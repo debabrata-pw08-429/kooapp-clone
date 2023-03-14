@@ -1,0 +1,13 @@
+.kooLogo{
+    width: 3rem;
+    margin: auto 3rem;
+    vertical-align: middle;
+} 
+.sidebar-main{
+    font-family: Roboto - 400;
+    color: rgb(136,136,136);
+    padding: 12px 25px 12px 80px;
+    width:'155px' ;
+    align-items:'center';
+    font-size: 18px;
+}
