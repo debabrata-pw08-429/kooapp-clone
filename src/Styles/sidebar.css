@@ -1,0 +1,23 @@
+.kooLogo{
+    width: 3rem;
+    margin: auto 3rem;
+    vertical-align: middle;
+} 
+.sidebar-main{
+    font-family: Roboto - 400;
+    color: rgb(136,136,136);
+    padding: 12px 25px 12px 80px;
+    width:'155px' ;
+    align-items:'center';
+    font-size: 18px;
+    
+}
+.side-option{
+    color:'rgb(136,136,136)';
+    border:'none';
+    background-color:'white';
+    width:'150px';
+    height:'48px' ;
+    justify-content:"flex-start";
+    border-radius: '50px' 
+}
