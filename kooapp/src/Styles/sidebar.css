@@ -10,4 +10,14 @@
     width:'155px' ;
     align-items:'center';
     font-size: 18px;
+    
+}
+.side-option{
+    color:'rgb(136,136,136)';
+    border:'none';
+    background-color:'white';
+    width:'150px';
+    height:'48px' ;
+    justify-content:"flex-start";
+    border-radius: '50px' 
 }

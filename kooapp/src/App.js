@@ -1,10 +1,13 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { SideBar } from "./Components/SideBar";
+import { ChakraProvider } from "@chakra-ui/react";
 function App() {
   return (
     <div className="App">
-      <SideBar/>
+      <ChakraProvider>
+         <SideBar/>
+      </ChakraProvider>
     </div>
   );
 }
