@@ -1,4 +1,4 @@
-qqimport React from 'react'
+import React from 'react'
 import {Card,HStack,Box,Avatar, VStack,Text,Spacer,Image,Button} from "@chakra-ui/react";
 import {Stack,InputGroup,InputLeftElement,Input,InputRightElement,Flex} from "@chakra-ui/react";
 import { MdPersonAddAlt,MdMoreVert } from "react-icons/md";
