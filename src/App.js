@@ -1,5 +1,5 @@
 import "./App.css";
-import { ChakraProvider } from "@chakra-ui/react";
+import Allroutes from './Components/Allroutes';
 // import People from "./Pages/People";
 // import Rsidebar from "./Components/Rsidebar";
 // import { Login } from "./Components/Login";
@@ -8,12 +8,11 @@ import Navbar from "./Components/Navbar";
 function App() {
   return (
     <div className="App">
-      <ChakraProvider>
         {/* <People /> */}
         {/* <Login /> */}
         {/* <Rsidebar /> */}
-        <Navbar />
-      </ChakraProvider>
+        {/* <Navbar /> */}
+        <Allroutes/> 
     </div>
   );
 }
