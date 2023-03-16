@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import LeftSidebar from "../Components/DummyLeftSidebar";
 import RightSidebar from "../Components/DummyRightSidebar";
+import Rsidebar from "../Components/Rsidebar";
 import FeedCreate from "../Components/FeedCreate";
 import {Flex,Box,Text,HStack} from "@chakra-ui/react";
-import f from "../modules/feed.module.css";
+import f from "../Styles/feed.module.css";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { useSelector,useDispatch } from 'react-redux'
 import ProfileComp from "../Components/ProfileComp";
@@ -71,6 +72,7 @@ function Feed() {
 
         <Box w="32%" mt="50px">
           <RightSidebar />{" "}
+          {/* <Rsidebar/> */}
         </Box>
       </Flex>
     </div>

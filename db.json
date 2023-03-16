@@ -1,4 +1,50 @@
 {
+  "posts": [
+    {
+      "data": {
+        "description": "adfafsfssssssssssssssssss",
+        "files": [
+          {
+            "fileData": {},
+            "previewUrl": "blob:http://localhost:3000/d2e7a250-1976-4aaf-a272-9d1f1a99d597",
+            "type": "image/jpeg",
+            "date": "2023-03-14T08:42:34.201Z"
+          },
+          {
+            "fileData": {},
+            "previewUrl": "blob:http://localhost:3000/66e1d608-7f8b-42c5-88b1-e07572df5470",
+            "type": "image/jpeg",
+            "date": "2023-03-14T06:57:13.461Z"
+          },
+          {
+            "fileData": {},
+            "previewUrl": "blob:http://localhost:3000/14ca86c6-6c46-43d8-a7a7-eef6c04d4ead",
+            "type": "video/mp4",
+            "date": "2023-02-18T20:11:19.576Z"
+          }
+        ],
+        "likes": 0,
+        "comments": []
+      },
+      "id": 1
+    },
+    {
+      "data": {
+        "description": 0,
+        "files": [],
+        "likes": 0,
+        "comments": []
+      },
+      "id": 2
+    }
+  ],
+  "loggedUser": [
+    {
+      "id": 1,
+      "name": "Syed",
+      "image": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61nlaq18GGL._SY679_.jpg"
+    }
+  ],
   "user": {
     "username": "",
     "email": "",
@@ -25,7 +71,7 @@
   "peopleData": [
     {
       "id": 1,
-      "name": "Piramal Capital & Housing Finance Limited",
+      "name": "Piramal Capital & Housing",
       "username": "PiramalFinance",
       "category": "Financial Services",
       "des": "Piramal Capital & Housing Finance Limited, formerly known as DHFL. serves the lending needs of Bharat. (herein referred to as Piramal Finance)",

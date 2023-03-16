@@ -15,8 +15,8 @@ import { useNavigate } from "react-router-dom";
 
 
 function Create() {
-  let { Image } = useSelector((state) => state.LoggedReducer);
-  Image='https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61nlaq18GGL._SY679_.jpg';
+  // let { Image } = useSelector((state) => state.LoggedReducer);
+  // let Image='https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61nlaq18GGL._SY679_.jpg';
   const dispatch= useDispatch();
   const [count, setCount] = useState(0);
   const [description, setDescription] = useState(0);
