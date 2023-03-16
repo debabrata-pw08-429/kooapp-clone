@@ -32,7 +32,7 @@ const SideBar = () => {
             </Button>
           </Box>
           <Box textAlign='left' m=' 8px' h='48px' display={isAuth ? 'block' : 'none'}>
-            <Button color='rgb(136,136,136)' border='none' bg='white' _hover={{ bg: '#ebedf0' }} w='150px' h='48px' justifyContent="flex-start" borderRadius='50px' >
+            <Button color='rgb(136,136,136)' border='none' bg='white' _hover={{ bg: '#ebedf0' }} w='150px' h='48px' justifyContent="flex-start" borderRadius='50px' overFlow='hidden'>
               < Image src={acct} alt="" marginRight='8px' />
               Keerthi Malini
               <Popover >
