@@ -1,0 +1,1 @@
+export const GET_PEOPLE_DATA = "GET_PEOPLE_DATA" 

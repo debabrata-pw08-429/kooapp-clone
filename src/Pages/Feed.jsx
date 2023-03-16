@@ -7,7 +7,7 @@ import f from "../modules/feed.module.css";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { useSelector,useDispatch } from 'react-redux'
 import ProfileComp from "../Components/ProfileComp";
-import { getData } from "../redux/PeopleDetails/action";
+import { getData } from "../Redux/PeopleDetails/action";
 import FeedPost from "../Components/FeedPost";
 
 function Feed() {
