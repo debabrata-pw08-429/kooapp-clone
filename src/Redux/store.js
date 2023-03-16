@@ -1,13 +1,12 @@
-// import { createStore, applyMiddleware } from "redux";
-// import thunk from "redux-thunk";
-// import { reducer as AppReducer } from "./products/reducer";
-// import { reducer as AuthReducer } from "./auth/reducer";
-// import { combineReducers } from "redux";
+import { reducer as LoggedReducer} from "./LoggedDetails/reducer";
+import { reducer as PeopleReducer} from "./PeopleDetails/reducer";
+import {applyMiddleware, legacy_createStore,combineReducers } from "redux"
+import thunk from "redux-thunk"
 
-// const rootReducers = combineReducers({
-//   App: AppReducer,
-//   Auth: AuthReducer,
-// });
+const rootReducer=combineReducers({
+    LoggedReducer,
+    PeopleReducer,
+});
+const store = legacy_createStore(rootReducer ,  applyMiddleware(thunk))
 
-// const store = createStore(rootReducers, applyMiddleware(thunk));
-// export { store };
+export {store};
