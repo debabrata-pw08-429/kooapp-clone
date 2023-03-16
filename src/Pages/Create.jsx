@@ -10,7 +10,7 @@ import { FiSettings  } from "react-icons/fi";
 import { Avatar ,Box,HStack,Button,Text,Spacer,CircularProgress, CircularProgressLabel} from '@chakra-ui/react';
 import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalCloseButton, Progress, ModalFooter } from "@chakra-ui/react";
 import { useSelector,useDispatch } from "react-redux";
-import { postData } from '../redux/PostDetails/action'
+import { postData } from '../Redux/PostDetails/action'
 import { useNavigate } from "react-router-dom";
 
 
