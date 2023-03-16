@@ -5,7 +5,7 @@ import { extendTheme } from "@chakra-ui/react";
 const brand = {
   colors: {
     bg_otp: "#c9c9c9",
-    bg_otp_hover: "black",
+    btn_bg_login: "#4b4b4b",
   },
 };
 
