@@ -1,12 +1,12 @@
 import "./App.css";
-import { SideBar } from "./Components/SideBar";
 import { ChakraProvider } from "@chakra-ui/react";
+import People from "./Pages/People";
 
 function App() {
   return (
     <div className="App">
       <ChakraProvider>
-         <SideBar/>
+         <People/>
       </ChakraProvider>
     </div>
   );

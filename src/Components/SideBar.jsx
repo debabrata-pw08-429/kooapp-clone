@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Button, Flex, HStack, Image, Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalFooter, ModalOverlay, Popover, PopoverArrow, PopoverBody, PopoverCloseButton, PopoverContent, PopoverHeader, PopoverTrigger, Portal, Spacer, Text, useDisclosure } from '@chakra-ui/react'
+import { Box, Button, Flex, Image, Modal, ModalBody, ModalContent, ModalFooter, ModalOverlay, Popover, PopoverArrow, PopoverBody, PopoverContent, PopoverTrigger, Portal, useDisclosure } from '@chakra-ui/react'
 import '../Styles/sidebar.css'
 import koo from '../Images/koo.svg'
 import feedIcon from '../Images/feed.svg'
@@ -32,7 +32,7 @@ const SideBar = () => {
             </Button>
           </Box>
           <Box textAlign='left' m=' 8px' h='48px' display={isAuth ? 'block' : 'none'}>
-            <Button color='rgb(136,136,136)' border='none' bg='white' _hover={{ bg: '#ebedf0' }} w='150px' h='48px' justifyContent="flex-start" borderRadius='50px' overFlow='hidden'>
+            <Button color='rgb(136,136,136)' border='none' bg='white' _hover={{ bg: '#ebedf0' }} w='150px' h='48px' justifyContent="flex-start" borderRadius='50px' >
               < Image src={acct} alt="" marginRight='8px' />
               Keerthi Malini
               <Popover >
