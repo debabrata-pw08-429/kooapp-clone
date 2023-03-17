@@ -12,6 +12,8 @@ import { getData } from "../Redux/PeopleDetails/action";
 import FeedPost from "../Components/FeedPost";
 import { Link } from "react-router-dom";
 import { FeedContext } from "../Context/FeedContext";
+import {SideBar} from "../Components/SideBar"
+
 
 function Feed() {
   let dispatch=useDispatch();
@@ -39,7 +41,8 @@ function Feed() {
     <div>
       <Flex w="100%">
         <Box w="26%" mt="50px">
-          <LeftSidebar />
+          {/* <LeftSidebar /> */}
+          <SideBar/>
         </Box>
         <Box w="42%"  bg="#f8f7f3" p={'10px 12px 0px'} overflow={"hidden"}> 
           <HStack p={'20px 10px'} alignItems='center' justifyContent={"space-between"} marginBottom='2px'>

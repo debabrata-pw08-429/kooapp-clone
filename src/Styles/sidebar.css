@@ -10,7 +10,8 @@
     width:'155px' ;
     align-items:'center';
     font-size: 18px;
-
+    max-height: fit-content;
+    position: sticky;
 }
 .side-option{
     color:'rgb(136,136,136)';
