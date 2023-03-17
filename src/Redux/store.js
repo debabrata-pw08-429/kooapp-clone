@@ -1,13 +1,11 @@
-// import { createStore, applyMiddleware } from "redux";
-// import thunk from "redux-thunk";
-// import { reducer as AppReducer } from "./products/reducer";
-// import { reducer as AuthReducer } from "./auth/reducer";
-// import { combineReducers } from "redux";
 
-// const rootReducers = combineReducers({
-//   App: AppReducer,
-//   Auth: AuthReducer,
-// });
+import { reducer as PeopleReducer} from "./PeopleDetails/reducer";
+import {applyMiddleware, legacy_createStore,combineReducers } from "redux"
+import thunk from "redux-thunk"
 
-// const store = createStore(rootReducers, applyMiddleware(thunk));
-// export { store };
+const rootReducer=combineReducers({
+    PeopleReducer,
+});
+const store = legacy_createStore(rootReducer ,  applyMiddleware(thunk))
+
+export {store};

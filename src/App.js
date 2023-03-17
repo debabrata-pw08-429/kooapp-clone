@@ -1,17 +1,21 @@
 import "./App.css";
-import { ChakraProvider } from "@chakra-ui/react";
-import People from "./Pages/People";
-import Rsidebar from "./Components/Rsidebar";
-// import { Login } from "./Components/Login";
 
+import Allroutes from './Components/Allroutes';
+// import People from "./Pages/People";
+// import Rsidebar from "./Components/Rsidebar";
+import { Login } from "./Components/Login";
+import Home from "./Pages/Home";
+import Navbar from "./Components/Navbar";
 function App() {
   return (
     <div className="App">
-      <ChakraProvider>
         {/* <People /> */}
         {/* <Login /> */}
-      <Rsidebar/>
-      </ChakraProvider>
+        {/* <Rsidebar /> */}
+        {/* <Navbar /> */}
+        {/* <Home /> */}
+        {/* <Navbar /> */}
+        <Allroutes/> 
     </div>
   );
 }
