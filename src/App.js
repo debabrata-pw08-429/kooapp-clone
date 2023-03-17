@@ -12,14 +12,10 @@ function App() {
         {/* <People /> */}
         {/* <Login /> */}
         {/* <Rsidebar /> */}
-<<<<<<< HEAD
-        <Navbar />
-        <Home />
-      </ChakraProvider>
-=======
+        {/* <Navbar /> */}
+        {/* <Home /> */}
         {/* <Navbar /> */}
         <Allroutes/> 
->>>>>>> 85629b30f717323f9844ebc597ad5c29ad301deb
     </div>
   );
 }
