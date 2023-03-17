@@ -19,7 +19,7 @@ const Section2 = () => {
           Amazing features to connect with people
         </Heading>
       </Flex>
-      <Box className={Styles.Home_carouselSlider__osNuX} display="flex">
+      {/* <Box className={Styles.Home_carouselSlider__osNuX} display="flex">
         <Image
           src="https://images.kooapp.com/img/home_page9.jpeg"
           alt="koo_carousel"
@@ -100,7 +100,7 @@ const Section2 = () => {
           className={Styles.Home_carouselImage__D1xpn}
           style={{ color: "transparent" }}
         />
-      </Box>
+      </Box> */}
     </Box>
   );
 };

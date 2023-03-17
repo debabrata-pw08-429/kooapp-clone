@@ -10,10 +10,10 @@ function App() {
     <div className="App">
       <ChakraProvider>
         {/* <People /> */}
-        <Login />
+        {/* <Login /> */}
         {/* <Rsidebar /> */}
-        {/* <Navbar />
-        <Home /> */}
+        <Navbar />
+        <Home />
       </ChakraProvider>
     </div>
   );

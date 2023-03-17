@@ -1,3 +1,4 @@
+import "../Styles/stats.css";
 import {
   Box,
   Heading,
@@ -9,12 +10,12 @@ import {
   Divider,
   Flex,
 } from "@chakra-ui/react";
-import { Image } from "@chakra-ui/react";
-import { BsArrowRight } from "react-icons/bs";
-import { theme } from "../Styles/theme/brandTheme";
+// import { Image } from "@chakra-ui/react";
+// import { BsArrowRight } from "react-icons/bs";
+// import { theme } from "../Styles/theme/brandTheme";
 
 // import Koo_tagline_ss from "../Images/Koo_tagline_ss.png";
-import mapbackground from "../Images/mapbackground.webp";
+// import mapbackground from "../Images/mapbackground.webp";
 import Section3 from "../Components/Section3";
 import Section2 from "../Components/Section2";
 import Section1 from "../Components/Section1";
