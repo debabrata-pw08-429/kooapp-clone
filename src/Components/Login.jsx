@@ -1,4 +1,7 @@
 import React from "react";
+import axios from "axios";
+import { useGoogleLogin } from "@react-oauth/google";
+
 import WatsApp from "./WatsApp";
 import EmailIcon from "./EmailIcon";
 import { AiFillApple } from "react-icons/ai";
@@ -35,7 +38,24 @@ const Login = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [change, setChange] = React.useState(false);
   const [otpVerify, setotpVerify] = React.useState(false);
+  const [oathVerify, setoathVerify] = React.useState(false);
   const initialRef = React.useRef(null);
+
+  const login = useGoogleLogin({
+    onSuccess: async (tokenResponse) => {
+      try {
+        const data = await axios
+          .get("https://www.googleapis.com/oauth2/v3/userinfo", {
+            headers: {
+              Authorization: `Bearer ${tokenResponse.access_token}`,
+            },
+          })
+          .then((res) => setoathVerify(true));
+      } catch (error) {
+        console.log(error);
+      }
+    },
+  });
 
   const s1 = {
     display: "flex",
@@ -52,7 +72,7 @@ const Login = () => {
           <Modal
             size="md"
             initialFocusRef={initialRef}
-            isOpen={isOpen}
+            isOpen={oathVerify ? null : isOpen}
             onClose={onClose}
           >
             <ModalOverlay />
@@ -101,7 +121,6 @@ const Login = () => {
                         </Text>
                         <Divider />
                       </Flex>
-                      {/* <Text my="36px" as="b" pl="17px"></Text> */}
                     </Stack>
                   </FormControl>
                 </ModalBody>
@@ -128,7 +147,6 @@ const Login = () => {
                           />
                         </InputGroup>
                         <Button
-                          // isLoading={change ? true : false}
                           onClick={() => setotpVerify(!otpVerify)}
                           borderRadius="3xl"
                           variant="solid"
@@ -171,7 +189,11 @@ const Login = () => {
                         </Text>
                         <Divider />
                       </Flex>
-                      <Button borderRadius="3xl" variant="outline">
+                      <Button
+                        onClick={login}
+                        borderRadius="3xl"
+                        variant="outline"
+                      >
                         <FcGoogle />
                         <Text ml="32px">Sign-in with Google</Text>
                       </Button>
