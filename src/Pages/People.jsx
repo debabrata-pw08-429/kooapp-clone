@@ -13,9 +13,15 @@ const People = () => {
             })
     }, [])
     console.log(data)
+
+
     return <Flex>
+
         <SideBar />
+
         <Box w='620px' bg='rgb(248,247,243)' p='20px 24px 0'>
+
+            {/* Navbar div */}
             <Flex justifyContent='space-evenly' h='43px' color='rgb(136,136,136)'>
                 <Text>Feed</Text>
                 <Text>People</Text>
@@ -25,11 +31,14 @@ const People = () => {
                 <Text>Following</Text>
                 <Text>Popular</Text>
             </Flex>
+
+            {/* Heading for people */}
             <Box display='flex' margin='8.5px 0' justifyContent='space-between'>
                 <Text fontSize='18px' fontWeight='500'>People you can follow</Text>
                 <Image src='https://www.kooapp.com/_next/static/media/arrow_right.f549fb9e.svg' />
             </Box>
-            {/* <Box h='986px' p='12px 9px' border='1px solid #E2E8F0' borderRadius='16px'> */}
+
+            {/* Card to display each user */}
             <Card h='986px' p='12px 9px' border='1px solid #E2E8F0' borderRadius='16px'>
                 <CardBody p='0'>
                     <Stack divider={<StackDivider />} p='9px 4.5px'>
@@ -61,7 +70,7 @@ const People = () => {
                     </Stack>
                 </CardBody>
             </Card>
-            {/* </Box> */}
+
         </Box>
 
     </Flex>;

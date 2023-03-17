@@ -10,13 +10,18 @@ import acct from '../Images/acct.svg'
 import dropdown from '../Images/dropdown.svg'
 import logout from '../Images/logout.svg'
 import notifications from '../Images/notifications.svg'
+import { useNavigate } from "react-router-dom";
 
 const SideBar = () => {
   const [isAuth, setIsAuth] = useState(true)
   const { isOpen, onOpen, onClose } = useDisclosure()
+  let navigate = useNavigate()
   return (
+    //Main div--
     <Box className="sidebar-main" w='350px' >
       <Flex direction="column" m='20px'>
+
+        {/* Koo logo-- */}
         <Box w='163px' h='73px'>
           <Image
             className="kooLogo"
@@ -24,14 +29,20 @@ const SideBar = () => {
             alt="mainlogo"
           />
         </Box>
+
+        {/* Flex for sidebar options */}
         <Flex direction="column" justifyContent='center' mt='35px' mb='20px'>
+
+          {/* Feed option */}
           <Box textAlign='left' m=' 8px' h='48px'>
             <Button color='rgb(136,136,136)' border='none' bg='white' _hover={{ bg: '#ebedf0' }} w='150px' h='48px' justifyContent="flex-start" borderRadius='50px' >
               < Image src={feedIcon} alt="" marginRight='8px' />
               Feed
             </Button>
           </Box>
-          <Box textAlign='left' m=' 8px' h='48px' display={isAuth ? 'block' : 'none'}>
+
+          {/* Username onclick displays the Bio with add account option */}
+          <Box onClick={() => navigate("/bio")} textAlign='left' m=' 8px' h='48px' display={isAuth ? 'block' : 'none'} >
             <Button color='rgb(136,136,136)' border='none' bg='white' _hover={{ bg: '#ebedf0' }} w='150px' h='48px' justifyContent="flex-start" borderRadius='50px' >
               < Image src={acct} alt="" marginRight='8px' />
               Keerthi Malini
@@ -52,32 +63,41 @@ const SideBar = () => {
                 </Portal>
               </Popover>
             </Button>
-
           </Box>
+
+          {/* Explore option */}
           <Box textAlign='left' m=' 8px' h='48px'>
             <Button color='rgb(136,136,136)' border='none' bg='white' _hover={{ bg: '#ebedf0' }} w='150px' h='48px' justifyContent="flex-start" borderRadius='50px' >
               <Image src={hashtag} alt="" marginRight='8px' />
               Explore
             </Button>
           </Box>
+
+          {/* Language option */}
           <Box textAlign='left' m=' 8px' h='48px'>
             <Button color='rgb(136,136,136)' border='none' bg='white' _hover={{ bg: '#ebedf0' }} w='150px' h='48px' justifyContent="flex-start" borderRadius='50px' >
               <Image src={lang} alt="" marginRight='8px' />
               Language
             </Button>
           </Box>
+
+          {/* Search option */}
           <Box textAlign='left' m=' 8px' h='48px'>
             <Button color='rgb(136,136,136)' border='none' bg='white' _hover={{ bg: '#ebedf0' }} w='150px' h='48px' justifyContent="flex-start" borderRadius='50px' >
               <Image src={search} alt="" marginRight='8px' />
               Search
             </Button>
           </Box>
+
+          {/* Notifications option */}
           <Box textAlign='left' m=' 8px' h='48px' display={isAuth ? 'block' : 'none'}>
             <Button color='rgb(136,136,136)' border='none' bg='white' _hover={{ bg: '#ebedf0' }} w='150px' h='48px' justifyContent="flex-start" borderRadius='50px' >
               <Image src={notifications} alt="" marginRight='8px' />
               Notifications
             </Button>
           </Box>
+
+          {/* Logout option with Modal */}
           <Box textAlign='left' m=' 8px' h='48px' display={isAuth ? 'block' : 'none'}>
             <Button onClick={onOpen} color='rgb(136,136,136)' border='none' bg='white' _hover={{ bg: '#ebedf0' }} w='150px' h='48px' justifyContent="flex-start" borderRadius='50px' >
               <Image src={logout} alt="" marginRight='8px' />
@@ -101,7 +121,10 @@ const SideBar = () => {
               </ModalContent>
             </Modal>
           </Box>
+
         </Flex>
+
+        {/* +koo and sign up button */}
         <Flex direction="column" justifyContent='center'>
           <Button mb={isAuth ? '0' : '80px'} bg='rgb(75,75,75)' color='white' border='none' borderRadius='50px' p='8px' fontSize='19px' w='195px' h='48px' >
             + Koo
@@ -115,4 +138,6 @@ const SideBar = () => {
     </Box>
   )
 };
+
+
 export { SideBar };
