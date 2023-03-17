@@ -70,6 +70,283 @@
 
   "peopleData": [
     {
+      "id": 3,
+      "name": "Mamata Banerjee",
+      "username": "MamataOfficial",
+      "img": "https://images.kooapp.com/koo-profile-media/profiles/36613113/profile.jpeg?tr=n-dp_square",
+      "followers": "188.5K",
+      "following": 4,
+      "userFollowState":true,
+      "category": "Politician",
+      "posts": [
+        {
+          "postsID": 1,
+          "likes": 33,
+          "comments": 19,
+          "re-share": 8,
+          "content": {
+            "textContent": "March 14 marks a black day in Bengal's history. It is a grim reminder of the barbaric attacks on the hapless farmers of Bengal, of the 14 martyrs of Nandigram and the countless villagers who were subjected to state-sponsored violence.16 years later, Bengal has emerged as a leading agricultural state that empowers its farmers and enables them to lead dignified lives. Nandigram Dibas is a bold testament to our indomitable fighting spirit and unrelenting zeal to secure every resident of the state.",
+            "imgContent": ""
+          },
+          "days":"3d",
+          "hastags": [
+            "#g20india",
+            "#iym2023"
+          ]
+        },
+        {
+          "postsID": 2,
+          "likes": 226,
+          "comments": 99,
+          "re-share": 35,
+          "content": {
+            "textContent": "Heartiest congratulations to India's Under 19 Women's Cricket Team.What a stellar victory in the inaugural Under 19 Women's T20 World Cup!This is only the beginning, I am certain the daughters of India will scale greater heights in the days ahead.",
+            "imgContent": ""
+          },
+          "days":"5d",
+          "hastags": [
+            "#iym2023"
+          ]
+        },
+        {
+          "postsID": 3,
+          "likes": 211,
+          "comments": 20,
+          "re-share": 46,
+          "content": {
+            "textContent": "Happy 51st Statehood Day to the people of Meghalaya!Today, we commemorate the hill state movement and seek inspiration from the sacrifices made by the founding fathers of Meghalaya.Let us also take pledge to unitedly strive for the holistic development of the state!",
+            "imgContent": "https://images.kooapp.com/transcode_input/36613113/6D978167-31BE-44E9-8AB0-510E8548644E-image.jpeg"
+          },
+          "days":"7d",
+          "hastags": [
+            "#g20india"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Prateek Shukla",
+      "username": "prateekMasai",
+      "img": "https://media.licdn.com/dms/image/C5603AQH6YLJNpKYptw/profile-displayphoto-shrink_400_400/0/1645321272614?e=1684368000&v=beta&t=goF5u7DW133mhUVQTzZMW1JVj363xwmOrJ28FX1Ixgg",
+      "des": "Transforming Higher Education | Tedx Speaker. Also, Talks about #impact, #engineers, #educationforall, #highereducation, and #hiringdevelopers",
+      "followers": "17.4K",
+      "following": 10,
+      "userFollowState":true,
+      "category": "Education",
+      "posts": [
+        {
+          "postsID": 1,
+          "likes": 287,
+          "comments": 19,
+          "re-share": 7,
+          "days":"2d",
+          "content": {
+            "textContent": "Super stoked to announce our Series A funding - an imp milestone in our mission to unlock 🇮🇳's untapped potential, regardless of their background. 💪This Series A empowers us to expand access to high-quality education to 1000s of students & transform lives. We are excited to have Omidyar Network India (Siddharth Nautiyal, Namita Dalmia and Neel Pattani ) as a partner on this journey, their keen understanding of the state of education at a global level will bring immense value.",
+            "imgContent": "https://media.licdn.com/dms/image/sync/C5627AQH6vNwTVblbtw/articleshare-shrink_800/0/1677705782538?e=1679428800&v=beta&t=V_EA_xmn4dnhWBe4Ya41QeycHjiksc2uxuJnXrmJl9g"
+          },
+          "hastags": [
+            "#AcademyAwards"
+          ]
+        },
+        {
+          "postsID": 2,
+          "likes": 207,
+          "comments": 10,
+          "re-share": 1,
+          "content": {
+            "textContent": "Goals without routines are wishes; routines without goals are aimless. - Verne Harnish",
+            "imgContent": ""
+          },
+          "days":"4d",
+          "hastags": [
+            "#highereducation"
+          ]
+        },
+        {
+          "postsID": 3,
+          "likes": 76,
+          "comments": 5,
+          "re-share": 12,
+          "content": {
+            "textContent": " We are thrilled to announce Masai partnership with Government of Karnatakas initiative Karnataka Digital Economy Mission (KDEM) and Karnataka Skill Development Corporation (KSDC) - to revolutionise the game for women in tech!🚀🚀. Happy Women's Day, Everyone! ❤️",
+            "imgContent": "https://media.licdn.com/dms/image/C561FAQHNRCE0toxg-Q/feedshare-document-images_480/1/1678281515037?e=1679529600&v=beta&t=2OpzMLEEOypQ7DWdM-p351FAps3XM0VBVpYgGQhC0vs"
+          },
+          "days":"7d",
+          "hastags": [
+            "#highereducation",
+            "#AcademyAwards"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Tarak Ram",
+      "username": "ntr",
+      "category": "Actor",
+      "des": "Love to work in films",
+      "followers": "155.8K",
+      "following": 0,
+      "userFollowState":true,
+      "img": "https://e1.pxfuel.com/desktop-wallpaper/468/425/desktop-wallpaper-jr-ntr-kajal-agarwal-temper-latest-stills-jr-ntr.jpg",
+      "posts": [
+        {
+          "postsID": 1,
+          "likes": 79,
+          "comments": 16,
+          "reKoo": 13,
+          "content": {
+            "textContent": "Congratulations Sirji on your well-deserved #GoldenGlobes award!. I've danced to many songs throughout my career but #NaatuNaatu will forever stay close to my heart... #mmkeeravaani #rrrmovie",
+            "imgContent": "https://scontent.fhyd11-3.fna.fbcdn.net/v/t39.30808-6/325201960_554034603279681_4239017606473687696_n.jpg?stp=dst-jpg_p843x403&_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_ohc=lTBcTDl8kYYAX_iEzQ2&_nc_ht=scontent.fhyd11-3.fna&oh=00_AfCsRPvqur9O8A_FHF3_fDlTE3vdP3SKZ9nmcbDk4NlscQ&oe=6418E751"
+          },
+          "days":"2d",
+          "hastags": [
+            "#RRR",
+            "#ElephantWhisperers",
+            "#AcademyAwards",
+            "#Oscars2023"
+          ]
+        },
+        {
+          "postsID": 2,
+          "likes": 659,
+          "comments": 66,
+          "reKoo": 23,
+          "content": {
+            "textContent": " And then with Prashanth Neel",
+            "imgContent": "https://scontent.fhyd11-3.fna.fbcdn.net/v/t39.30808-6/283097147_568241237990165_3643045645127736330_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=730e14&_nc_ohc=xJTyh6xY0CIAX8-JAf_&_nc_oc=AQnXUS-Kn-n3hj12pE8cEuNpf1KFnzAB6qVKkMv8rlky8r0wb4zvwru5L0k6sDqrHDOHYHOMLED6mYNHGEfdmpNS&_nc_ht=scontent.fhyd11-3.fna&oh=00_AfAgye9lW8QUoY2gZrHor6NELjlnAw-FkrOD_1N5zIcBuA&oe=6418B5D4"
+          },
+          "days":"2d",
+          "hastags": [
+            "#RRR",
+            "#ElephantWhisperers",
+            "#AcademyAwards",
+            "#Oscars2023"
+          ]
+        },
+        {
+          "postsID": 3,
+          "likes": 154,
+          "comments": 33,
+          "reKoo": 22,
+          "content": {
+            "textContent": "Reliving the experience of RRR with the Japanese media. Thanks for all the love and admiration.",
+            "imgContent": "https://scontent.fhyd11-1.fna.fbcdn.net/v/t39.30808-6/309536075_659443732203248_9171478383127661983_n.jpg?stp=dst-jpg_p180x540&_nc_cat=100&ccb=1-7&_nc_sid=730e14&_nc_ohc=e4kvEkn9yXoAX_-vGTk&_nc_ht=scontent.fhyd11-1.fna&oh=00_AfBsZ8avE4gvXjQK_Z5ZxPVEJvAu6zroAff1zetH_4SF8g&oe=64183C89"
+          },
+          "days":"10d",
+          "hastags": [
+            "#RRR"
+          ]
+        }
+      ]
+    }, 
+    {
+      "id": 7,
+      "name": "Dalai Lama",
+      "username": "dalailama",
+      "category": "Spiritual Leader",
+      "des": "Peace activist | Religious persecution | Tibetan culture | Freedom of religion in China ",
+      "followers": "880.8K",
+      "following": 80,
+      "userFollowState":true,
+      "img": "https://wallpapercave.com/wp/wp4176324.jpg",
+      "posts": [
+        {
+          "postsID": 1,
+          "likes": 41,
+          "comments":5,
+          "reKoo": 3,
+          "content": {
+            "textContent": "Every human being is part of our single human family, and each of us has a responsibility to care for all our fellow human beings. This is not something that can be legislated about, but it is something that each of us can work toward. We can work to develop our own feelings of compassion and then put them into practice in our daily lives. For it is only with true compassion that we can begin to create a better world for ourselves, our children, and for all living beings.",
+            "imgContent": ""
+          },
+          "days":"23h",
+          "hastags": [
+          ]
+        },{
+          "postsID": 2,
+          "likes": 181,
+          "comments":42,
+          "reKoo": 17,
+          "content": {
+            "textContent": "We must strive to cultivate feelings of kindness, compassion, and love for others, viewing our fellow human beings as brothers and sisters, regardless of their race, nationality or religion. A warm heart can bring joy to our own lives and to the lives of those around us.",
+            "imgContent": ""
+          },
+          "days":"2d",
+          "hastags": [
+          ]
+        },{
+          "postsID": 3,
+          "likes": 240,
+          "comments":62,
+          "reKoo": 27,
+          "content": {
+            "textContent": "I am just a simple Buddhist monk but I try to help others to live a happy life, to learn to appreciate the difference that finding peace of mind makes. That is my dream. One of my main practices is the cultivation of altruism: it is what I think about as soon as I wake up.",
+            "imgContent": "https://www.tsemrinpoche.com/wp-content/uploads/2015/11/DalaiLama002.jpg"
+          },
+          "days":"5d",
+          "hastags": [
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Nitin Gadkari",
+      "username": "nitin.gadkari",
+      "img": "https://images.kooapp.com/koo-profile-media/profiles/3072079/6B6C5408-7CCB-4BCF-8213-89CDC36A24FE-profile.jpeg?tr=n-dp_square",
+      "des": "Minister of Road Transport & Highways, Government of India.",
+      "followers": "3.4M",
+      "following": 2,
+      "userFollowState":true,
+      "category": "Politician",
+      "posts": [
+        {
+          "postsID": 1,
+          "likes": 33,
+          "comments": 19,
+          "re-share": 8,
+          "content": {
+            "textContent": "📢 West Bengal ➡️ In West Bengal, we have approved a substantial budget of ₹812.50 Crore towards the project of Widening-cum-Strengthening the existing alignment of NH-116B to a 2 lane+PS configuration, with a length of 17.10 Km, and also constructing a 2 lane+PS Ramnagar Bypass in the Purba Medinipur District",
+            "imgContent": ""
+          },
+          "days":"2d",
+          "hastags": [
+            "#g20india"
+          ]
+        },
+        {
+          "postsID": 2,
+          "likes": 226,
+          "comments": 99,
+          "re-share": 35,
+          "content": {
+            "textContent": "📢 Telangana 👉 In Telangana, we are developing a 4-Lane Access-Controlled Greenfield Highway section on NH-163G (Khammam-Vijayawada) from V. Venkatayapalem village to Brahmanapalli(K) village under the Economic Corridor (NH-O) program. ₹983.90 Cr has been sanctioned for the construction of this 29.92 Km (Package-I) layout on Hybrid Annuity Mode.",
+            "imgContent": ""
+          },
+          "days":"3d",
+          "hastags": [
+            "#iym2023"
+          ]
+        },
+        {
+          "postsID": 3,
+          "likes": 150,
+          "comments": 30,
+          "re-share": 9,
+          "content": {
+            "textContent": "Chief Minister Yogi Adityanath and all MPs, MLAs and officials inaugurated and laid the foundation stone of nine national highway projects in Mahoba today with an investment of more than Rs 3,500 crore.",
+            "imgContent": "https://images.kooapp.com/transcode_input/3072079/3E73EE96-7449-49A5-A405-8F16510AD39E-image.jpeg"
+          },
+          "days":"6d",
+          "hastags": [
+            "#vandebharatexpress"
+          ]
+        }
+      ]
+    },
+    {
       "id": 1,
       "name": "Piramal Capital & Housing",
       "username": "PiramalFinance",
@@ -77,7 +354,8 @@
       "des": "Piramal Capital & Housing Finance Limited, formerly known as DHFL. serves the lending needs of Bharat. (herein referred to as Piramal Finance)",
       "followers": "155.8K",
       "following": 0,
-      "img": "https://images.kooapp.com/koo-profile-media/profiles/31386620/profile1661424911315t1a2pj.png?tr=n-dp_square",
+      "userFollowState":false,
+      "img": "https://images.kooapp.com/koo-profile-media/profiles/31386620/profile1661424911315t1a2pj.png",
       "posts": [
         {
           "postsID": 1,
@@ -88,6 +366,7 @@
             "textContent": "Time to Naatu Naatu with The Elephant Whisperers!! BIG congratulations to our Oscar award winners for making Bharat so proud. ❤️🇮🇳",
             "imgContent": "https://images.kooapp.com/transcode_input/31386620/FINAL-IMAGE-WEB-0304e8ab-d0f9-46fa-b762-556cbf2309c1.jpg"
           },
+          "days":"3d",
           "hastags": [
             "#RRR",
             "#ElephantWhisperers",
@@ -104,6 +383,7 @@
       "img": "https://images.kooapp.com/koo-profile-media/profiles/11664193/c05e75f0-ba92-4d0c-9b30-fcebaf6b3cf8voke.jpg?tr=n-dp_square",
       "followers": "5.0M",
       "following": 0,
+      "userFollowState":false,
       "category": "Cricketer",
       "posts": [
         {
@@ -115,7 +395,11 @@
             "textContent": "Happy Holi to all 🙌🇮🇳",
             "imgContent": "https://images.kooapp.com/transcode_input/11664193/d2fb1d0e-e1f2-474b-b4ab-2f190723b7eb.jpg"
           },
-          "hastags": ["#g20india", "#iym2023"]
+          "days":"1d",
+          "hastags": [
+            "#g20india",
+            "#iym2023"
+          ]
         },
         {
           "postsID": 2,
@@ -126,7 +410,10 @@
             "textContent": "🕉️",
             "imgContent": "https://images.kooapp.com/transcode_input/11664193/f4273131-e349-4cf5-8fc7-948140b2005d.jpg"
           },
-          "hastags": ["#iym2023"]
+          "days":"3d",
+          "hastags": [
+            "#iym2023"
+          ]
         },
         {
           "postsID": 3,
@@ -137,96 +424,10 @@
             "textContent": "Delhi done. Two in a row. 🇮🇳✅",
             "imgContent": "https://images.kooapp.com/transcode_input/11664193/c5c504d8-5ebe-47c6-a1de-c602548df25b.jpg"
           },
-          "hastags": ["#g20india"]
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "name": "Mamata Banerjee",
-      "username": "MamataOfficial",
-      "img": "https://images.kooapp.com/koo-profile-media/profiles/36613113/profile.jpeg?tr=n-dp_square",
-      "followers": "188.5K",
-      "following": 4,
-      "category": "Politician",
-      "posts": [
-        {
-          "postsID": 1,
-          "likes": 33,
-          "comments": 19,
-          "re-share": 8,
-          "content": {
-            "textContent": "March 14 marks a black day in Bengal's history. It is a grim reminder of the barbaric attacks on the hapless farmers of Bengal, of the 14 martyrs of Nandigram and the countless villagers who were subjected to state-sponsored violence.16 years later, Bengal has emerged as a leading agricultural state that empowers its farmers and enables them to lead dignified lives. Nandigram Dibas is a bold testament to our indomitable fighting spirit and unrelenting zeal to secure every resident of the state.",
-            "imgContent": ""
-          },
-          "hastags": ["#g20india", "#iym2023"]
-        },
-        {
-          "postsID": 2,
-          "likes": 226,
-          "comments": 99,
-          "re-share": 35,
-          "content": {
-            "textContent": "Heartiest congratulations to India's Under 19 Women's Cricket Team.What a stellar victory in the inaugural Under 19 Women's T20 World Cup!This is only the beginning, I am certain the daughters of India will scale greater heights in the days ahead.",
-            "imgContent": ""
-          },
-          "hastags": ["#iym2023"]
-        },
-        {
-          "postsID": 3,
-          "likes": 211,
-          "comments": 20,
-          "re-share": 46,
-          "content": {
-            "textContent": "Happy 51st Statehood Day to the people of Meghalaya!Today, we commemorate the hill state movement and seek inspiration from the sacrifices made by the founding fathers of Meghalaya.Let us also take pledge to unitedly strive for the holistic development of the state!",
-            "imgContent": "https://images.kooapp.com/transcode_input/36613113/6D978167-31BE-44E9-8AB0-510E8548644E-image.jpeg"
-          },
-          "hastags": ["#g20india"]
-        }
-      ]
-    },
-    {
-      "id": 4,
-      "name": "Nitin Gadkari",
-      "username": "nitin.gadkari",
-      "img": "https://images.kooapp.com/koo-profile-media/profiles/3072079/6B6C5408-7CCB-4BCF-8213-89CDC36A24FE-profile.jpeg?tr=n-dp_square",
-      "des": "Minister of Road Transport & Highways, Government of India.",
-      "followers": "3.4M",
-      "following": 2,
-      "category": "Politician",
-      "posts": [
-        {
-          "postsID": 1,
-          "likes": 33,
-          "comments": 19,
-          "re-share": 8,
-          "content": {
-            "textContent": "📢 West Bengal ➡️ In West Bengal, we have approved a substantial budget of ₹812.50 Crore towards the project of Widening-cum-Strengthening the existing alignment of NH-116B to a 2 lane+PS configuration, with a length of 17.10 Km, and also constructing a 2 lane+PS Ramnagar Bypass in the Purba Medinipur District",
-            "imgContent": ""
-          },
-          "hastags": ["#g20india"]
-        },
-        {
-          "postsID": 2,
-          "likes": 226,
-          "comments": 99,
-          "re-share": 35,
-          "content": {
-            "textContent": "📢 Telangana 👉 In Telangana, we are developing a 4-Lane Access-Controlled Greenfield Highway section on NH-163G (Khammam-Vijayawada) from V. Venkatayapalem village to Brahmanapalli(K) village under the Economic Corridor (NH-O) program. ₹983.90 Cr has been sanctioned for the construction of this 29.92 Km (Package-I) layout on Hybrid Annuity Mode.",
-            "imgContent": ""
-          },
-          "hastags": ["#iym2023"]
-        },
-        {
-          "postsID": 3,
-          "likes": 150,
-          "comments": 30,
-          "re-share": 9,
-          "content": {
-            "textContent": "Chief Minister Yogi Adityanath and all MPs, MLAs and officials inaugurated and laid the foundation stone of nine national highway projects in Mahoba today with an investment of more than Rs 3,500 crore.",
-            "imgContent": "https://images.kooapp.com/transcode_input/3072079/3E73EE96-7449-49A5-A405-8F16510AD39E-image.jpeg"
-          },
-          "hastags": ["#vandebharatexpress"]
+          "days":"7d",
+          "hastags": [
+            "#g20india"
+          ]
         }
       ]
     },
@@ -238,6 +439,7 @@
       "des": "Government Organisation. Official Account of India‘s G20 Presidency. Official Hashtag: #G20India",
       "followers": "9.4K",
       "following": 2,
+      "userFollowState":false,
       "category": "Government Organisation",
       "posts": [
         {
@@ -249,7 +451,10 @@
             "textContent": "Day 2 of the SAI20 meeting in #Guwahati focused on the global promotion of the blue economy and its integration with SDGs. Experience sharing on a performance audit that utilizes innovative toolkits for the conservation of coastal ecosystems. #G20India",
             "imgContent": "https://images.kooapp.com/transcode_input/19329484/b4699ded-59bc-4f31-8a13-6967c521dcfe.jpg"
           },
-          "hastags": ["#g20india"]
+          "days":"1d",
+          "hastags": [
+            "#g20india"
+          ]
         },
         {
           "postsID": 2,
@@ -260,7 +465,11 @@
             "textContent": "We are just 1️⃣8️⃣0️⃣ days away from the #G20India Summit! Here's a quick recap of the insightful events in February! Read the latest edition of the #G20 Secretariat Newsletter & stay updated on what's next in line: Click here 👉🏼 bit.ly/3TbYbjB",
             "imgContent": "https://images.kooapp.com/transcode_input/19329484/315d2261-09a4-4b67-9daa-cd0153e29e19.jpg"
           },
-          "hastags": ["#iym2023", "#g20india"]
+          "days":"3d",
+          "hastags": [
+            "#iym2023",
+            "#g20india"
+          ]
         },
         {
           "postsID": 3,
@@ -271,56 +480,155 @@
             "textContent": " #G20India aims to celebrate the power culture holds in uniting the world. 🌏Congratulations to team #RRR & #ElephantWhisperers.",
             "imgContent": "https://images.kooapp.com/transcode_input/19329484/3d815fd7-87d0-45ab-bbf4-13f025c49144.jpg"
           },
-          "hastags": ["#G20India", "#RRR", "#ElephantWhisperers"]
+          "days":"5d",
+          "hastags": [
+            "#G20India",
+            "#RRR",
+            "#ElephantWhisperers"
+          ]
         }
       ]
     },
     {
-      "id": 6,
-      "name": "Prateek Shukla",
-      "username": "prateekMasai",
-      "img": "https://media.licdn.com/dms/image/C5603AQH6YLJNpKYptw/profile-displayphoto-shrink_400_400/0/1645321272614?e=1684368000&v=beta&t=goF5u7DW133mhUVQTzZMW1JVj363xwmOrJ28FX1Ixgg",
-      "des": "Transforming Higher Education | Tedx Speaker. Also, Talks about #impact, #engineers, #educationforall, #highereducation, and #hiringdevelopers",
-      "followers": "17.4K",
-      "following": 10,
-      "category": "Education",
+      "id": 9,
+      "name": "Narendra Modi",
+      "username": "narendra modi",
+      "category": "Politician",
+      "des": "India government official | Prime Minister of India",
+      "followers": "85M",
+      "following": 0,
+      "userFollowState":true,
+      "img": "https://wallpaperaccess.com/full/1917934.jpg",
       "posts": [
         {
           "postsID": 1,
-          "likes": 287,
-          "comments": 19,
-          "re-share": 7,
+          "likes": 2022,
+          "comments": 50,
+          "reKoo": 80,
           "content": {
-            "textContent": "Super stoked to announce our Series A funding - an imp milestone in our mission to unlock 🇮🇳's untapped potential, regardless of their background. 💪This Series A empowers us to expand access to high-quality education to 1000s of students & transform lives. We are excited to have Omidyar Network India (Siddharth Nautiyal, Namita Dalmia and Neel Pattani ) as a partner on this journey, their keen understanding of the state of education at a global level will bring immense value.",
-            "imgContent": "https://media.licdn.com/dms/image/sync/C5627AQH6vNwTVblbtw/articleshare-shrink_800/0/1677705782538?e=1679428800&v=beta&t=V_EA_xmn4dnhWBe4Ya41QeycHjiksc2uxuJnXrmJl9g"
-          },
-          "hastags": ["#AcademyAwards"]
-        },
-        {
-          "postsID": 2,
-          "likes": 207,
-          "comments": 10,
-          "re-share": 1,
-          "content": {
-            "textContent": "Goals without routines are wishes; routines without goals are aimless. - Verne Harnish",
+            "textContent": "The PM MITRA mega textile parks will provide state-of-the-art infrastructure for the textiles sector, attracts investment of crores and create lakhs of jobs. It will be a great example of 'Make in India' and 'Make For the World.' #PragatiKaPMMitra",
             "imgContent": ""
           },
-          "hastags": ["#highereducation"]
+          "days":"1d",
+          "hastags": [
+            "#PragatiKaPMMitra"
+          ]
+        },{
+          "postsID": 2,
+          "likes": 1472,
+          "comments": 217,
+          "reKoo": 75,
+          "content": {
+            "textContent": "Dharwad has a strong link with culture, literature and learning. The IIT will strengthen the educational infrastructure and also draw best talent here.",
+            "imgContent": "https://pbs.twimg.com/media/FrCBsc2XoAANoRV?format=jpg&name=small"
+          },
+          "days":"2d",
+          "hastags": [
+            
+          ]
         },
         {
           "postsID": 3,
-          "likes": 76,
-          "comments": 5,
-          "re-share": 12,
+          "likes": 1422,
+          "comments": 87,
+          "reKoo": 30,
           "content": {
-            "textContent": " We are thrilled to announce Masai partnership with Government of Karnatakas initiative Karnataka Digital Economy Mission (KDEM) and Karnataka Skill Development Corporation (KSDC) - to revolutionise the game for women in tech!🚀🚀. Happy Women's Day, Everyone! ❤️",
-            "imgContent": "https://media.licdn.com/dms/image/C561FAQHNRCE0toxg-Q/feedshare-document-images_480/1/1678281515037?e=1679529600&v=beta&t=2OpzMLEEOypQ7DWdM-p351FAps3XM0VBVpYgGQhC0vs"
+            "textContent": "PM MITRA mega textile parks will boost the textiles sector in line with 5F (Farm to Fibre to Factory to Fashion to Foreign) vision. Glad to share that PM MITRA mega textile parks would be set up in Tamil Nadu, Telangana, Karnataka, Maharashtra, Gujarat, MP and UP.",
+            "imgContent": ""
           },
-          "hastags": ["#highereducation", "#AcademyAwards"]
+          "days":"3d",
+          "hastags": [
+            
+          ]
+        },{
+          "postsID": 4,
+          "likes": 5472,
+          "comments": 417,
+          "reKoo": 45,
+          "content": {
+            "textContent": "A fruitful meeting with Mr.PekkaLundmark in which we discussed aspects relating to technology and leveraging it for the welfare of society. We also discussed India’s strides in building next generation digital infrastructure.",
+            "imgContent": "https://pbs.twimg.com/media/FrG1movaUAQUraF?format=jpg&name=4096x4096"
+          },
+          "days":"3d",
+          "hastags": [
+            
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Sanjay Dutt",
+      "username": "duttsanjay",
+      "category": "Actor | Producer",
+      "des": "Family & Films keep me going.",
+      "followers": "85M",
+      "following": 0,
+      "userFollowState":true,
+      "img": "https://e1.pxfuel.com/desktop-wallpaper/364/687/desktop-wallpaper-sanjay-dutt-gallery-sanjay-dutta-thumbnail.jpg",
+      "posts": [
+        {
+          "postsID": 1,
+          "likes": 2022,
+          "comments": 50,
+          "reKoo": 80,
+          "content": {
+            "textContent": "Happy birthday my brother, son, family Dir_Lokesh, may God give you more success, peace, happiness and wealth, I am always with you for life, stay blessed. Love you!",
+            "imgContent": "https://pbs.twimg.com/media/FrJ3NQkXwAA4G4b?format=jpg&name=900x900"
+          },
+          "days":"1d",
+          "hastags": [
+           
+          ]
+        },{
+          "postsID": 2,
+          "likes": 1472,
+          "comments": 217,
+          "reKoo": 75,
+          "content": {
+            "textContent": "Rest in peace #SatishKaushik. You will be deeply missed by so many. Sending love and prayers to your family and loved ones during this difficult time. 🙏🏻",
+            "imgContent": ""
+          },
+          "days":"2d",
+          "hastags": [
+            
+          ]
+        },
+        {
+          "postsID": 3,
+          "likes": 1422,
+          "comments": 87,
+          "reKoo": 30,
+          "content": {
+            "textContent": "Let's celebrate the joy of Holi with love and happiness in our hearts. Wishing you a happy and colorful Holi!",
+            "imgContent": "https://pbs.twimg.com/media/FqmjAnzXwAM63Su?format=jpg&name=small"
+          },
+          "days":"3d",
+          "hastags": [
+            "#HOLI"
+          ]
+        },{
+          "postsID": 4,
+          "likes": 5472,
+          "comments": 417,
+          "reKoo": 45,
+          "content": {
+            "textContent": "A fruitful meeting with Mr.PekkaLundmark in which we discussed aspects relating to technology and leveraging it for the welfare of society. We also discussed India’s strides in building next generation digital infrastructure.",
+            "imgContent": "https://pbs.twimg.com/media/FrG1movaUAQUraF?format=jpg&name=4096x4096"
+          },
+          "days":"3d",
+          "hastags": [
+            
+          ]
         }
       ]
     }
   ],
+
+  "followData":[
+   
+  ],
+
 
   "allHastags": [
     "#g20india",

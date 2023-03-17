@@ -10,9 +10,9 @@ import {RxLoop} from "react-icons/rx";
 import {RiShareForwardLine} from "react-icons/ri";
 
 
-function FeedPost({name,img,username,category,days,content,hastags,likes,comments,reKoo}) {
+function FeedPost({name,img,username,category,days,content,hastags,likes,comments,reKoo,userFollowState}) {
     const myHashTags = hastags.join(" ");
-  return (
+  return userFollowState == false ? (
         <Card p={'2%'} m={'2%'} textAlign={'left'} >
            <Box >
             <HStack justifyContent={'space-between'}>
@@ -23,7 +23,7 @@ function FeedPost({name,img,username,category,days,content,hastags,likes,comment
                     </VStack>
             </HStack>
             <HStack><Text color={'#888888'} fontSize='14px' >{days}</Text>
-                    <MdPersonAddAlt color={'#888888'} />
+                    {userFollowState == true ? <MdPersonAddAlt color={'#888888'} /> : <></>}
                     <MdMoreVert color={'#888888'} />
             </HStack>
             </HStack>
@@ -62,6 +62,8 @@ function FeedPost({name,img,username,category,days,content,hastags,likes,comment
             </HStack></Box>
            </Box>
         </Card>
+  ):(
+    <div></div>
   )
 }
 
