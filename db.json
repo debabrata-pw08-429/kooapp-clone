@@ -38,34 +38,15 @@
       "id": 2
     }
   ],
-  "loggedUser": [
-    {
-      "id": 1,
-      "name": "Syed",
-      "image": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61nlaq18GGL._SY679_.jpg"
-    }
-  ],
-  "user": {
-    "username": "",
-    "email": "",
-    "password": "",
-    "profileImg": "[\"blob:http://localhost:3000/a7185f48-3bcc-405b-bd11-469e08dba76f\",\"blob:http://localhost:3000/9db789be-f575-40d6-bc58-1f117e44020e\",null,null,null,null,null,null,null,null]",
-    "loginDetails": {
-      "isAuth": false,
-      "token": "",
-      "isLoading": false,
-      "isError": false
-    },
-    "followers": {
-      "count": 0,
-      "people": []
-    },
-    "following": {
-      "count": 0,
-      "people": []
-    },
-    "postsCreated": [],
-    "hastags": []
+  "loggedUser": {
+    "sub": "108804342027546650011",
+    "name": "Debabrata Hembram",
+    "given_name": "Debabrata",
+    "family_name": "Hembram",
+    "picture": "https://lh3.googleusercontent.com/a/AGNmyxYALen5fWuUsL7w3yTehx1CjX_nnBbB5jzkL8UqKQ=s96-c",
+    "email": "chintuthecoder@gmail.com",
+    "email_verified": true,
+    "locale": "en"
   },
   "peopleData": [
     {

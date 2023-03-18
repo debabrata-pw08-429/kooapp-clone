@@ -1,4 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { Login } from "./Login";
+import { googleLogout } from "@react-oauth/google";
+
 import {
   Box,
   Button,
@@ -28,11 +31,25 @@ import dropdown from "../Images/dropdown.svg";
 import logout from "../Images/logout.svg";
 import notifications from "../Images/notifications.svg";
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { log_out } from "../Redux/login/action";
 
 const SideBar = () => {
-  const [isAuth, setIsAuth] = useState(true);
   const { isOpen, onOpen, onClose } = useDisclosure();
   let navigate = useNavigate();
+  let dispatch = useDispatch();
+  let isAuth = useSelector((state) => {
+    return state.loginReducer.isAuth;
+  });
+
+  let loggedUser_Data = useSelector((state) => {
+    return state;
+  });
+
+  let fullName = useSelector((state) => {
+    return state.loginReducer.name;
+  });
+
   return (
     //Main div--
     <Box className="sidebar-main" w="350px">
@@ -80,7 +97,7 @@ const SideBar = () => {
               borderRadius="50px"
             >
               <Image src={acct} alt="" marginRight="8px" />
-              Keerthi Malini
+              {fullName}
               <Popover>
                 <PopoverTrigger>
                   <Button color="rgb(136,136,136)" border="none" bg="white">
@@ -231,7 +248,7 @@ const SideBar = () => {
                     color="white"
                     onClick={() => {
                       onClose();
-                      setIsAuth(false);
+                      dispatch(log_out(loggedUser_Data));
                     }}
                   >
                     Yes
@@ -257,22 +274,21 @@ const SideBar = () => {
           >
             + Koo
           </Button>
-          <Button
-            onClick={() => {
-              setIsAuth(true);
-            }}
-            display={isAuth ? "none" : "block"}
-            bg="rgb(75,75,75)"
-            color="white"
-            border="none"
-            borderRadius="50px"
-            p="8px"
-            fontSize="19px"
-            w="195px"
-            h="48px"
-          >
-            Sign In
-          </Button>
+          <Login>
+            <Button
+              display={isAuth ? "none" : "block"}
+              bg="rgb(75,75,75)"
+              color="white"
+              border="none"
+              borderRadius="50px"
+              p="8px"
+              fontSize="19px"
+              w="195px"
+              h="48px"
+            >
+              Sign In
+            </Button>
+          </Login>
         </Flex>
       </Flex>
     </Box>
