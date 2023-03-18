@@ -60,6 +60,42 @@ function FeedPost({id1,postsID,name,img,username,category,days,content,hastags,l
         dispatch(putData(send,id1));
         // dispatch(redData(x))
       }
+      else{
+        likes=likes-1;
+        userLike=false;
+        console.log(likes,"L");
+        let q=-1;
+        let x = [
+          ...peopleData.map((e,idx) => {
+            if (e.id === id1) {
+              q=idx;
+              return {
+                ...e,
+                posts: e.posts.map((e1) => {
+                  if (e1.postsID === postsID) {
+                    return {
+                      ...e1,
+                      likes: likes,
+                      userLike: false,
+                    };
+                  } else {
+                    return e1;
+                  }
+                }),
+              };
+            } 
+                // else {
+        //       return e;
+        //     }
+          }),
+        ];
+        console.log(x);
+        console.log(q,"qqqq")
+        console.log(x[q],"changedddd")
+        let send=x[q];
+        dispatch(putData(send,id1));
+        // dispatch(redData(x))
+      }
       
     }
 
