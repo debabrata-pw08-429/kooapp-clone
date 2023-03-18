@@ -37,7 +37,6 @@ import { log_out } from "../Redux/login/action";
 const SideBar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   let navigate = useNavigate();
-<<<<<<< HEAD
   let dispatch = useDispatch();
   let isAuth = useSelector((state) => {
     return state.loginReducer.isAuth;
@@ -51,10 +50,6 @@ const SideBar = () => {
     return state.loginReducer.name;
   });
 
-=======
-  let winSize=window.innerWidth;
-  console.log(winSize)
->>>>>>> c42758d90d353ee0a83fdfb74ecf25bd6772d806
   return (
     //Main div--
     <Box>
@@ -104,11 +99,7 @@ const SideBar = () => {
               borderRadius="50px"
             >
               <Image src={acct} alt="" marginRight="8px" />
-<<<<<<< HEAD
               {fullName}
-=======
-              <span className="text-fields">Keerthi malini</span>
->>>>>>> c42758d90d353ee0a83fdfb74ecf25bd6772d806
               <Popover>
                 <PopoverTrigger>
                   <Button color="rgb(136,136,136)" border="none" bg="white" display={['none','none','block']}>
