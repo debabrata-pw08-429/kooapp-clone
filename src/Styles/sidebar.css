@@ -22,3 +22,10 @@
     justify-content:"flex-start";
     border-radius: '50px' 
 }
+
+@media (max-width:650px) {
+    .text-fields{
+        display: none;
+    }    
+
+}

@@ -49,7 +49,7 @@
     "username": "",
     "email": "",
     "password": "",
-    "profileImg": "[\"blob:http://localhost:3000/a7185f48-3bcc-405b-bd11-469e08dba76f\",\"blob:http://localhost:3000/9db789be-f575-40d6-bc58-1f117e44020e\",null,null,null,null,null,null,null,null]",
+    "profileImg": "[null,null,null,null,null,null,null,null,null,null]",
     "loginDetails": {
       "isAuth": false,
       "token": "",

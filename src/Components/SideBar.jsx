@@ -33,6 +33,8 @@ const SideBar = () => {
   const [isAuth, setIsAuth] = useState(true);
   const { isOpen, onOpen, onClose } = useDisclosure();
   let navigate = useNavigate();
+  let winSize=window.innerWidth;
+  console.log(winSize)
   return (
     //Main div--
     <Box className="sidebar-main" w="350px">
@@ -45,11 +47,11 @@ const SideBar = () => {
         {/* Flex for sidebar options */}
         <Flex direction="column" justifyContent="center" mt="35px" mb="20px">
           {/* Feed option */}
-          <Box textAlign="left" m=" 8px" h="48px">
+          <Box textAlign="left" m=" 8px" h="48px" >
             <Button
               color="rgb(136,136,136)"
               border="none"
-              bg="white"
+              bg={['none','none','white']}
               _hover={{ bg: "#ebedf0" }}
               w="150px"
               h="48px"
@@ -57,7 +59,7 @@ const SideBar = () => {
               borderRadius="50px"
             >
               <Image src={feedIcon} alt="" marginRight="8px" />
-              Feed
+              <span className="text-fields">Feed</span>
             </Button>
           </Box>
 
@@ -72,19 +74,19 @@ const SideBar = () => {
             <Button
               color="rgb(136,136,136)"
               border="none"
-              bg="white"
               _hover={{ bg: "#ebedf0" }}
               w="150px"
               h="48px"
               justifyContent="flex-start"
+              bg={['none','none','white']}
               borderRadius="50px"
             >
               <Image src={acct} alt="" marginRight="8px" />
-              Keerthi Malini
-              <Popover>
+              <span className="text-fields">Keerthi malini</span>
+              <Popover display={['none','none','block']}>
                 <PopoverTrigger>
                   <Button color="rgb(136,136,136)" border="none" bg="white">
-                    <Image src={dropdown} />
+                    <Image src={dropdown} display={['none','none','block']}/>
                   </Button>
                 </PopoverTrigger>
                 <PopoverArrow />
@@ -95,9 +97,10 @@ const SideBar = () => {
                     boxShadow="0 0 10px rgb(136,136,136)"
                     borderRadius="15px"
                     textAlign="center"
+                    display={['none','none','block']}
                   >
-                    <PopoverBody>
-                      <Button color="rgb(136,136,136)" border="none" bg="white">
+                    <PopoverBody display={['none','none','block']}>
+                      <Button color="rgb(136,136,136)" border="none" bg="white" >
                         Add Account +
                       </Button>
                     </PopoverBody>
@@ -112,7 +115,7 @@ const SideBar = () => {
             <Button
               color="rgb(136,136,136)"
               border="none"
-              bg="white"
+              bg={['none','none','white']}
               _hover={{ bg: "#ebedf0" }}
               w="150px"
               h="48px"
@@ -120,7 +123,7 @@ const SideBar = () => {
               borderRadius="50px"
             >
               <Image src={hashtag} alt="" marginRight="8px" />
-              Explore
+              <span className="text-fields">Explore</span>
             </Button>
           </Box>
 
@@ -129,7 +132,7 @@ const SideBar = () => {
             <Button
               color="rgb(136,136,136)"
               border="none"
-              bg="white"
+              bg={['none','none','white']}
               _hover={{ bg: "#ebedf0" }}
               w="150px"
               h="48px"
@@ -137,7 +140,7 @@ const SideBar = () => {
               borderRadius="50px"
             >
               <Image src={lang} alt="" marginRight="8px" />
-              Language
+              <span className="text-fields">Language</span>
             </Button>
           </Box>
 
@@ -146,7 +149,7 @@ const SideBar = () => {
             <Button
               color="rgb(136,136,136)"
               border="none"
-              bg="white"
+              bg={['none','none','white']}
               _hover={{ bg: "#ebedf0" }}
               w="150px"
               h="48px"
@@ -154,7 +157,7 @@ const SideBar = () => {
               borderRadius="50px"
             >
               <Image src={search} alt="" marginRight="8px" />
-              Search
+              <span className="text-fields">Search</span>
             </Button>
           </Box>
 
@@ -168,7 +171,7 @@ const SideBar = () => {
             <Button
               color="rgb(136,136,136)"
               border="none"
-              bg="white"
+              bg={['none','none','white']}
               _hover={{ bg: "#ebedf0" }}
               w="150px"
               h="48px"
@@ -176,7 +179,7 @@ const SideBar = () => {
               borderRadius="50px"
             >
               <Image src={notifications} alt="" marginRight="8px" />
-              Notifications
+              <span className="text-fields">Notifications</span>
             </Button>
           </Box>
 
@@ -191,7 +194,7 @@ const SideBar = () => {
               onClick={onOpen}
               color="rgb(136,136,136)"
               border="none"
-              bg="white"
+              bg={['none','none','white']}
               _hover={{ bg: "#ebedf0" }}
               w="150px"
               h="48px"
@@ -199,7 +202,7 @@ const SideBar = () => {
               borderRadius="50px"
             >
               <Image src={logout} alt="" marginRight="8px" />
-              Logout
+              <span className="text-fields">Logout</span>
             </Button>
             <Modal isOpen={isOpen} onClose={onClose} isCentered size="xs">
               <ModalOverlay />
@@ -248,6 +251,7 @@ const SideBar = () => {
             mb={isAuth ? "0" : "80px"}
             bg="rgb(75,75,75)"
             color="white"
+            display={['none','none','block']}
             border="none"
             borderRadius="50px"
             p="8px"
