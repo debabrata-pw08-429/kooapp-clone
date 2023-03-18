@@ -37,7 +37,9 @@ const SideBar = () => {
   console.log(winSize)
   return (
     //Main div--
-    <Box className="sidebar-main" w="350px">
+    <Box>
+
+     <Box className="sidebar-main" w="350px">
       <Flex direction="column" m="20px">
         {/* Koo logo-- */}
         <Box w="163px" h="73px">
@@ -51,7 +53,7 @@ const SideBar = () => {
             <Button
               color="rgb(136,136,136)"
               border="none"
-              bg={['none','none','white']}
+              bg={['none','none','none','white']}
               _hover={{ bg: "#ebedf0" }}
               w="150px"
               h="48px"
@@ -83,9 +85,9 @@ const SideBar = () => {
             >
               <Image src={acct} alt="" marginRight="8px" />
               <span className="text-fields">Keerthi malini</span>
-              <Popover display={['none','none','block']}>
+              <Popover>
                 <PopoverTrigger>
-                  <Button color="rgb(136,136,136)" border="none" bg="white">
+                  <Button color="rgb(136,136,136)" border="none" bg="white" display={['none','none','block']}>
                     <Image src={dropdown} display={['none','none','block']}/>
                   </Button>
                 </PopoverTrigger>
@@ -279,6 +281,32 @@ const SideBar = () => {
           </Button>
         </Flex>
       </Flex>
+     </Box>
+     <Box className="sidebar-sub" 
+     w='100%' 
+     h='56px' 
+     display='flex' 
+     justifyContent='space-around'
+     position='fixed'
+     alignItems='center'
+     zIndex='99'
+     bg='white'
+     bottom='0'
+     borderTop='1px solid #e8e8e3'
+     >
+      <Box w='48px' h='48px' display='flex' alignItems='center' >
+        <Image w='34px' h='34px' src={feedIcon}/>
+      </Box>
+      <Box w='48px' h='48px' display='flex' alignItems='center' >
+      <Image w='34px' h='34px' src={hashtag}/>
+      </Box>
+      <Box w='48px' h='48px' display='flex' alignItems='center' >
+      <Image w='34px' h='34px' src={search}/>
+      </Box>
+      <Box w='48px' h='48px' display='flex' alignItems='center' >
+      <Image w='34px' h='34px' src={notifications}/>
+      </Box>               
+     </Box>
     </Box>
   );
 };
