@@ -36,11 +36,11 @@ function Feed() {
  
   
   let followData = useSelector(state=>state.PeopleReducer.followData)
-
+  console.log(peopleData,"checking after like peopleData");
   return (
     <div>
       <Flex w="100%">
-        <Box w="26%" mt="50px">
+        <Box w="26%" paddingLeft={'2%'}>
           {/* <LeftSidebar /> */}
           <SideBar/>
         </Box>
@@ -66,7 +66,8 @@ function Feed() {
 
           
           <HStack marginTop={'-3%'} marginLeft={'2%'} marginBottom={'5%'}  >
-            { peopleData.map((e)=>{
+            { 
+            peopleData.map((e)=>{
                 let {name,category,img,userFollowState,id}=e;
                 return <ProfileComp id1={id} name={name} category={category} img={img} userFollowState={userFollowState} setTrueCount={setTrueCount}/>
             })}
@@ -75,29 +76,22 @@ function Feed() {
 
 
           {peopleData.map((e)=>{
-                let {name,username,category,img,posts,userFollowState}=e;
+                let {name,username,category,img,posts,userFollowState,id}=e;
                 return (<div >
                 {posts.map((e)=>{
-                  let {days,content,hastags,likes,comments,reKoo}=e;
-                  return <FeedPost name={name} category={category} img={img} userFollowState={userFollowState} username={username} days={days} content={content} hastags={hastags} likes={likes} comments={comments} reKoo={reKoo}/>
+                  let {postsID,days,content,hastags,likes,comments,reKoo,userLike}=e;
+                  return <FeedPost id1={id} postsID={postsID} name={name} category={category} userLike={userLike} img={img} userFollowState={userFollowState} username={username} days={days} content={content} hastags={hastags} likes={likes} comments={comments} reKoo={reKoo}/>
                 })}
                 </div>)
             })}
 
 
-
-
-
-
-
-
-
          
         </Box>
 
-        <Box w="32%" mt="50px">
-          <RightSidebar />{" "}
-          {/* <Rsidebar/> */}
+        <Box w="32%" paddingRight={'6%'}    >
+          {/* <RightSidebar />{" "} */}
+          <Rsidebar/>
         </Box>
       </Flex>
     </div>
