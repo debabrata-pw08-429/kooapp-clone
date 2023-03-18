@@ -169,10 +169,12 @@ const Bio = () => {
                             <Button
                                 w="158PX"
                                 h="35px"
-                                mt="-75%"
-                                ml="80%"
-                                mb="50%"
+                                position='absolute'
+                                top='10px'
+                                right='10px'
                                 bg="none"
+                                transform='translate(50%,-50%)'
+                                zIndex='1'
                                 color="white"
                                 fontSize="40px"
                                 _hover={{ backgroundColor: "transparent" }}

@@ -22,3 +22,27 @@
     justify-content:"flex-start";
     border-radius: '50px' 
 }
+
+@media (max-width:760px) {
+      
+    .sidebar-main{
+        display: none;
+    }  
+
+}
+@media (min-width:760px) and (max-width:900px) {
+    .text-fields{
+        display: none;
+    } 
+    .sidebar-main{
+        display: none;
+    }  
+
+}
+@media (min-width:900px) {
+    
+    .sidebar-sub{
+        display: none;
+    }  
+
+}
