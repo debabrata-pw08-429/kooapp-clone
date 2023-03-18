@@ -1,4 +1,5 @@
 import "../Styles/stats.css";
+import Navbar from "../Components/Navbar";
 import {
   Box,
   Heading,
@@ -23,6 +24,7 @@ import Section1 from "../Components/Section1";
 const Home = () => {
   return (
     <div>
+      <Navbar />
       <Stack>
         <HStack>
           <Section1 />
