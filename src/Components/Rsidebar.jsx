@@ -1,12 +1,9 @@
 import { SearchIcon, ArrowForwardIcon } from "@chakra-ui/icons";
-import { AiOutlinePlusCircle } from "react-icons/ai";
 import React, { useState, useEffect } from "react";
 import UserComponent from "./SearchCard";
 import axios from "axios";
 
 import {
-  Avatar,
-  AvatarGroup,
   Box,
   Flex,
   Heading,
@@ -23,6 +20,7 @@ import {
   PopoverArrow,
   PopoverCloseButton,
 } from "@chakra-ui/react";
+import RsidebarCard from "./RsidebarCard";
 
 const Rsidebar = () => {
   const initialFocusRef = React.useRef();
@@ -42,6 +40,13 @@ const Rsidebar = () => {
     getInitialState();
   }, []);
 
+  const hashData = [
+    { hastag: "#amritpalsingh" },
+    { hastag: "#manishkashyap" },
+    { hastag: "#g20india" },
+    { hastag: "#indvsaus" },
+  ];
+
   const filterSearch = () => {
     let filtered = dataJSON.filter((val) => {
       if (searchQuery == "") {
@@ -52,7 +57,6 @@ const Rsidebar = () => {
     });
 
     setqueryData(filtered);
-    console.log("filtered", filtered);
   };
 
   return (
@@ -123,202 +127,9 @@ const Rsidebar = () => {
         mt={"30px"}
         className="allCardContainer"
       >
-        <Box className="card">
-          <Flex
-            justifyContent={"space-between"}
-            p="5px 20px"
-            borderRadius={"20px"}
-            width="95%"
-            margin={"auto"}
-            alignItems="center"
-            bg={"rgb(248,247,243)"}
-          >
-            <Box>
-              <Flex direction={"column"}>
-                <Heading size={"25px"} fontWeight="600">
-                  #iym2023
-                </Heading>
-                <Box>
-                  <AvatarGroup size="sm" max={3} p="10px">
-                    <Avatar
-                      name="Ryan Florence"
-                      src="https://bit.ly/ryan-florence"
-                    />
-                    <Avatar
-                      name="Segun Adebayo"
-                      src="https://bit.ly/sage-adebayo"
-                    />
-                    <Avatar
-                      name="Kent Dodds"
-                      src="https://bit.ly/kent-c-dodds"
-                    />
-                    <Avatar
-                      name="Prosper Otemuyiwa"
-                      src="https://bit.ly/prosper-baba"
-                    />
-                    <Avatar
-                      name="Christian Nwamba"
-                      src="https://bit.ly/code-beast"
-                    />
-                  </AvatarGroup>
-                </Box>
-                <Box fontSize={"12px"} color="rgb(136,138,160)">
-                  Trending Locally
-                </Box>
-              </Flex>
-            </Box>
-            <Box>
-              <AiOutlinePlusCircle size={"30px"} />
-            </Box>
-          </Flex>
-        </Box>
-        <Box className="card">
-          <Flex
-            justifyContent={"space-between"}
-            p="5px 20px"
-            borderRadius={"20px"}
-            width="95%"
-            margin={"auto"}
-            alignItems="center"
-            bg={"rgb(248,247,243)"}
-          >
-            <Box>
-              <Flex direction={"column"}>
-                <Heading size={"25px"} fontWeight="600">
-                  #iym2023
-                </Heading>
-                <Box>
-                  <AvatarGroup size="sm" max={3} p="10px">
-                    <Avatar
-                      name="Ryan Florence"
-                      src="https://bit.ly/ryan-florence"
-                    />
-                    <Avatar
-                      name="Segun Adebayo"
-                      src="https://bit.ly/sage-adebayo"
-                    />
-                    <Avatar
-                      name="Kent Dodds"
-                      src="https://bit.ly/kent-c-dodds"
-                    />
-                    <Avatar
-                      name="Prosper Otemuyiwa"
-                      src="https://bit.ly/prosper-baba"
-                    />
-                    <Avatar
-                      name="Christian Nwamba"
-                      src="https://bit.ly/code-beast"
-                    />
-                  </AvatarGroup>
-                </Box>
-                <Box fontSize={"12px"} color="rgb(136,138,160)">
-                  Trending Locally
-                </Box>
-              </Flex>
-            </Box>
-            <Box>
-              <AiOutlinePlusCircle size={"30px"} />
-            </Box>
-          </Flex>
-        </Box>
-        <Box className="card">
-          <Flex
-            justifyContent={"space-between"}
-            p="5px 20px"
-            borderRadius={"20px"}
-            width="95%"
-            margin={"auto"}
-            alignItems="center"
-            bg={"rgb(248,247,243)"}
-          >
-            <Box>
-              <Flex direction={"column"}>
-                <Heading size={"25px"} fontWeight="600">
-                  #iym2023
-                </Heading>
-                <Box>
-                  <AvatarGroup size="sm" max={3} p="10px">
-                    <Avatar
-                      name="Ryan Florence"
-                      src="https://bit.ly/ryan-florence"
-                    />
-                    <Avatar
-                      name="Segun Adebayo"
-                      src="https://bit.ly/sage-adebayo"
-                    />
-                    <Avatar
-                      name="Kent Dodds"
-                      src="https://bit.ly/kent-c-dodds"
-                    />
-                    <Avatar
-                      name="Prosper Otemuyiwa"
-                      src="https://bit.ly/prosper-baba"
-                    />
-                    <Avatar
-                      name="Christian Nwamba"
-                      src="https://bit.ly/code-beast"
-                    />
-                  </AvatarGroup>
-                </Box>
-                <Box fontSize={"12px"} color="rgb(136,138,160)">
-                  Trending Locally
-                </Box>
-              </Flex>
-            </Box>
-            <Box>
-              <AiOutlinePlusCircle size={"30px"} />
-            </Box>
-          </Flex>
-        </Box>
-        <Box className="card">
-          <Flex
-            justifyContent={"space-between"}
-            p="5px 20px"
-            borderRadius={"20px"}
-            width="95%"
-            margin={"auto"}
-            alignItems="center"
-            bg={"rgb(248,247,243)"}
-          >
-            <Box>
-              <Flex direction={"column"}>
-                <Heading size={"25px"} fontWeight="600">
-                  #iym2023
-                </Heading>
-                <Box>
-                  <AvatarGroup size="sm" max={3} p="10px">
-                    <Avatar
-                      name="Ryan Florence"
-                      src="https://bit.ly/ryan-florence"
-                    />
-                    <Avatar
-                      name="Segun Adebayo"
-                      src="https://bit.ly/sage-adebayo"
-                    />
-                    <Avatar
-                      name="Kent Dodds"
-                      src="https://bit.ly/kent-c-dodds"
-                    />
-                    <Avatar
-                      name="Prosper Otemuyiwa"
-                      src="https://bit.ly/prosper-baba"
-                    />
-                    <Avatar
-                      name="Christian Nwamba"
-                      src="https://bit.ly/code-beast"
-                    />
-                  </AvatarGroup>
-                </Box>
-                <Box fontSize={"12px"} color="rgb(136,138,160)">
-                  Trending Locally
-                </Box>
-              </Flex>
-            </Box>
-            <Box>
-              <AiOutlinePlusCircle size={"30px"} />
-            </Box>
-          </Flex>
-        </Box>
+        {hashData.map((ele) => {
+          return <RsidebarCard ele={ele} />;
+        })}
       </Flex>
       <Box mt="1rem">
         <Flex

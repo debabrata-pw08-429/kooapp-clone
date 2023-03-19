@@ -36,7 +36,12 @@ function Footer({ links }) {
             </Text>
           </Box>
 
-          <Box display="flex" textAlign="left" order={[1, 2]}>
+          <Box
+            display="flex"
+            textAlign="left"
+            order={[1, 2]}
+            mb={["12px", null]}
+          >
             <Box mr={6}>
               <Text fontSize="sm" fontWeight="bold" mb={2}>
                 Quick Links
