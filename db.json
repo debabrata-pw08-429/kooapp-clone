@@ -73,12 +73,12 @@
     }
   ],
   "loggedUser": {
-    "sub": "108426521460426161266",
-    "name": "Gouse Syed Mohammed",
-    "given_name": "Gouse",
-    "family_name": "Syed Mohammed",
-    "picture": "https://lh3.googleusercontent.com/a/AGNmyxZl3O2nf_fYuxut-22kATbU564ugIAYxXFWB6nY=s96-c",
-    "email": "gousesyed97@gmail.com",
+    "sub": "108804342027546650011",
+    "name": "Debabrata Hembram",
+    "given_name": "Debabrata",
+    "family_name": "Hembram",
+    "picture": "https://lh3.googleusercontent.com/a/AGNmyxYALen5fWuUsL7w3yTehx1CjX_nnBbB5jzkL8UqKQ=s96-c",
+    "email": "chintuthecoder@gmail.com",
     "email_verified": true,
     "locale": "en"
   },
@@ -90,7 +90,7 @@
       "img": "https://images.kooapp.com/koo-profile-media/profiles/36613113/profile.jpeg?tr=n-dp_square",
       "followers": "188.5K",
       "following": 1010,
-      "userFollowState": true,
+      "userFollowState": false,
       "category": "Politician",
       "posts": [
         {
@@ -169,8 +169,8 @@
         },
         {
           "postsID": 4,
-          "userLike": false,
-          "likes": 998,
+          "userLike": true,
+          "likes": 999,
           "comments": 19,
           "re-share": 7,
           "days": "1d",
@@ -186,8 +186,8 @@
         },
         {
           "postsID": 2,
-          "userLike": false,
-          "likes": 207,
+          "userLike": true,
+          "likes": 208,
           "comments": 10,
           "re-share": 1,
           "content": {
