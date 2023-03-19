@@ -73,12 +73,21 @@
     }
   ],
   "loggedUser": {
+<<<<<<< HEAD
+    "sub": "108804342027546650011",
+    "name": "Debabrata Hembram",
+    "given_name": "Debabrata",
+    "family_name": "Hembram",
+    "picture": "https://lh3.googleusercontent.com/a/AGNmyxYALen5fWuUsL7w3yTehx1CjX_nnBbB5jzkL8UqKQ=s96-c",
+    "email": "chintuthecoder@gmail.com",
+=======
     "sub": "107119568014187088956",
     "name": "keerthi malini",
     "given_name": "keerthi",
     "family_name": "malini",
     "picture": "https://lh3.googleusercontent.com/a/AGNmyxYIuBNEEVPpLYT_0lwCLQKGC1CeooT5Y6lub15h=s96-c",
     "email": "keerthimalini6699@gmail.com",
+>>>>>>> e4a7faba4056aa2b92c2819290cd9d76b7580eeb
     "email_verified": true,
     "locale": "en"
   },
@@ -90,7 +99,7 @@
       "img": "https://images.kooapp.com/koo-profile-media/profiles/36613113/profile.jpeg?tr=n-dp_square",
       "followers": "188.5K",
       "following": 1010,
-      "userFollowState": true,
+      "userFollowState": false,
       "category": "Politician",
       "posts": [
         {
@@ -169,8 +178,8 @@
         },
         {
           "postsID": 4,
-          "userLike": false,
-          "likes": 998,
+          "userLike": true,
+          "likes": 999,
           "comments": 19,
           "re-share": 7,
           "days": "1d",
@@ -186,8 +195,8 @@
         },
         {
           "postsID": 2,
-          "userLike": false,
-          "likes": 207,
+          "userLike": true,
+          "likes": 208,
           "comments": 10,
           "re-share": 1,
           "content": {

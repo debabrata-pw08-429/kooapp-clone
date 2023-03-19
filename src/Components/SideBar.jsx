@@ -56,8 +56,8 @@ const SideBar = () => {
 
   return (
     //Main div--
-    <Box>
-      <Box className="sidebar-main" w="350px" h='700px' position='sticky' top='0'>
+    <Box position="sticky" top="0">
+      <Box className="sidebar-main" w="350px" h="700px">
         <Flex direction="column" m="20px">
           {/* Koo logo-- */}
           <Box w="163px" h="73px" ml={['0','0','20px','0']}>
@@ -274,6 +274,7 @@ const SideBar = () => {
                       onClick={() => {
                         onClose();
                         dispatch(log_out(loggedUser_Data));
+                        window.location.reload();
                       }}
                     >
                       Yes

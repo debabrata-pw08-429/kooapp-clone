@@ -4,42 +4,46 @@ import "../Styles/stats.css";
 const Section3 = () => {
   return (
     <>
-      <div class="Home_numberSection__tf0Ni">
+      <div className="Home_numberSection__tf0Ni">
         <div>
-          <div class="Home_numberSectionHeading1__a65Wb">
+          <div className="Home_numberSectionHeading1__a65Wb">
             Koo in <br /> numbers
           </div>
-          <div class="Home_numberSectionHeading2__koVkf">
+          <div className="Home_numberSectionHeading2__koVkf">
             Overwhelming response across the globe
           </div>
         </div>
         <table>
           <tbody>
             <tr>
-              <td class="Home_tableCell1__nr4hu">
-                <div class="Home_tableCellDiv__xNled">
-                  <div class="Home_tableHeading1__Q1hHg">100+ </div>
-                  <div class="Home_tableHeading2__mzDw8">Countries</div>
+              <td className="Home_tableCell1__nr4hu">
+                <div className="Home_tableCellDiv__xNled">
+                  <div className="Home_tableHeading1__Q1hHg">100+ </div>
+                  <div className="Home_tableHeading2__mzDw8">Countries</div>
                 </div>
               </td>
-              <td class="Home_tableCell2__LXfb8">
-                <div class="Home_tableCellDiv__xNled">
-                  <div class="Home_tableHeading1__Q1hHg">60M+</div>
-                  <div class="Home_tableHeading2__mzDw8">Downloads</div>
+              <td className="Home_tableCell2__LXfb8">
+                <div className="Home_tableCellDiv__xNled">
+                  <div className="Home_tableHeading1__Q1hHg">60M+</div>
+                  <div className="Home_tableHeading2__mzDw8">Downloads</div>
                 </div>
               </td>
             </tr>
             <tr>
-              <td class="Home_tableCell3__5enFI">
-                <div class="Home_tableCellDiv__xNled">
-                  <div class="Home_tableHeading1__Q1hHg">9000+</div>
-                  <div class="Home_tableHeading2__mzDw8">Eminent Profiles</div>
+              <td className="Home_tableCell3__5enFI">
+                <div className="Home_tableCellDiv__xNled">
+                  <div className="Home_tableHeading1__Q1hHg">9000+</div>
+                  <div className="Home_tableHeading2__mzDw8">
+                    Eminent Profiles
+                  </div>
                 </div>
               </td>
-              <td class="Home_tableCell4__Id_X4">
-                <div class="Home_tableCellDiv__xNled">
-                  <div class="Home_tableHeading1__Q1hHg">1000+</div>
-                  <div class="Home_tableHeading2__mzDw8">Topics to explore</div>
+              <td className="Home_tableCell4__Id_X4">
+                <div className="Home_tableCellDiv__xNled">
+                  <div className="Home_tableHeading1__Q1hHg">1000+</div>
+                  <div className="Home_tableHeading2__mzDw8">
+                    Topics to explore
+                  </div>
                 </div>
               </td>
             </tr>
