@@ -56,11 +56,11 @@ const SideBar = () => {
 
   return (
     //Main div--
-    <Box>
+    <Box h='100%'>
       <Box className="sidebar-main" w="350px">
         <Flex direction="column" m="20px">
           {/* Koo logo-- */}
-          <Box w="163px" h="73px">
+          <Box w="163px" h="73px"  ml={['0','0','-30px','0']}>
             <Image className="kooLogo" src={koo} alt="mainlogo" />
           </Box>
 
@@ -77,6 +77,7 @@ const SideBar = () => {
                 h="48px"
                 justifyContent="flex-start"
                 borderRadius="50px"
+                onClick={()=>navigate('/feed')}
               >
                 <Image src={feedIcon} alt="" marginRight="8px" />
                 <span className="text-fields">Feed</span>
@@ -98,7 +99,7 @@ const SideBar = () => {
                 w="150px"
                 h="48px"
                 justifyContent="flex-start"
-                bg={["none", "none", "white"]}
+                bg={["none", "none", "none", "white"]}
                 borderRadius="50px"
               >
                 <Image
@@ -116,11 +117,11 @@ const SideBar = () => {
                       color="rgb(136,136,136)"
                       border="none"
                       bg="white"
-                      display={["none", "none", "block"]}
+                      display={["none", "none",'none', "block"]}
                     >
                       <Image
                         src={dropdown}
-                        display={["none", "none", "block"]}
+                        display={["none", "none",'none', "block"]}
                       />
                     </Button>
                   </PopoverTrigger>
@@ -132,9 +133,9 @@ const SideBar = () => {
                       boxShadow="0 0 10px rgb(136,136,136)"
                       borderRadius="15px"
                       textAlign="center"
-                      display={["none", "none", "block"]}
+                      display={["none", "none",'none', "block"]}
                     >
-                      <PopoverBody display={["none", "none", "block"]}>
+                      <PopoverBody display={["none", "none",'none', "block"]}>
                         <Button
                           color="rgb(136,136,136)"
                           border="none"
@@ -154,7 +155,7 @@ const SideBar = () => {
               <Button
                 color="rgb(136,136,136)"
                 border="none"
-                bg={["none", "none", "white"]}
+                bg={["none", "none", "none", "white"]}
                 _hover={{ bg: "#ebedf0" }}
                 w="150px"
                 h="48px"
@@ -171,7 +172,7 @@ const SideBar = () => {
               <Button
                 color="rgb(136,136,136)"
                 border="none"
-                bg={["none", "none", "white"]}
+                bg={["none", "none", "none", "white"]}
                 _hover={{ bg: "#ebedf0" }}
                 w="150px"
                 h="48px"
@@ -188,7 +189,7 @@ const SideBar = () => {
               <Button
                 color="rgb(136,136,136)"
                 border="none"
-                bg={["none", "none", "white"]}
+                bg={["none", "none", "none", "white"]}
                 _hover={{ bg: "#ebedf0" }}
                 w="150px"
                 h="48px"
@@ -210,7 +211,7 @@ const SideBar = () => {
               <Button
                 color="rgb(136,136,136)"
                 border="none"
-                bg={["none", "none", "white"]}
+                bg={["none", "none", "none", "white"]}
                 _hover={{ bg: "#ebedf0" }}
                 w="150px"
                 h="48px"
@@ -233,7 +234,7 @@ const SideBar = () => {
                 onClick={onOpen}
                 color="rgb(136,136,136)"
                 border="none"
-                bg={["none", "none", "white"]}
+                bg={["none", "none", "none", "white"]}
                 _hover={{ bg: "#ebedf0" }}
                 w="150px"
                 h="48px"
@@ -290,13 +291,14 @@ const SideBar = () => {
               mb={isAuth ? "0" : "80px"}
               bg="rgb(75,75,75)"
               color="white"
-              display={["none", "none", "block"]}
+              display={["none", "none",'none', "block"]}
               border="none"
               borderRadius="50px"
               p="8px"
               fontSize="19px"
               w="195px"
               h="48px"
+              onClick={()=>navigate('/create')}
             >
               + Koo
             </Button>
@@ -309,7 +311,8 @@ const SideBar = () => {
                 borderRadius="50px"
                 p="8px"
                 fontSize="19px"
-                w="195px"
+                w="85px"
+                ml={['0','0','-120px','0']}
                 h="48px"
               >
                 Sign In
@@ -318,34 +321,35 @@ const SideBar = () => {
           </Flex>
         </Flex>
       </Box>
-      <Box
+
+  <Box
         className="sidebar-sub"
-        w="100%"
-        h="56px"
-        display="flex"
+        w={["100%","100%",'0']}
+        h={["56px","56px",'0']}
         justifyContent="space-around"
-        position="fixed"
+        position={['fixed','fixed','none']}
         alignItems="center"
         zIndex="99"
-        bg="white"
+        bg={["white","white",'none']}
         bottom="0"
+        display={['flex','flex','none']}
         borderTop="1px solid #e8e8e3"
       >
-        <Box w="48px" h="48px" display="flex" alignItems="center">
+        <Box className="sidebar-sub" w="48px" h="48px" display='flex' alignItems="center">
           <Image w="34px" h="34px" src={feedIcon} />
         </Box>
-        <Box w="48px" h="48px" display="flex" alignItems="center">
+        <Box className="sidebar-sub" w="48px" h="48px" display='flex' alignItems="center">
           <Image w="34px" h="34px" src={hashtag} />
         </Box>
-        <Box w="48px" h="48px" display="flex" alignItems="center">
+        <Box className="sidebar-sub" w="48px" h="48px" display='flex' alignItems="center">
           <Image w="34px" h="34px" src={search} />
         </Box>
-        <Box w="48px" h="48px" display="flex" alignItems="center">
+        <Box className="sidebar-sub" w="48px" h="48px" display='flex' alignItems="center">
           <Image w="34px" h="34px" src={notifications} />
         </Box>
-      </Box>
-    </Box>
-  );
-};
-
-export { SideBar };
+      </Box> 
+     </Box> 
+    );
+  };
+  
+  export { SideBar}
