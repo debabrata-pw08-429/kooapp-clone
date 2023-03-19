@@ -9,6 +9,7 @@ import searchIcon from "../Images/searchIcon.svg";
 import scanIcon from "../Images/scanIcon.svg";
 import earthIcon from "../Images/earthIcon.svg";
 import koo from "../Images/koo.svg";
+import { Login } from "./Login";
 
 import {
   Flex,
@@ -33,8 +34,13 @@ import {
 
 // Internally, we transform to this
 // const breakpoints = ["0em", "30em", "48em", "62em", "80em", "96em"];
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
+  let isAuth = useSelector((state) => {
+    return state.loginReducer.isAuth;
+  });
+
   return (
     <div>
       <Flex
@@ -86,21 +92,23 @@ const Navbar = () => {
               <Img src={earthIcon} />
             </Link>
           </Box>
-          <Button
-            sx={{
-              "&:hover": {
-                backgroundColor: "blue.500",
-                color: "white",
-                boxShadow: "0 0 0 3px rgba(66, 153, 225, 0.6)",
-              },
-            }}
-            bg={theme.brand.colors.btn_bg_login}
-            color="white"
-            borderRadius="3xl"
-            px={5}
-          >
-            Login
-          </Button>
+          <Login>
+            <Button
+              sx={{
+                "&:hover": {
+                  backgroundColor: "blue.500",
+                  color: "white",
+                  boxShadow: "0 0 0 3px rgba(66, 153, 225, 0.6)",
+                },
+              }}
+              bg={theme.brand.colors.btn_bg_login}
+              color="white"
+              borderRadius="3xl"
+              px={5}
+            >
+              Login
+            </Button>
+          </Login>
 
           <Center height="50px">
             <Divider orientation="vertical" />

@@ -8,7 +8,7 @@ function FeedCreate() {
     // let { Image } = useSelector((state) => state.LoggedReducer);
     let Image='https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61nlaq18GGL._SY679_.jpg';
   return (
-    <div>
+    <div style={{pointer:'cursor'}}>
         <Link to="/create">
             <Stack padding="10px" spacing={4} >
               <InputGroup pointer="cursor" style={{backgroundColor:'#ffffff'}}>
@@ -19,7 +19,7 @@ function FeedCreate() {
                     </div>
                   }
                 />
-                <Input type="text" placeholder="What's on your mind?" color={'#CCCCCC'} fontSize='14px' />
+                <Input type="text" placeholder="What's on your mind?" color={'#CCCCCC'} fontSize='14px' pointer="cursor" />
                 <InputRightElement
                   children={
                     <AiFillPlusCircle size={19} style={{ fill: "#474747" }} />

@@ -1,6 +1,7 @@
 import React from "react";
 import Styles from "../Styles/stats.css";
-import { Box, Flex, Heading, Image } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text } from "@chakra-ui/react";
+import Slider from "./Slider";
 
 const Section2 = () => {
   return (
@@ -11,96 +12,17 @@ const Section2 = () => {
         justify="center"
         textAlign="center"
         py={10}
+        mb="50px"
       >
-        <Heading as="h2" fontSize="4xl" mb={4}>
+        <Heading as="h2" fontSize={["2xl", "4xl"]} mb={4}>
           Features to explore
         </Heading>
-        <Heading as="h3" fontSize="2xl">
+        <Text as="p" fontSize={["xl", "2xl"]} px="7px" wordBreak="break-word">
           Amazing features to connect with people
-        </Heading>
+        </Text>
       </Flex>
-      {/* <Box className={Styles.Home_carouselSlider__osNuX} display="flex">
-        <Image
-          src="https://images.kooapp.com/img/home_page9.jpeg"
-          alt="koo_carousel"
-          loading="lazy"
-          width="320px"
-          height="540px"
-          decoding="async"
-          className={Styles.Home_carouselImage__D1xpn}
-          style={{ color: "transparent" }}
-        />
-        <Image
-          src="https://images.kooapp.com/img/home_page1.jpeg"
-          alt="koo_carousel"
-          loading="lazy"
-          width="320px"
-          height="540px"
-          decoding="async"
-          className={Styles.Home_carouselImage__D1xpn}
-          style={{ color: "transparent" }}
-        />
-        <Image
-          src="https://images.kooapp.com/img/home_page2.jpeg"
-          alt="koo_carousel"
-          loading="lazy"
-          width="320px"
-          height="540px"
-          decoding="async"
-          className={Styles.Home_carouselImage__D1xpn}
-          style={{ color: "transparent" }}
-        />
-        <Image
-          src="https://images.kooapp.com/img/home_page3.jpeg"
-          alt="koo_carousel"
-          loading="lazy"
-          width="320px"
-          height="540px"
-          decoding="async"
-          className={Styles.Home_carouselImage__D1xpn}
-          style={{ color: "transparent" }}
-        />
-        <Image
-          src="https://images.kooapp.com/img/home_page4.jpeg"
-          alt="koo_carousel"
-          loading="lazy"
-          width="320px"
-          height="540px"
-          decoding="async"
-          className={Styles.Home_carouselImage__D1xpn}
-          style={{ color: "transparent" }}
-        />
-        <Image
-          src="https://images.kooapp.com/img/home_page5.jpeg"
-          alt="koo_carousel"
-          loading="lazy"
-          width="320px"
-          height="540px"
-          decoding="async"
-          className={Styles.Home_carouselImage__D1xpn}
-          style={{ color: "transparent" }}
-        />
-        <Image
-          src="https://images.kooapp.com/img/home_page6.jpeg"
-          alt="koo_carousel"
-          loading="lazy"
-          width="320px"
-          height="540px"
-          decoding="async"
-          className={Styles.Home_carouselImage__D1xpn}
-          style={{ color: "transparent" }}
-        />
-        <Image
-          src="https://images.kooapp.com/img/home_page7.jpeg"
-          alt="koo_carousel"
-          loading="lazy"
-          width="320px"
-          height="540px"
-          decoding="async"
-          className={Styles.Home_carouselImage__D1xpn}
-          style={{ color: "transparent" }}
-        />
-      </Box> */}
+
+      <Slider />
     </Box>
   );
 };

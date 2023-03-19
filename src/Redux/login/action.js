@@ -1,33 +1,52 @@
-// import axios from "axios";
-// import { LOGIN_SUCCESS, LOGIN_REQUEST, LOGIN_FAILURE } from "./actionTypes";
+import axios from "axios";
+import {
+  LOGIN_SUCCESS,
+  LOGIN_REQUEST,
+  LOGIN_FAILURE,
+  LOGOUT,
+} from "./actionTypes";
 
-// export const setLogin = (payload) => {
-//   return (dispatch) => {
-//     dispatch(login_request());
-//     axios
-//       .post(`https://reqres.in/api/login`, payload)
-//       .then((res) => {
-//         dispatch(login_success(res.data.token));
-//       })
-//       .catch(() => {
-//         dispatch(login_failure());
-//       });
-//   };
-// };
+const json_URL = `http://localhost:8080/loggedUser`;
 
-// const login_request = () => {
-//   return {
-//     type: LOGIN_REQUEST,
-//   };
-// };
-// const login_success = (bool) => {
-//   return {
-//     type: LOGIN_SUCCESS,
-//     payload: bool,
-//   };
-// };
-// const login_failure = () => {
-//   return {
-//     type: LOGIN_FAILURE,
-//   };
-// };
+const setLogin = (payload) => {
+  return (dispatch) => {
+    dispatch(login_request());
+
+    axios
+      .post(json_URL, payload)
+      .then((res) => {
+        dispatch(login_success(res.data));
+      })
+      .catch(() => {
+        dispatch(login_failure());
+      });
+  };
+};
+
+const login_request = () => {
+  return {
+    type: LOGIN_REQUEST,
+  };
+};
+
+const login_success = (bool) => {
+  return {
+    type: LOGIN_SUCCESS,
+    payload: bool,
+  };
+};
+
+const login_failure = () => {
+  return {
+    type: LOGIN_FAILURE,
+  };
+};
+
+const log_out = (data) => {
+  return {
+    type: LOGOUT,
+    payload: data,
+  };
+};
+
+export { setLogin, log_out };
