@@ -5,7 +5,7 @@ import { TiTick} from "react-icons/ti";
 import { FeedContext } from "../Context/FeedContext";
 import { Navigate } from 'react-router-dom';
 import { useSelector,useDispatch} from 'react-redux'
-import { redData } from "../Redux/PeopleDetails/action";
+import { redData,putData } from "../Redux/PeopleDetails/action";
 
 
 function ProfileComp({id1,name,category,img,userFollowState}) {
@@ -25,22 +25,37 @@ function ProfileComp({id1,name,category,img,userFollowState}) {
       setBt1(1);
       setidC(id1);
       console.log(id1);
+      let q=-1;
       let x = [
-        ...peopleData.map((e) => {
+        ...peopleData.map((e,idx) => {
           if (e.id === id1) {
+            q=idx;
             return {
               ...e,
               userFollowState: false,
             };
-          } else {
-            return e;
           }
+          //  else {
+          //   return e;
+          // }
         })
       ];
       setTrueCount(trueCount-1);
      
       console.log(x,"xxxxxx")
-        dispatch(redData(x));
+        // dispatch(redData(x));
+
+        
+        console.log(x);
+        console.log(q,"qqqq")
+        console.log(x[q],"changedddd")
+        let send=x[q];
+        console.log(send,"sendddd data at profileComp");
+        dispatch(putData(send,id1));
+
+
+
+
         setFollowstate(followstate);
           console.log(userFollowState,"userstateofFollow")
           console.log(name);

@@ -18,7 +18,7 @@ const Section1 = () => {
       bg="#f1f1ee"
     >
       <GridItem area={["img", "cta"]} pt={[null, "180px"]} pl={[null, "150px"]}>
-        <Box textAlign={["center", "left"]}>
+        <Box textAlign={["center", "left"]} ml={[null, "30px"]}>
           <Text as="b" fontSize="4xl" mb={9}>
             Know what's <br /> happening!
           </Text>
@@ -26,11 +26,16 @@ const Section1 = () => {
           <Text fontSize="md" my="1rem">
             All in your Language
           </Text>
-          <Button bg={theme.brand.colors.btn_bg_login} size="lg" color="white">
+          <Button
+            borderRadius="full"
+            bg={theme.brand.colors.btn_bg_login}
+            size="lg"
+            color="white"
+          >
             Go to Feed
             <ArrowForwardIcon mx="12px" />
           </Button>
-          <Image src={app_ss} width="339px" ml={["30px", "-33px"]} />
+          <Image src={app_ss} width="339px" ml={["30px", "-33px"]} my="30px" />
         </Box>
       </GridItem>
       <GridItem area={["cta", "img"]}>
