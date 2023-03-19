@@ -57,7 +57,7 @@ const SideBar = () => {
   return (
     //Main div--
     <Box>
-      <Box className="sidebar-main" w="350px">
+      <Box className="sidebar-main" w="350px" h='700px' position='sticky' top='0'>
         <Flex direction="column" m="20px">
           {/* Koo logo-- */}
           <Box w="163px" h="73px">

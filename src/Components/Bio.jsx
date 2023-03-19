@@ -24,6 +24,7 @@ import plus from "../Images/plus.svg";
 import whiteplus from "../Images/whiteplus.svg";
 import axios from "axios";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 
 const Bio = () => {
   const [images, setImages] = useState(Array(10).fill(null));
@@ -32,6 +33,7 @@ const Bio = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const hiddenFileInput = useRef(null);
   const [data, setData] = useState([]);
+  let navigate=useNavigate()
   const handleClick = (event) => {
     hiddenFileInput.current.click();
   };
@@ -353,6 +355,7 @@ const Bio = () => {
                 fontSize="12px"
                 fontWeight="500"
                 bg="#4b4b4b"
+                onClick={()=>{navigate('/edit')}}
               >
                 Edit
               </Button>
