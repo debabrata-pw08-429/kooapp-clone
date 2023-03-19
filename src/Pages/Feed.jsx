@@ -22,25 +22,29 @@ function Feed() {
 
   useEffect(() => {
     dispatch(getData(0));
-    console.log("yyesss");
-    setTrueCount(7);
-  }, []);
+    console.log("yyesss")
+    setTrueCount (7);
+    
+  },[])
+  
+  let peopleData = useSelector(state=>state.PeopleReducer.peopleData);
 
-  let peopleData = useSelector((state) => state.PeopleReducer.peopleData);
+  useEffect(()=>{
+    console.log("222")
+  },[followstate])
 
-  useEffect(() => {
-    console.log("222");
-  }, [followstate]);
-
-  let followData = useSelector((state) => state.PeopleReducer.followData);
-
+ 
+  
+  let followData = useSelector(state=>state.PeopleReducer.followData)
+  console.log(peopleData,"checking after like peopleData");
   return (
     <div>
       <Flex w="100%">
-        <Box w="26%" mt="50px">
+        <Box w="26%" paddingLeft={'2%'}>
           {/* <LeftSidebar /> */}
           <SideBar />
         </Box>
+
         <Box w="42%" bg="#f8f7f3" p={"10px 12px 0px"} overflow={"hidden"}>
           <HStack
             p={"20px 10px"}
@@ -108,55 +112,38 @@ function Feed() {
                 </Link>
               </HStack>
 
-              <HStack marginTop={"-3%"} marginLeft={"2%"} marginBottom={"5%"}>
-                {peopleData.map((e) => {
-                  let { name, category, img, userFollowState, id } = e;
-                  return (
-                    <ProfileComp
-                      id1={id}
-                      name={name}
-                      category={category}
-                      img={img}
-                      userFollowState={userFollowState}
-                      setTrueCount={setTrueCount}
-                    />
-                  );
-                })}
-              </HStack>
-            </>
+          
+          <HStack marginTop={'-3%'} marginLeft={'2%'} marginBottom={'5%'}  >
+            { 
+            peopleData.map((e)=>{
+                let {name,category,img,userFollowState,id}=e;
+                return <ProfileComp id1={id} name={name} category={category} img={img} userFollowState={userFollowState} setTrueCount={setTrueCount}/>
+            })}
+          </HStack></>
           )}
 
-          {peopleData.map((e) => {
-            let { name, username, category, img, posts, userFollowState } = e;
-            return (
-              <div>
-                {posts.map((e) => {
-                  let { days, content, hastags, likes, comments, reKoo } = e;
-                  return (
-                    <FeedPost
-                      name={name}
-                      category={category}
-                      img={img}
-                      userFollowState={userFollowState}
-                      username={username}
-                      days={days}
-                      content={content}
-                      hastags={hastags}
-                      likes={likes}
-                      comments={comments}
-                      reKoo={reKoo}
-                    />
-                  );
+
+          {peopleData.map((e)=>{
+                let {name,username,category,img,posts,userFollowState,id}=e;
+                return (<div >
+                {posts.map((e)=>{
+                  
+                  let {postsID,days,content,hastags,likes,comments,reKoo,userLike}=e;
+                  
+                  return <FeedPost id1={id} postsID={postsID} name={name} category={category}  userLike={userLike} img={img} userFollowState={userFollowState} username={username} days={days} content={content} hastags={hastags} likes={likes} comments={comments} reKoo={reKoo}/>
                 })}
-              </div>
-            );
-          })}
+                </div>)
+            })}
+
+
+         
         </Box>
 
-        <Box w="32%" mt="50px">
+        <Box w="32%" paddingRight={'6%'}    >
           {/* <RightSidebar />{" "} */}
-          <Rsidebar />
+          <Rsidebar/>
         </Box>
+
       </Flex>
     </div>
   );

@@ -16,8 +16,8 @@ import { AiOutlinePlusCircle } from "react-icons/ai";
 
 const Rsidebar = () => {
   return (
-    <>
-      <Flex direction={"column"} mt="30px" w={"50%"} m="auto">
+
+      <Flex direction={"column"}  m="auto" h='700px' position='sticky' top='0' pt='3%'>
         <Box>
           <Stack spacing={4} p="10px">
             <InputGroup>
@@ -266,7 +266,6 @@ const Rsidebar = () => {
           </Flex>
         </Box>
       </Flex>
-    </>
   );
 };
 
