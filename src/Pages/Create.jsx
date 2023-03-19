@@ -1,23 +1,40 @@
-import React,{useState,useRef,useEffect,useLayoutEffect} from 'react'
+import React, { useState, useRef, useEffect, useLayoutEffect } from "react";
 import style from "../Styles/create.module.css";
 import { BiLeftArrowAlt } from "react-icons/bi";
-import { BsSend,BsPlusCircle,BsBarChart} from "react-icons/bs";
-import { AiOutlineHistory,AiOutlinePlusCircle } from "react-icons/ai";
-import { HiOutlineInboxArrowDown,HiOutlineLink } from "react-icons/hi2";
+import { BsSend, BsPlusCircle, BsBarChart } from "react-icons/bs";
+import { AiOutlineHistory, AiOutlinePlusCircle } from "react-icons/ai";
+import { HiOutlineInboxArrowDown, HiOutlineLink } from "react-icons/hi2";
 import { ImImages } from "react-icons/im";
-import { RxVideo  } from "react-icons/rx";
-import { FiSettings  } from "react-icons/fi";
-import { Avatar ,Box,HStack,Button,Text,Spacer,CircularProgress, CircularProgressLabel} from '@chakra-ui/react';
-import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalCloseButton, Progress, ModalFooter } from "@chakra-ui/react";
-import { useSelector,useDispatch } from "react-redux";
-import { postData } from '../Redux/PostDetails/action'
+import { RxVideo } from "react-icons/rx";
+import { FiSettings } from "react-icons/fi";
+import {
+  Avatar,
+  Box,
+  HStack,
+  Button,
+  Text,
+  Spacer,
+  CircularProgress,
+  CircularProgressLabel,
+} from "@chakra-ui/react";
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalCloseButton,
+  Progress,
+  ModalFooter,
+} from "@chakra-ui/react";
+import { useSelector, useDispatch } from "react-redux";
+import { postData } from "../Redux/PostDetails/action";
 import { useNavigate } from "react-router-dom";
-
 
 function Create() {
   // let { Image } = useSelector((state) => state.LoggedReducer);
   // let Image='https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61nlaq18GGL._SY679_.jpg';
-  const dispatch= useDispatch();
+  const dispatch = useDispatch();
   const [count, setCount] = useState(0);
   const [description, setDescription] = useState(0);
   const [file, setFile] = useState([]);
@@ -26,55 +43,141 @@ function Create() {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
   const [progressCount, setProgressCount] = useState(0);
-  
+  const [previewFiles, setPreviewFiles] = useState([]);
   const handleInputChange = (event) => {
     const inputValue = event.target.value;
     setDescription(event.target.value);
     setCount(inputValue.length);
   };
-  
+
   const handleFileChange = (event) => {
-    // const selectedFile = event.target.files[0];
-    // setFile([...file, selectedFile]);
     console.log(file,"fileeeeeee");
     const selectedFiles = event.target.files;
     const filesArray = Array.from(selectedFiles);
-    console.log(filesArray,"filesssssAARRRRay");
+    console.log(filesArray, "filesssssAARRRRay");
     const filesWithPreview = filesArray.map((file) => ({
-                                                  fileData:file,
-                                                  previewUrl: URL.createObjectURL(file),
-                                                  type:file.type,
-                                                  date:file.lastModifiedDate,
-                              }));
-    console.log(filesWithPreview,"ffilesWithPreview");
+      fileData: file,
+      previewUrl: URL.createObjectURL(file),
+      type: file.type,
+      date: file.lastModifiedDate,
+    }));
+    console.log(filesWithPreview, "ffilesWithPreview");
     setFile([...file, ...filesWithPreview]);
   };
 
-  const handleClose= (index) => {
-      const newFiles = [...file];
-      newFiles.splice(index, 1);
-      setFile(newFiles);
-    }
+  const handleClose = (index) => {
+    const newFiles = [...file];
+    newFiles.splice(index, 1);
+    setFile(newFiles);
+  };
 
   const handleButtonClick = (i) => {
     i===0? (fileInputRef.current.click()):(fileInputRef1.current.click());
+    console.log("Button clickededddd")
   };
 
-  const handlePost=()=>{
-    console.log(file,"fileeeeeee22222222");
-    let data={
+  const handlePost = () => {
+    console.log(file, "fileeeeeee22222222");
+    let data = {
       description,
       files:[...file],
       likes:0,
       comments:[]
     }
     console.log(data,"dataaaa")
+    console.log("av");
     dispatch(postData(data))
      setIsOpen(true);
   }
 
+  // const handlePost = ()=>{ 
+  //  let data={ 
+  //   description,
+  //   files: file.map((fileData, index) => ({
+  //     name: fileData.fileData.name,
+  //     type: fileData.type,
+  //     size: fileData.fileData.size,
+  //     previewUrl: previewFiles[index].previewUrl,
+  //     date: fileData.date,
+  //   })),
+  //   likes: 0,
+  //   comments: [],
+  //   };
+  
+  // dispatch(postData(data));
+  // setIsOpen(true);
+  // }
+
+  // const handleFileChange = async (e) => {
+  //   const files = e.target.files;
+  // const fileArray = Array.from(files);
+  //   console.log("INNNN File change")
+  //    const reviewFiles = await Promise.all(
+  //     fileArray.map(async (fileData) => {
+  //       const previewBlob = await createPreviewBlob(fileData.fileData); // replace with your function to create the preview blob
+  //       const previewFileName = `preview_${Date.now()}`;
+  //       const previewFileUrl = `/previews/${previewFileName}`;
+  //       await uploadFileToServer(previewBlob, previewFileName); // replace with your function to upload the file to the server
+  //       return { previewUrl: previewFileUrl, type: fileData.type, date: fileData.date };
+  //     })
+      
+  //   );
+  //   setPreviewFiles(reviewFiles);
+  //   // handlePost();
+  // }
+  
+  //   const handlePost = {
+  //     description,
+  //     files: file.map((fileData, index) => ({
+  //       name: fileData.fileData.name,
+  //       type: fileData.type,
+  //       size: fileData.fileData.size,
+  //       previewUrl: previewFiles[index].previewUrl,
+  //       date: fileData.date,
+  //     })),
+  //     likes: 0,
+  //     comments: [],
+  //   };
+  
+  //   dispatch(postData(handlePost));
+  //   setIsOpen(true);
+  // };
+  
+  // const createPreviewBlob = (file) => {
+  //   console.log("in Blob");
+  //   return new Promise((resolve, reject) => {
+  //     const reader = new FileReader();
+  //     reader.readAsDataURL(file);
+  //     reader.onload = () => {
+  //       const img = new Image();
+  //       img.src = reader.result;
+  //       img.onload = () => {
+  //         const canvas = document.createElement("canvas");
+  //         canvas.width = 400; // set the width and height of the preview canvas
+  //         canvas.height = 120;
+  //         const ctx = canvas.getContext("2d");
+  //         ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+  //         canvas.toBlob((blob) => {
+  //           resolve(blob);
+  //         }, file.type);
+  //       };
+  //     };
+  //     reader.onerror = reject;
+  //   });
+  // };
+  // const uploadFileToServer = (fileBlob, fileName) => {
+  //   const formData = new FormData();
+  //   formData.append("file", fileBlob, fileName);
+  
+  //   return fetch("http://localhost:3000/userposts", {
+  //     method: "POST",
+  //     body: formData,
+  //   });
+  // };
+    
+  
   const handleCloseModal = () => {
-    if (progressCount<100){
+    if (progressCount < 100) {
       setIsOpen(false);
       setProgressCount(0);
     }
@@ -96,7 +199,6 @@ function Create() {
     }
   }, [isOpen]);
 
-
   return (
     <div className={style.main}>
       <div className={style.d1}>
@@ -104,7 +206,7 @@ function Create() {
                 <HStack marginBottom='2%' marginTop='-2%'>
                     <Box className={style.s1} ><HStack><BiLeftArrowAlt style={{cursor:'pointer'}} size={28} /> <Avatar size="md" style={{cursor:'pointer'}} src={ Image }/></HStack></Box>
                     <Box><HStack  gap={'8%'}><AiOutlineHistory size={30}  style={{cursor:'pointer',fill: '#666666'}} /> <HiOutlineInboxArrowDown size={30} color="#666666" style={{cursor:'pointer'}} /> 
-                                  <Button onClick={handlePost} colorScheme='white' disabled={count>500 || count==0 } bg={count>500 || count==0 ? '#b3b2b0': '#4b4b4b'} height='fit-content' size='md' spacing='10px' gap='8px'> <BsSend size={30} />   Post</Button>
+                                  <Button onClick={handlePost} colorScheme='white' disabled={progressCount<100}  bg={count>500 || count==0 ? '#b3b2b0': '#4b4b4b'} height='fit-content' size='md' spacing='10px' gap='8px'> <BsSend size={30} />   Post</Button>
                     </HStack></Box>
                 </HStack> 
                 <HStack marginBottom='-5%'>
@@ -153,18 +255,24 @@ function Create() {
       <Modal onClose={handleCloseModal} isOpen={isOpen} isCentered>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>{progressCount<=100? 'Updating Post...' : 'Post successfully updated.'}</ModalHeader>
+          <ModalHeader>{progressCount<=100? 'Creating Koo...' : 'Post successfully updated.'}</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-          <Progress hasStripe value={progressCount} />
+            <Progress hasStripe value={progressCount} />
           </ModalBody>
           <ModalFooter>
-            <Button onClick={onClose} disabled={progressCount<100} bg={progressCount>=100? 'green.500' : 'red.500'} >{progressCount<=100? 'WAIT' : 'DONE'}</Button>
+            <Button
+              onClick={onClose}
+              disabled={progressCount < 100}
+              bg={progressCount >= 100 ? "green.500" : "red.500"}
+            >
+              {progressCount <= 100 ? "WAIT" : "DONE"}
+            </Button>
           </ModalFooter>
         </ModalContent>
       </Modal>
     </div>
-  )
+  );
 }
 
-export default Create
+export default Create;
