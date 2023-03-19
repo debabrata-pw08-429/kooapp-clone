@@ -28,7 +28,11 @@ const videoConstraints = {
 function Edit() {
     const[img,setImg]=useState(false)
     const [image, setImage] = useState("");
-    const [mob, setmob] = useState("");
+    const [mob, setMob] = useState("");
+    const [name, setName] = useState("");
+    const [mail, setMail] = useState("");
+    const [dob, setDob] = useState("");
+    const [gender, setGender] = useState("");
     const webcamRef = React.useRef(null);
     const capture = React.useCallback(() => {
       const imageSrc = webcamRef.current.getScreenshot();
@@ -125,7 +129,9 @@ function Edit() {
                         <Image src='https://www.kooapp.com/img/formIcon/user.svg'/>
                         <Box w='460px' h='80px' textAlign='left' ml='30px'>
                             <Text color='#888' fontWeight='500'>Name</Text>
-                            <Input mt='10px' value={fullName? fullName : 'keerthimalini'} border='none' textAlign='left' p='0'></Input>
+                            <Input mt='10px' value={name? name : fullName} border='none' textAlign='left' p='0'  onChange={(e)=>{
+                               setName(e.target.value)
+                            }}></Input>
                             <hr/>
                         </Box>                   
                     </Box>
@@ -133,7 +139,9 @@ function Edit() {
                         <Image src='https://www.kooapp.com/img/formIcon/email.svg'/>
                         <Box w='460px' h='80px' textAlign='left' ml='30px'>
                             <Text color='#888' fontWeight='500'>Email</Text>
-                            <Input mt='10px' value={email? email : 'keerthimalini@gmail.com'} border='none' textAlign='left' p='0'></Input>
+                            <Input mt='10px' value={mail? mail : email} border='none' textAlign='left' p='0'  onChange={(e)=>{
+                               setMail(e.target.value)
+                            }}></Input>
                             <hr/>
                         </Box>                  
                     </Box>
@@ -141,7 +149,9 @@ function Edit() {
                         <Image src='https://www.kooapp.com/img/formIcon/phone.svg'/>
                         <Box w='460px' h='80px' textAlign='left' ml='30px'>
                             <Text color='#888' fontWeight='500'>Mobile</Text>
-                            <Input mt='10px' placeholder='Enter phone' border='none' textAlign='left' p='0'></Input>
+                            <Input mt='10px' placeholder='Enter phone' border='none' textAlign='left' p='0' onChange={(e)=>{
+                               setMob(e.target.value)
+                            }}></Input>
                             <hr/>
                         </Box>                  
                     </Box> 
@@ -149,7 +159,9 @@ function Edit() {
                         <Image src='https://www.kooapp.com/img/formIcon/sex.svg'/>
                         <Box w='460px' h='80px' textAlign='left' ml='30px'>
                             <Text color='#888' fontWeight='500'>Gender</Text>
-                            <Select placeholder='Select Your Gender' border='none'>
+                            <Select placeholder='Select Your Gender' border='none' onChange={(e)=>{
+                               setGender(e.target.value)
+                            }}>
                             <option value='option1'>Male</option>
                             <option value='option2'>Female</option>
                             <option value='option3'>Other</option>
@@ -161,7 +173,9 @@ function Edit() {
                         <Image src='https://www.kooapp.com/img/formIcon/cake.svg'/>
                         <Box w='460px' h='80px' textAlign='left' ml='30px'>
                             <Text color='#888' fontWeight='500'>Date of Birth</Text>
-                            <Input mt='10px' type='date' placeholder='dd-mm-yyyy'  border='none' textAlign='left' p='0'></Input>
+                            <Input mt='10px' type='date' placeholder='dd-mm-yyyy'  border='none' textAlign='left' p='0' onChange={(e)=>{
+                               setDob(e.target.value)
+                            }}></Input>
                             <hr/>
                         </Box>                  
                     </Box>            
