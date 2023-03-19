@@ -1,5 +1,5 @@
 {
-  "posts": [
+  "userposts": [
     {
       "data": {
         "description": "adfafsfssssssssssssssssss",
@@ -30,12 +30,46 @@
     },
     {
       "data": {
+        "description": "imperial blue",
+        "files": [
+          {
+            "fileData": {},
+            "previewUrl": "blob:http://localhost:3000/8179de5c-7043-4b36-bb3f-576b5bd44daf",
+            "type": "video/mp4",
+            "date": "2023-03-18T21:42:35.838Z"
+          }
+        ],
+        "likes": 0,
+        "comments": []
+      },
+      "id": 18
+    },
+    {
+      "data": {
+        "description": "sasasas",
+        "files": [],
+        "likes": 0,
+        "comments": []
+      },
+      "id": 19
+    },
+    {
+      "data": {
         "description": 0,
         "files": [],
         "likes": 0,
         "comments": []
       },
-      "id": 2
+      "id": 20
+    },
+    {
+      "data": {
+        "description": "zXZX",
+        "files": [],
+        "likes": 0,
+        "comments": []
+      },
+      "id": 21
     }
   ],
   "loggedUser": {
@@ -55,13 +89,14 @@
       "username": "MamataOfficial",
       "img": "https://images.kooapp.com/koo-profile-media/profiles/36613113/profile.jpeg?tr=n-dp_square",
       "followers": "188.5K",
-      "following": 4,
+      "following": 1010,
       "userFollowState": true,
       "category": "Politician",
       "posts": [
         {
           "postsID": 1,
-          "likes": 33,
+          "userLike": false,
+          "likes": 43,
           "comments": 19,
           "re-share": 8,
           "content": {
@@ -76,6 +111,7 @@
         },
         {
           "postsID": 2,
+          "userLike": false,
           "likes": 226,
           "comments": 99,
           "re-share": 35,
@@ -90,6 +126,7 @@
         },
         {
           "postsID": 3,
+          "userLike": false,
           "likes": 211,
           "comments": 20,
           "re-share": 46,
@@ -112,12 +149,13 @@
       "des": "Transforming Higher Education | Tedx Speaker. Also, Talks about #impact, #engineers, #educationforall, #highereducation, and #hiringdevelopers",
       "followers": "17.4K",
       "following": 10,
-      "userFollowState": true,
+      "userFollowState": false,
       "category": "Education",
       "posts": [
         {
           "postsID": 1,
-          "likes": 287,
+          "userLike": true,
+          "likes": 288,
           "comments": 19,
           "re-share": 7,
           "days": "2d",
@@ -130,7 +168,25 @@
           ]
         },
         {
+          "postsID": 4,
+          "userLike": false,
+          "likes": 998,
+          "comments": 19,
+          "re-share": 7,
+          "days": "1d",
+          "content": {
+            "textContent": "Imperial Blue",
+            "imgContent": "",
+            "vdoContent": "https://drive.google.com/file/d/1aAfH40lP73REteAnKUmM2alaU-OPjR8B/view?usp=sharing",
+            "type": "video/mp4"
+          },
+          "hastags": [
+            "#AcademyAwards"
+          ]
+        },
+        {
           "postsID": 2,
+          "userLike": false,
           "likes": 207,
           "comments": 10,
           "re-share": 1,
@@ -145,6 +201,7 @@
         },
         {
           "postsID": 3,
+          "userLike": false,
           "likes": 76,
           "comments": 5,
           "re-share": 12,
@@ -173,6 +230,7 @@
       "posts": [
         {
           "postsID": 1,
+          "userLike": false,
           "likes": 79,
           "comments": 16,
           "reKoo": 13,
@@ -190,6 +248,7 @@
         },
         {
           "postsID": 2,
+          "userLike": false,
           "likes": 659,
           "comments": 66,
           "reKoo": 23,
@@ -207,6 +266,7 @@
         },
         {
           "postsID": 3,
+          "userLike": false,
           "likes": 154,
           "comments": 33,
           "reKoo": 22,
@@ -229,12 +289,13 @@
       "des": "Peace activist | Religious persecution | Tibetan culture | Freedom of religion in China ",
       "followers": "880.8K",
       "following": 80,
-      "userFollowState": true,
+      "userFollowState": false,
       "img": "https://wallpapercave.com/wp/wp4176324.jpg",
       "posts": [
         {
           "postsID": 1,
-          "likes": 41,
+          "userLike": true,
+          "likes": 42,
           "comments": 5,
           "reKoo": 3,
           "content": {
@@ -246,6 +307,7 @@
         },
         {
           "postsID": 2,
+          "userLike": false,
           "likes": 181,
           "comments": 42,
           "reKoo": 17,
@@ -258,6 +320,7 @@
         },
         {
           "postsID": 3,
+          "userLike": false,
           "likes": 240,
           "comments": 62,
           "reKoo": 27,
@@ -283,6 +346,7 @@
       "posts": [
         {
           "postsID": 1,
+          "userLike": false,
           "likes": 33,
           "comments": 19,
           "re-share": 8,
@@ -297,6 +361,7 @@
         },
         {
           "postsID": 2,
+          "userLike": false,
           "likes": 226,
           "comments": 99,
           "re-share": 35,
@@ -311,6 +376,7 @@
         },
         {
           "postsID": 3,
+          "userLike": false,
           "likes": 150,
           "comments": 30,
           "re-share": 9,
@@ -338,7 +404,8 @@
       "posts": [
         {
           "postsID": 1,
-          "likes": 59,
+          "userLike": false,
+          "likes": 60,
           "comments": 6,
           "reKoo": 3,
           "content": {
@@ -367,7 +434,8 @@
       "posts": [
         {
           "postsID": 1,
-          "likes": 3.4,
+          "userLike": true,
+          "likes": 900,
           "comments": 420,
           "re-share": 142,
           "content": {
@@ -382,7 +450,8 @@
         },
         {
           "postsID": 2,
-          "likes": 2.6,
+          "userLike": false,
+          "likes": 554,
           "comments": 185,
           "re-share": 103,
           "content": {
@@ -396,7 +465,8 @@
         },
         {
           "postsID": 3,
-          "likes": 2.1,
+          "userLike": false,
+          "likes": 218,
           "comments": 88,
           "re-share": 84,
           "content": {
@@ -423,6 +493,7 @@
       "posts": [
         {
           "postsID": 1,
+          "userLike": false,
           "likes": 8,
           "comments": 5,
           "re-share": 1,
@@ -437,7 +508,8 @@
         },
         {
           "postsID": 2,
-          "likes": 226,
+          "userLike": true,
+          "likes": 227,
           "comments": 99,
           "re-share": 35,
           "content": {
@@ -452,6 +524,7 @@
         },
         {
           "postsID": 3,
+          "userLike": false,
           "likes": 350,
           "comments": 125,
           "re-share": 52,
@@ -481,7 +554,8 @@
       "posts": [
         {
           "postsID": 1,
-          "likes": 2022,
+          "userLike": false,
+          "likes": 222,
           "comments": 50,
           "reKoo": 80,
           "content": {
@@ -495,6 +569,7 @@
         },
         {
           "postsID": 2,
+          "userLike": false,
           "likes": 1472,
           "comments": 217,
           "reKoo": 75,
@@ -507,7 +582,8 @@
         },
         {
           "postsID": 3,
-          "likes": 1422,
+          "userLike": false,
+          "likes": 122,
           "comments": 87,
           "reKoo": 30,
           "content": {
@@ -519,7 +595,8 @@
         },
         {
           "postsID": 4,
-          "likes": 5472,
+          "userLike": false,
+          "likes": 472,
           "comments": 417,
           "reKoo": 45,
           "content": {
@@ -544,7 +621,8 @@
       "posts": [
         {
           "postsID": 1,
-          "likes": 2022,
+          "userLike": false,
+          "likes": 222,
           "comments": 50,
           "reKoo": 80,
           "content": {
@@ -556,7 +634,8 @@
         },
         {
           "postsID": 2,
-          "likes": 1472,
+          "userLike": false,
+          "likes": 142,
           "comments": 217,
           "reKoo": 75,
           "content": {
@@ -568,7 +647,8 @@
         },
         {
           "postsID": 3,
-          "likes": 1422,
+          "userLike": false,
+          "likes": 142,
           "comments": 87,
           "reKoo": 30,
           "content": {
@@ -582,7 +662,8 @@
         },
         {
           "postsID": 4,
-          "likes": 5472,
+          "userLike": false,
+          "likes": 547,
           "comments": 417,
           "reKoo": 45,
           "content": {
