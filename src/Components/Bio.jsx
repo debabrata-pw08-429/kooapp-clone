@@ -25,6 +25,7 @@ import whiteplus from "../Images/whiteplus.svg";
 import axios from "axios";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Bio = () => {
   const [images, setImages] = useState(Array(10).fill(null));
@@ -37,11 +38,13 @@ const Bio = () => {
   const handleClick = (event) => {
     hiddenFileInput.current.click();
   };
+  const fullName = useSelector((state) => {
+    return state.loginReducer.name;
+  });
   const handleImageUpload = (event) => {
     const selectedImages = Array.from(event.target.files).map((file) =>
       URL.createObjectURL(file)
     );
-
     setImages((prevImages) => {
       const newImages = [...prevImages];
       let nullCount = 0;
@@ -336,10 +339,10 @@ const Bio = () => {
           <Box display="flex" justifyContent="space-between">
             <Box>
               <Text fontSize="17px" fontWeight="500">
-                Keerthi malini
+                {fullName}
               </Text>
               <Text fontSize="15px" fontWeight="500" color="#888">
-                @keerthi777OKN
+                @{fullName}
               </Text>
             </Box>
             <Box>
@@ -419,10 +422,10 @@ const Bio = () => {
                   <Box display="flex" justifyContent="space-between" p="16px">
                     <Box>
                       <Text fontSize="16px" fontWeight="500" maxWidth="93%">
-                        Keerthi malini
+                        {fullName}
                       </Text>
                       <Text fontSize="14px" fontWeight="500" color="#888">
-                        @keerthi777OKN
+                        @{fullName}
                       </Text>
                     </Box>
                     <Box>
