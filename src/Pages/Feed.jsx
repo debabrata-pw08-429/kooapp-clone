@@ -79,8 +79,10 @@ function Feed() {
                 let {name,username,category,img,posts,userFollowState,id}=e;
                 return (<div >
                 {posts.map((e)=>{
-                  let {postsID,days,content,hastags,likes,comments,reKoo,userLike}=e;
-                  return <FeedPost id1={id} postsID={postsID} name={name} category={category} userLike={userLike} img={img} userFollowState={userFollowState} username={username} days={days} content={content} hastags={hastags} likes={likes} comments={comments} reKoo={reKoo}/>
+                  
+                  let {postsID,days,content,hastags,likes,comments,reKoo,userLike,vdoContent,type}=e;
+                  
+                  return <FeedPost id1={id} postsID={postsID} name={name} category={category}  userLike={userLike} img={img} userFollowState={userFollowState} username={username} days={days} content={content} hastags={hastags} likes={likes} comments={comments} reKoo={reKoo}/>
                 })}
                 </div>)
             })}

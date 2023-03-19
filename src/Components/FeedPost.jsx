@@ -18,7 +18,8 @@ function FeedPost({id1,postsID,name,img,username,category,days,content,hastags,l
     const navigate = useNavigate();
     const dispatch=useDispatch();
     let peopleData = useSelector(state=>state.PeopleReducer.peopleData);
-    // console.log(posts,"fr");
+   
+    console.log(content.vdoContent,"vdooodv")
     const redirect =()=>{
       console.log("prroofileee calleded");
       navigate(`/profile/${username}`);
@@ -121,7 +122,15 @@ function FeedPost({id1,postsID,name,img,username,category,days,content,hastags,l
             </HStack>
             <Box marginTop={'5%'} ><Text>{content.textContent}</Text></Box>
             <Box marginTop={'5%'} style={{ cursor: 'pointer' }} ><Text color={'#1E63BD'}>{myHashTags}</Text></Box>
-            <Box marginTop={'3%'}><Image maxHeight={'500px'} width={'100%'} src={content.imgContent} style={{ cursor: 'pointer' }}></Image></Box>
+            <Box marginTop={'3%'}><Image maxHeight={'500px'} width={'100%'} src={content.imgContent} style={{ cursor: 'pointer' }}></Image>
+            {console.log(content.vdoContent,"vdeo in vdo space")}
+                        {content.vdoContent !== undefined && (
+                            
+                            <video width="400" height="120" controls>
+                                <source src={content.vdoContent} type={content.type} />
+                            </video>
+                        )}
+            </Box>
             <Box  marginTop={'2%'}><HStack>
                 <Button color={'#121212'} backgroundColor={'#E8E8E3'}><Text fontSize='14px' >English</Text></Button>
                 <Button color={'#888888'} backgroundColor={'#FFFFFF'} ><Text fontSize='14px' >हिन्दी</Text></Button>
