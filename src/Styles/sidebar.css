@@ -33,16 +33,14 @@
 @media (min-width:760px) and (max-width:900px) {
     .text-fields{
         display: none;
-    } 
-    .sidebar-main{
-        display: none;
     }  
-
-}
-@media (min-width:900px) {
-    
     .sidebar-sub{
         display: none;
-    }  
+    } 
 
+}
+@media (min-width:760px) and (max-width:1500px){
+    .sidebar-sub{
+        display: none;
+    } 
 }
