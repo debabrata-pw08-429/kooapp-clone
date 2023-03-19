@@ -5,6 +5,7 @@ import Create from "../Pages/Create";
 import People from "../Pages/People";
 import Home from "../Pages/Home";
 import { Bio } from "./Bio";
+import Edit from "./Edit";
 
 function Allroutes() {
   return (
@@ -14,6 +15,7 @@ function Allroutes() {
       <Route path="/create" element={<Create />}></Route>
       <Route path="/people" element={<People />}></Route>
       <Route path="/bio" element={<Bio />}></Route>
+      <Route path="/edit" element={<Edit />}></Route>
     </Routes>
   );
 }

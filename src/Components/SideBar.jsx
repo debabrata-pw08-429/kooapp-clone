@@ -51,6 +51,7 @@ const SideBar = () => {
   });
 
   let img_DP = useSelector((state) => {
+    console.log(state)
     return state.loginReducer.picture;
   });
 
