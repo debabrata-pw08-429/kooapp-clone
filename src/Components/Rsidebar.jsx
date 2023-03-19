@@ -246,8 +246,13 @@ const Rsidebar = () => {
             </Flex>
           </Box>
         </Flex>
-        <Box>
-          <Flex justifyContent={"space-evenly"}>
+        <Box mt="1rem">
+          <Flex
+            justifyContent={"space-around"}
+            fontSize="12px"
+            m="auto"
+            pt="1rem"
+          >
             <Link href="http://www.google.com" color={"rgb(136,136,136)"}>
               About
             </Link>
