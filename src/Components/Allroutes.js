@@ -6,6 +6,8 @@ import People from "../Pages/People";
 import Home from "../Pages/Home";
 import { Bio } from "./Bio";
 import Edit from "./Edit";
+import ProfileComp from './ProfileComp'
+
 
 function Allroutes() {
   return (
@@ -16,6 +18,8 @@ function Allroutes() {
       <Route path="/people" element={<People />}></Route>
       <Route path="/bio" element={<Bio />}></Route>
       <Route path="/edit" element={<Edit />}></Route>
+      <Route path="/profile" element={<ProfileComp/>} ></Route>
+     <Route path="/profile:name" element={<ProfileComp/>} ></Route>
     </Routes>
   );
 }
