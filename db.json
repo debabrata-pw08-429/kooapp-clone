@@ -72,39 +72,15 @@
       "id": 21
     }
   ],
-  "loggedUser": [
-    {
-      "id": 1,
-      "name": "Syed",
-      "image": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61nlaq18GGL._SY679_.jpg"
-    }
-  ],
-  "user": {
-    "username": "",
-    "email": "",
-    "password": "",
-    "profileImg": "",
-    "loginDetails": {
-      "isAuth": false,
-      "token": "",
-      "isLoading": false,
-      "isError": false
-    },
-    "followers": {
-      "count": 0,
-      "people": []
-    },
-    "following": {
-      "count": 0,
-      "people": []
-    },
-    "postsCreated": [],
-    "hastags": []
-  },
-  "feed": {
-    "data": [],
-    "isLoading": false,
-    "isError": false
+  "loggedUser": {
+    "sub": "108426521460426161266",
+    "name": "Gouse Syed Mohammed",
+    "given_name": "Gouse",
+    "family_name": "Syed Mohammed",
+    "picture": "https://lh3.googleusercontent.com/a/AGNmyxZl3O2nf_fYuxut-22kATbU564ugIAYxXFWB6nY=s96-c",
+    "email": "gousesyed97@gmail.com",
+    "email_verified": true,
+    "locale": "en"
   },
   "peopleData": [
     {
@@ -178,8 +154,8 @@
       "posts": [
         {
           "postsID": 1,
-          "userLike": false,
-          "likes": 287,
+          "userLike": true,
+          "likes": 288,
           "comments": 19,
           "re-share": 7,
           "days": "2d",

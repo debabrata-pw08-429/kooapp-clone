@@ -1,37 +1,57 @@
-// import { LOGIN_SUCCESS, LOGIN_REQUEST, LOGIN_FAILURE } from "./actionTypes";
+import {
+  LOGIN_SUCCESS,
+  LOGIN_REQUEST,
+  LOGIN_FAILURE,
+  LOGOUT,
+} from "./actionTypes";
 
-// const initialState = {
-//   isAuth: false,
-//   token: "",
-//   isLoading: false,
-//   isError: false,
-// };
+import axios from "axios";
 
-// const reducer = (state = initialState, { type, payload }) => {
-//   switch (type) {
-//     case LOGIN_REQUEST:
-//       return {
-//         ...state,
-//         isLoading: true,
-//       };
+const json_URL = `http://localhost:8080/loggedUser`;
+let initData = { isAuth: false, token: "", isLoading: false, isError: false };
 
-//     case LOGIN_SUCCESS:
-//       return {
-//         ...state,
-//         isLoading: false,
-//         isAuth: true,
-//         token: payload,
-//       };
+const getInitialState = async () => {
+  let res = await axios.get(json_URL);
+  res = res.data;
+  initData = { ...initData, ...res };
+};
 
-//     case LOGIN_FAILURE:
-//       return {
-//         ...state,
-//         isError: true,
-//       };
+getInitialState();
 
-//     default:
-//       return state;
-//   }
-// };
+const initialState = initData;
 
-// export { reducer };
+const reducer = (state = initialState, { type, payload }) => {
+  switch (type) {
+    case LOGIN_REQUEST:
+      return {
+        ...state,
+        isLoading: true,
+      };
+
+    case LOGIN_SUCCESS:
+      return {
+        ...state,
+        isLoading: false,
+        isAuth: true,
+        ...payload,
+      };
+
+    case LOGIN_FAILURE:
+      return {
+        ...state,
+        isError: true,
+      };
+
+    case LOGOUT:
+      return {
+        ...state,
+        isAuth: false,
+        ...payload,
+      };
+
+    default:
+      return state;
+  }
+};
+
+export { reducer };

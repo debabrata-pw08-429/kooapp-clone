@@ -5,6 +5,11 @@
   }
 }
 
+/* Hide scrollbars */
+body {
+  overflow-x: hidden;
+}
+
 .Home_intro__gfp7Z {
   height: 100vh;
   width: 100vw;
@@ -192,17 +197,6 @@
       margin-left: 50px;
     }
   }
-}
-
-.Home_carouselContainer__K44P8 > div > div > ul {
-  margin: -40px 0 !important;
-}
-
-.Home_carouselContainer__K44P8 > div > div > ul > li {
-  box-shadow: none !important;
-  border: 1px solid #ff0;
-  width: 12px !important;
-  height: 12px !important;
 }
 
 .Home_where__Ga2lA {

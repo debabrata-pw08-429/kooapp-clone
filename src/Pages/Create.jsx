@@ -1,23 +1,40 @@
-import React,{useState,useRef,useEffect,useLayoutEffect} from 'react'
+import React, { useState, useRef, useEffect, useLayoutEffect } from "react";
 import style from "../Styles/create.module.css";
 import { BiLeftArrowAlt } from "react-icons/bi";
-import { BsSend,BsPlusCircle,BsBarChart} from "react-icons/bs";
-import { AiOutlineHistory,AiOutlinePlusCircle } from "react-icons/ai";
-import { HiOutlineInboxArrowDown,HiOutlineLink } from "react-icons/hi2";
+import { BsSend, BsPlusCircle, BsBarChart } from "react-icons/bs";
+import { AiOutlineHistory, AiOutlinePlusCircle } from "react-icons/ai";
+import { HiOutlineInboxArrowDown, HiOutlineLink } from "react-icons/hi2";
 import { ImImages } from "react-icons/im";
-import { RxVideo  } from "react-icons/rx";
-import { FiSettings  } from "react-icons/fi";
-import { Avatar ,Box,HStack,Button,Text,Spacer,CircularProgress, CircularProgressLabel} from '@chakra-ui/react';
-import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalCloseButton, Progress, ModalFooter } from "@chakra-ui/react";
-import { useSelector,useDispatch } from "react-redux";
-import { postData } from '../Redux/PostDetails/action'
+import { RxVideo } from "react-icons/rx";
+import { FiSettings } from "react-icons/fi";
+import {
+  Avatar,
+  Box,
+  HStack,
+  Button,
+  Text,
+  Spacer,
+  CircularProgress,
+  CircularProgressLabel,
+} from "@chakra-ui/react";
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalCloseButton,
+  Progress,
+  ModalFooter,
+} from "@chakra-ui/react";
+import { useSelector, useDispatch } from "react-redux";
+import { postData } from "../Redux/PostDetails/action";
 import { useNavigate } from "react-router-dom";
-
 
 function Create() {
   // let { Image } = useSelector((state) => state.LoggedReducer);
   // let Image='https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61nlaq18GGL._SY679_.jpg';
-  const dispatch= useDispatch();
+  const dispatch = useDispatch();
   const [count, setCount] = useState(0);
   const [description, setDescription] = useState(0);
   const [file, setFile] = useState([]);
@@ -32,36 +49,36 @@ function Create() {
     setDescription(event.target.value);
     setCount(inputValue.length);
   };
-  
+
   const handleFileChange = (event) => {
     console.log(file,"fileeeeeee");
     const selectedFiles = event.target.files;
     const filesArray = Array.from(selectedFiles);
-    console.log(filesArray,"filesssssAARRRRay");
+    console.log(filesArray, "filesssssAARRRRay");
     const filesWithPreview = filesArray.map((file) => ({
-                                                  fileData:file,
-                                                  previewUrl: URL.createObjectURL(file),
-                                                  type:file.type,
-                                                  date:file.lastModifiedDate,
-                              }));
-    console.log(filesWithPreview,"ffilesWithPreview");
+      fileData: file,
+      previewUrl: URL.createObjectURL(file),
+      type: file.type,
+      date: file.lastModifiedDate,
+    }));
+    console.log(filesWithPreview, "ffilesWithPreview");
     setFile([...file, ...filesWithPreview]);
   };
 
-  const handleClose= (index) => {
-      const newFiles = [...file];
-      newFiles.splice(index, 1);
-      setFile(newFiles);
-    }
+  const handleClose = (index) => {
+    const newFiles = [...file];
+    newFiles.splice(index, 1);
+    setFile(newFiles);
+  };
 
   const handleButtonClick = (i) => {
     i===0? (fileInputRef.current.click()):(fileInputRef1.current.click());
     console.log("Button clickededddd")
   };
 
-  const handlePost=()=>{
-    console.log(file,"fileeeeeee22222222");
-    let data={
+  const handlePost = () => {
+    console.log(file, "fileeeeeee22222222");
+    let data = {
       description,
       files:[...file],
       likes:0,
@@ -160,7 +177,7 @@ function Create() {
     
   
   const handleCloseModal = () => {
-    if (progressCount<100){
+    if (progressCount < 100) {
       setIsOpen(false);
       setProgressCount(0);
     }
@@ -181,7 +198,6 @@ function Create() {
       return () => clearInterval(interval);
     }
   }, [isOpen]);
-
 
   return (
     <div className={style.main}>
@@ -242,15 +258,21 @@ function Create() {
           <ModalHeader>{progressCount<=100? 'Creating Koo...' : 'Post successfully updated.'}</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-          <Progress hasStripe value={progressCount} />
+            <Progress hasStripe value={progressCount} />
           </ModalBody>
           <ModalFooter>
-            <Button onClick={onClose} disabled={progressCount<100} bg={progressCount>=100? 'green.500' : 'red.500'} >{progressCount<=100? 'WAIT' : 'DONE'}</Button>
+            <Button
+              onClick={onClose}
+              disabled={progressCount < 100}
+              bg={progressCount >= 100 ? "green.500" : "red.500"}
+            >
+              {progressCount <= 100 ? "WAIT" : "DONE"}
+            </Button>
           </ModalFooter>
         </ModalContent>
       </Modal>
     </div>
-  )
+  );
 }
 
 export default Create;
