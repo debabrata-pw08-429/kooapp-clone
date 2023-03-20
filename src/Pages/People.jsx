@@ -28,7 +28,6 @@ const People = () => {
   return (
     <Flex>
       <SideBar />
-
       <Box w="620px" bg="rgb(248,247,243)" p="20px 24px 0">
         {/* Navbar div */}
         <Flex justifyContent="space-evenly" h="43px" color="rgb(136,136,136)">

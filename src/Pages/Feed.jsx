@@ -16,6 +16,9 @@ import { SideBar } from "../Components/SideBar";
 import { getData1 } from "../Redux/PostDetails/action";
 import { getData2 } from "../Redux/userDetails/action";
 import { getData3 } from "../Redux/LoogedOutData/action";
+
+
+
 function Feed() {
   let dispatch = useDispatch();
   let { followstate, setFollowstate, idC, setidC, trueCount, setTrueCount } =
@@ -28,44 +31,51 @@ function Feed() {
     dispatch(getData2());
     dispatch(getData3());
     // console.log("yyesss")
-    setTrueCount (7);
-    
-  },[])
-  
-  let peopleData = useSelector(state=>state.PeopleReducer.peopleData);
-  let userPostData = useSelector(state=>state.userPostReducer.userPostData);
-  let  loggedUser  = useSelector((state) => state.loggedReducer.loggedUser);
-  
-  let LoggedOutData= useSelector((state) => state.loggedOutDataReducer.loggedOutData);
+    setTrueCount(7);
+  }, []);
+
+  let peopleData = useSelector((state) => state.PeopleReducer.peopleData);
+  let userPostData = useSelector((state) => state.userPostReducer.userPostData);
+  let loggedUser = useSelector((state) => state.loggedReducer.loggedUser);
+
+  let LoggedOutData = useSelector(
+    (state) => state.loggedOutDataReducer.loggedOutData
+  );
   let isAuth = useSelector((state) => {
     return state.loginReducer.isAuth;
   });
-  console.log(LoggedOutData,"loggedoutttttttttttttttttttttttUser");
-  console.log(loggedUser,"loggedUser");
-  console.log(userPostData,"userPostData");
+  console.log(LoggedOutData, "loggedoutttttttttttttttttttttttUser");
+  console.log(loggedUser, "loggedUser");
+  console.log(userPostData, "userPostData");
   // console.log(userPostData[0].data.files[0].previewUrl,"prievewinggggg")
-  useEffect(()=>{
+  useEffect(() => {
     // console.log("222")
-  },[followstate])
+  }, [followstate]);
 
   // let imageSrc;
   // if (userPostData.length>=1){
   //   imageSrc = URL.createObjectURL(userPostData[2].data.files[0].actualFile);
   //   console.log(imageSrc,"imageSrc");
   // }
-  let x=0;
- let encodedImg;
-  let followData = useSelector(state=>state.PeopleReducer.followData)
+  let x = 0;
+  let encodedImg;
+  let followData = useSelector((state) => state.PeopleReducer.followData);
   // console.log(peopleData,"checking after like peopleData");
   return (
-    <div>
+    <Box>
       <Flex w="100%">
-        <Box w="26%" paddingLeft={'2%'}>
+        <Box w={["0", "0", "26%", "26%"]} paddingLeft={["0", "0", "0", "2%"]}>
           {/* <LeftSidebar /> */}
           <SideBar />
         </Box>
 
-        <Box w="42%" bg="#f8f7f3" p={"10px 12px 0px"} overflow={"hidden"}>
+        <Box
+          w={["100%", "100%", "74%", "42%"]}
+          bg="#f8f7f3"
+          p={"10px 12px 0px"}
+          zIndex="-1"
+          overflow={"hidden"}
+        >
           <HStack
             p={"20px 10px"}
             alignItems="center"
@@ -132,77 +142,182 @@ function Feed() {
                 </Link>
               </HStack>
 
-          
-          <HStack marginTop={'-3%'} marginLeft={'2%'} marginBottom={'5%'}  >
-            { 
-            peopleData.map((e)=>{
-                let {name,category,img,userFollowState,id}=e;
-                return <ProfileComp id1={id} name={name} category={category} img={img} userFollowState={userFollowState} setTrueCount={setTrueCount}/>
-            })}
-          </HStack></>
+              <HStack marginTop={"-3%"} marginLeft={"2%"} marginBottom={"5%"}>
+                {peopleData.map((e) => {
+                  let { name, category, img, userFollowState, id } = e;
+                  return (
+                    <ProfileComp
+                      id1={id}
+                      name={name}
+                      category={category}
+                      img={img}
+                      userFollowState={userFollowState}
+                      setTrueCount={setTrueCount}
+                    />
+                  );
+                })}
+              </HStack>
+            </>
           )}
 
-              {isAuth==true && userPostData.map((e,idx)=>{
-                // let {name,username,category,img,posts,userFollowState,id}=e;
-                let name=loggedUser.name;
-                let username=loggedUser.given_name;
-                let img=loggedUser.picture;
-                let category="";
-                let userFollowState=false;
-                let id=idx;
-                let postsID =idx;
-                let days="Just now";
-                let content = {
-                  textContent: e.data.description,
-                  imgContent: e.data.myJSON
-                };
-                let hastags="";
-                let likes=0;
-                let comments=0;
-                let reKoo=0;
-                let userLike=e.data.userLike;
-                let Image1=loggedUser.picture;
-                let user=true;
-                console.log(e.data.description,"description checkkkkkk")
-                  return  <FeedPost user={user} id1={idx+1} postsID={postsID} Image1={Image1} name={name} category={category}  userLike={userLike} img={img} userFollowState={userFollowState} username={username} days={days} content={content} hastags={hastags} likes={likes} comments={comments} reKoo={reKoo}/>
-               
-               })}
-
-          {isAuth==true &&  peopleData.map((e)=>{
-                let {name,username,category,img,posts,userFollowState,id}=e;
-                return (<div >
-                {posts.map((e)=>{
-                  let Image1=loggedUser.picture;
-                  let {postsID,days,content,hastags,likes,comments,reKoo,userLike}=e;
-                  let user=false;
-                  return <FeedPost user={user} id1={id} postsID={postsID} Image1={Image1} name={name} category={category}  userLike={userLike} img={img} userFollowState={userFollowState} username={username} days={days} content={content} hastags={hastags} likes={likes} comments={comments} reKoo={reKoo}/>
-                })}
-                </div>)
+          {isAuth == true &&
+            userPostData.map((e, idx) => {
+              // let {name,username,category,img,posts,userFollowState,id}=e;
+              let name = loggedUser.name;
+              let username = loggedUser.given_name;
+              let img = loggedUser.picture;
+              let category = "";
+              let userFollowState = false;
+              let id = idx;
+              let postsID = idx;
+              let days = "Just now";
+              let content = {
+                textContent: e.data.description,
+                imgContent: e.data.myJSON,
+              };
+              let hastags = "";
+              let likes = 0;
+              let comments = 0;
+              let reKoo = 0;
+              let userLike = e.data.userLike;
+              let Image1 = loggedUser.picture;
+              let user = true;
+              console.log(e.data.description, "description checkkkkkk");
+              return (
+                <FeedPost
+                  user={user}
+                  id1={idx + 1}
+                  postsID={postsID}
+                  Image1={Image1}
+                  name={name}
+                  category={category}
+                  userLike={userLike}
+                  img={img}
+                  userFollowState={userFollowState}
+                  username={username}
+                  days={days}
+                  content={content}
+                  hastags={hastags}
+                  likes={likes}
+                  comments={comments}
+                  reKoo={reKoo}
+                />
+              );
             })}
 
-
-              {isAuth==false &&  LoggedOutData.map((e)=>{
-                let {name,username,category,img,posts,userFollowState,id}=e;
-                return (<div >
-                {posts.map((e)=>{
-                  let Image1=loggedUser.picture;
-                  let {postsID,days,content,hastags,likes,comments,reKoo,userLike}=e;
-                  let user=false;
-                  return <FeedPost user={user} id1={id} postsID={postsID} Image1={Image1} name={name} category={category}  userLike={userLike} img={img} userFollowState={userFollowState} username={username} days={days} content={content} hastags={hastags} likes={likes} comments={comments} reKoo={reKoo}/>
-                })}
-                </div>)
+          {isAuth == true &&
+            peopleData.map((e) => {
+              let {
+                name,
+                username,
+                category,
+                img,
+                posts,
+                userFollowState,
+                id,
+              } = e;
+              return (
+                <div>
+                  {posts.map((e) => {
+                    let Image1 = loggedUser.picture;
+                    let {
+                      postsID,
+                      days,
+                      content,
+                      hastags,
+                      likes,
+                      comments,
+                      reKoo,
+                      userLike,
+                    } = e;
+                    let user = false;
+                    return (
+                      <FeedPost
+                        user={user}
+                        id1={id}
+                        postsID={postsID}
+                        Image1={Image1}
+                        name={name}
+                        category={category}
+                        userLike={userLike}
+                        img={img}
+                        userFollowState={userFollowState}
+                        username={username}
+                        days={days}
+                        content={content}
+                        hastags={hastags}
+                        likes={likes}
+                        comments={comments}
+                        reKoo={reKoo}
+                      />
+                    );
+                  })}
+                </div>
+              );
             })}
 
-         
+          {isAuth == false &&
+            LoggedOutData.map((e) => {
+              let {
+                name,
+                username,
+                category,
+                img,
+                posts,
+                userFollowState,
+                id,
+              } = e;
+              return (
+                <div>
+                  {posts.map((e) => {
+                    let Image1 = loggedUser.picture;
+                    let {
+                      postsID,
+                      days,
+                      content,
+                      hastags,
+                      likes,
+                      comments,
+                      reKoo,
+                      userLike,
+                    } = e;
+                    let user = false;
+                    return (
+                      <FeedPost
+                        user={user}
+                        id1={id}
+                        postsID={postsID}
+                        Image1={Image1}
+                        name={name}
+                        category={category}
+                        userLike={userLike}
+                        img={img}
+                        userFollowState={userFollowState}
+                        username={username}
+                        days={days}
+                        content={content}
+                        hastags={hastags}
+                        likes={likes}
+                        comments={comments}
+                        reKoo={reKoo}
+                      />
+                    );
+                  })}
+                </div>
+              );
+            })}
         </Box>
 
-        <Box w="32%" paddingRight={'6%'}    >
+        <Box
+          w="32%"
+          paddingRight={"6%"}
+          display={["none", "none", "none", "block"]}
+        >
           {/* <RightSidebar />{" "} */}
-          <Rsidebar/>
+          <Rsidebar />
         </Box>
-
       </Flex>
-    </div>
+    </Box>
   );
 }
 

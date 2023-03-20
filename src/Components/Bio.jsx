@@ -204,7 +204,7 @@ const Bio = () => {
                 borderRadius="14px"
                 object-fit="cover"
                 object-position="center top"
-                src={Image1}
+                src={Image1?Image1:"https://images.kooapp.com/img/media-placeholder.png"}
                 width='100%'
               />
               <Button

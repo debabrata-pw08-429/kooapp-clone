@@ -30,13 +30,16 @@
     }  
 
 }
-@media (min-width:760px) and (max-width:900px) {
+@media (min-width:760px) and (max-width:1000px) {
     .text-fields{
         display: none;
     }  
     .sidebar-sub{
         display: none;
     } 
+    .sidebar-main{
+        padding: 0;
+    }  
 
 }
 @media (min-width:760px) and (max-width:1500px){

@@ -40,6 +40,17 @@ import {
 } from "@chakra-ui/react";
 
 const Login = ({ children }) => {
+  let {
+    followstate,
+    setFollowstate,
+    idC,
+    setidC,
+    trueCount,
+    setTrueCount,
+    log,
+    setLog,
+  } = useContext(FeedContext);
+
   let isAuth = useSelector((state) => {
     return state.loginReducer.isAuth;
   });
@@ -69,7 +80,7 @@ const Login = ({ children }) => {
         setoathVerify(true);
 
         dispatch(setLogin(user.data));
-
+        setLog(true);
         navigate(location.state === null ? "/feed" : location.state);
       } catch (error) {
         console.log(error);
