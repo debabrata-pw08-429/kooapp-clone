@@ -346,10 +346,10 @@ const SideBar = () => {
         h="56px"
         display={["flex", "flex", "none", "none"]}
         justifyContent="space-around"
-        position="fixed"
+        position="absolute"
         alignItems="center"
-        zIndex="-99"
         bg="white"
+        zIndex='1'
         bottom="0"
         borderTop="1px solid #e8e8e3"
       >
