@@ -16,12 +16,9 @@ import { useSelector } from "react-redux";
 import acc_Img from "../Images/acct.svg";
 
 function FeedCreate() {
-  let img_DP = useSelector((state) => {
-    return state.loginReducer.picture;
-  });
-
-  let Image = img_DP || acc_Img;
-
+    // let { Image } = useSelector((state) => state.LoggedReducer);
+    let  loggedUser  = useSelector((state) => state.loggedReducer.loggedUser);
+    let Image=loggedUser.picture;
   return (
     <div style={{ pointer: "cursor" }}>
       <Link to="/create">
