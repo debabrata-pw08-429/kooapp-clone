@@ -1,14 +1,12 @@
 {
-  "userposts": [
-   
-  ],
+  "userposts": [],
   "loggedUser": {
-    "sub": "108804342027546650011",
-    "name": "Debabrata Hembram",
-    "given_name": "Debabrata",
-    "family_name": "Hembram",
-    "picture": "https://lh3.googleusercontent.com/a/AGNmyxYALen5fWuUsL7w3yTehx1CjX_nnBbB5jzkL8UqKQ=s96-c",
-    "email": "chintuthecoder@gmail.com",
+    "sub": "108426521460426161266",
+    "name": "Gouse Syed Mohammed",
+    "given_name": "Gouse",
+    "family_name": "Syed Mohammed",
+    "picture": "https://lh3.googleusercontent.com/a/AGNmyxZl3O2nf_fYuxut-22kATbU564ugIAYxXFWB6nY=s96-c",
+    "email": "gousesyed97@gmail.com",
     "email_verified": true,
     "locale": "en"
   },
