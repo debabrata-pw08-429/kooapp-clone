@@ -57,6 +57,9 @@ const SideBar = () => {
   let img_DP = useSelector((state) => {
     return state.loginReducer.picture;
   });
+  useEffect(()=>{
+
+  })
   return (
     //Main div--
     <Box position="sticky" top="0">
@@ -111,6 +114,10 @@ const SideBar = () => {
                 justifyContent="flex-start"
                 bg={["none", "none", "white"]}
                 borderRadius="50px"
+                overflow='hidden'
+                textOverflow='ellipsis'
+                whiteSpace='normal'
+                wordWrap= "break-word"
               >
                 <Image
                   src={img_DP}
@@ -166,7 +173,7 @@ const SideBar = () => {
               <Button
                 color="rgb(136,136,136)"
                 border="none"
-                bg={["none", "none", "white"]}
+                bg={["none", "none","none", "white"]}
                 _hover={{ bg: "#ebedf0" }}
                 w="150px"
                 h="48px"
@@ -183,7 +190,7 @@ const SideBar = () => {
               <Button
                 color="rgb(136,136,136)"
                 border="none"
-                bg={["none", "none", "white"]}
+                bg={["none", "none","none", "white"]}
                 _hover={{ bg: "#ebedf0" }}
                 w="150px"
                 h="48px"
@@ -200,7 +207,7 @@ const SideBar = () => {
               <Button
                 color="rgb(136,136,136)"
                 border="none"
-                bg={["none", "none", "white"]}
+                bg={["none", "none","none", "white"]}
                 _hover={{ bg: "#ebedf0" }}
                 w="150px"
                 h="48px"
@@ -222,7 +229,7 @@ const SideBar = () => {
               <Button
                 color="rgb(136,136,136)"
                 border="none"
-                bg={["none", "none", "white"]}
+                bg={["none", "none","none", "white"]}
                 _hover={{ bg: "#ebedf0" }}
                 w="150px"
                 h="48px"
@@ -245,7 +252,7 @@ const SideBar = () => {
                 onClick={onOpen}
                 color="rgb(136,136,136)"
                 border="none"
-                bg={["none", "none", "white"]}
+                bg={["none", "none","none", "white"]}
                 _hover={{ bg: "#ebedf0" }}
                 w="150px"
                 h="48px"
@@ -303,7 +310,7 @@ const SideBar = () => {
               mb={isAuth ? "0" : "80px"}
               bg="rgb(75,75,75)"
               color="white"
-              display={["none", "none", "block"]}
+              display={["none", "none","none", "block"]}
               border="none"
               borderRadius="50px"
               p="8px"
@@ -328,7 +335,8 @@ const SideBar = () => {
                 Sign In
               </Button>
             </Login>
-            <IconButton icon={<FaSun/>} isRound={true} size="lg" onClick={toggleColorMode} />
+            {/* <IconButton icon={<FaSun/>} isRound={true} size="lg" onClick={toggleColorMode} />
+             */}
           </Flex>
         </Flex>
       </Box>
@@ -340,7 +348,7 @@ const SideBar = () => {
         justifyContent="space-around"
         position="fixed"
         alignItems="center"
-        zIndex="99"
+        zIndex="-99"
         bg="white"
         bottom="0"
         borderTop="1px solid #e8e8e3"
