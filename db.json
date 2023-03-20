@@ -1,5 +1,6 @@
 {
-  "userposts": [],
+  "userposts": [
+  ],
   "loggedUser": {
     "sub": "108426521460426161266",
     "name": "Gouse Syed Mohammed",
@@ -23,8 +24,8 @@
       "posts": [
         {
           "postsID": 1,
-          "userLike": false,
-          "likes": 43,
+          "userLike": true,
+          "likes": 44,
           "comments": 19,
           "re-share": 8,
           "content": {
@@ -39,8 +40,8 @@
         },
         {
           "postsID": 2,
-          "userLike": false,
-          "likes": 226,
+          "userLike": true,
+          "likes": 227,
           "comments": 99,
           "re-share": 35,
           "content": {
