@@ -58,14 +58,14 @@ function Feed() {
   let followData = useSelector(state=>state.PeopleReducer.followData)
   // console.log(peopleData,"checking after like peopleData");
   return (
-    <div>
+    <Box>
       <Flex w="100%">
-        <Box w="26%" paddingLeft={'2%'}>
+        <Box w={["0","0","26%","26%"]} paddingLeft={["0","0","0",'2%']}>
           {/* <LeftSidebar /> */}
           <SideBar />
         </Box>
 
-        <Box w="42%" bg="#f8f7f3" p={"10px 12px 0px"} overflow={"hidden"}>
+        <Box w={["100%","100%","74%","42%"]} bg="#f8f7f3" p={"10px 12px 0px"} zIndex='-1' overflow={"hidden"}>
           <HStack
             p={"20px 10px"}
             alignItems="center"
@@ -196,13 +196,13 @@ function Feed() {
          
         </Box>
 
-        <Box w="32%" paddingRight={'6%'}    >
+        <Box w="32%" paddingRight={'6%'} display={["none","none","none","block"]}   >
           {/* <RightSidebar />{" "} */}
           <Rsidebar/>
         </Box>
 
       </Flex>
-    </div>
+    </Box>
   );
 }
 

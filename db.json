@@ -1,12 +1,12 @@
 {
   "userposts": [],
   "loggedUser": {
-    "sub": "108426521460426161266",
-    "name": "Gouse Syed Mohammed",
-    "given_name": "Gouse",
-    "family_name": "Syed Mohammed",
-    "picture": "https://lh3.googleusercontent.com/a/AGNmyxZl3O2nf_fYuxut-22kATbU564ugIAYxXFWB6nY=s96-c",
-    "email": "gousesyed97@gmail.com",
+    "sub": "107119568014187088956",
+    "name": "keerthi malini",
+    "given_name": "keerthi",
+    "family_name": "malini",
+    "picture": "https://lh3.googleusercontent.com/a/AGNmyxYIuBNEEVPpLYT_0lwCLQKGC1CeooT5Y6lub15h=s96-c",
+    "email": "keerthimalini6699@gmail.com",
     "email_verified": true,
     "locale": "en"
   },
@@ -77,7 +77,7 @@
       "des": "Transforming Higher Education | Tedx Speaker. Also, Talks about #impact, #engineers, #educationforall, #highereducation, and #hiringdevelopers",
       "followers": "17.4K",
       "following": 10,
-      "userFollowState": true,
+      "userFollowState": false,
       "category": "Education",
       "posts": [
         {
@@ -153,7 +153,7 @@
       "des": "Love to work in films",
       "followers": "155.8K",
       "following": 0,
-      "userFollowState": true,
+      "userFollowState": false,
       "img": "https://e1.pxfuel.com/desktop-wallpaper/468/425/desktop-wallpaper-jr-ntr-kajal-agarwal-temper-latest-stills-jr-ntr.jpg",
       "posts": [
         {
@@ -269,7 +269,7 @@
       "des": "Minister of Road Transport & Highways, Government of India.",
       "followers": "3.4M",
       "following": 2,
-      "userFollowState": true,
+      "userFollowState": false,
       "category": "Politician",
       "posts": [
         {
@@ -657,11 +657,9 @@
           "content": {
             "textContent": "Welcome to the Koo family 🙂 1. Follow people you like by clicking on the '+ Follow' button to see their posts in your feed. 2. Share your thoughts with others and gain a following. Happy Koo to you!",
             "vdoContent": "https://drive.google.com/uc?id=1N64FJvnk4VfnxPQ-LFj8JDJwE1O9hVG0&export=download"
-            
           },
           "days": "101d",
-          "hastags": [
-          ]
+          "hastags": []
         }
       ]
     }
