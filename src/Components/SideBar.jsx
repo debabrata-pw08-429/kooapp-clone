@@ -33,7 +33,7 @@ import notifications from "../Images/notifications.svg";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { log_out } from "../Redux/login/action";
-
+import { Link } from "react-router-dom";
 const SideBar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   let navigate = useNavigate();
@@ -74,6 +74,7 @@ const SideBar = () => {
           >
             {/* Feed option */}
             <Box textAlign="left" m=" 8px" h="48px">
+            <Link to="/feed">
               <Button
                 color="rgb(136,136,136)"
                 border="none"
@@ -87,6 +88,7 @@ const SideBar = () => {
                 <Image src={feedIcon} alt="" marginRight="8px" />
                 <span className="text-fields">Feed</span>
               </Button>
+              </Link>
             </Box>
 
             {/* Username onclick displays the Bio with add account option */}

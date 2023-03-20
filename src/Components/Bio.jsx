@@ -15,6 +15,7 @@ import {
   ModalBody,
   ModalFooter,
 } from "@chakra-ui/react";
+import Rsidebar from "../Components/Rsidebar";
 import { SideBar } from "./SideBar";
 import back from "../Images/back.svg";
 import dots3 from "../Images/dots3.svg";
@@ -26,7 +27,7 @@ import axios from "axios";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
-
+import FeedPost from "../Components/FeedPost";
 const Bio = () => {
   const [images, setImages] = useState(Array(10).fill(null));
   const [modalIsOpen1, setModalIsOpen1] = useState(false);
@@ -34,6 +35,10 @@ const Bio = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const hiddenFileInput = useRef(null);
   const [data, setData] = useState([]);
+
+  let userPostData = useSelector(state=>state.userPostReducer.userPostData);
+  let  loggedUser  = useSelector((state) => state.loggedReducer.loggedUser);
+  let Image1=loggedUser.picture;
   let navigate = useNavigate();
   const handleClick = (event) => {
     hiddenFileInput.current.click();
@@ -100,10 +105,12 @@ const Bio = () => {
       });
   }, [images]);
   return (
+    <div>
     <Flex>
-      <SideBar />
+      <Box position="sticky" top="0"  w="26%"><SideBar /></Box>
+      
 
-      <Box w="620px" bg="rgb(248,247,243)" p="20px 24px 0">
+      <Box w="42%" bg="rgb(248,247,243)" p="20px 24px 0">
         {/* User details top box of image */}
         <Box borderRadius="14px">
           <Box
@@ -197,7 +204,8 @@ const Bio = () => {
                 borderRadius="14px"
                 object-fit="cover"
                 object-position="center top"
-                src={"https://images.kooapp.com/img/media-placeholder.png"}
+                src={Image1}
+                width='100%'
               />
               <Button
                 w="158PX"
@@ -521,14 +529,53 @@ const Bio = () => {
           </Box>
 
           {/* No Koo found box */}
-          <Box w="572px" h="176px" pt="51px" textAlign="center">
+          {userPostData.length==0 && 
+            <Box w="572px" h="176px" pt="51px" textAlign="center">
             <Text fontSize="17px" fontWeight="500" color="gray">
               No Koo Found
             </Text>
           </Box>
+          }
+          <Box p={'0px'}>
+            { userPostData.length>=1 &&  userPostData.map((e,idx)=>{
+                // let {name,username,category,img,posts,userFollowState,id}=e;
+                let name=loggedUser.name;
+                let username=loggedUser.given_name;
+                let img=loggedUser.picture;
+                let category="";
+                let userFollowState=false;
+                let id=idx;
+                let postsID =idx;
+                let days="Just now";
+                let content = {
+                  textContent: e.data.description,
+                  imgContent: e.data.myJSON
+                };
+                let hastags="";
+                let likes=0;
+                let comments=0;
+                let reKoo=0;
+                let userLike=e.data.userLike;
+                let Image1=loggedUser.picture;
+                let user=true;
+                console.log(e.data.description,"description checkkkkkk")
+                  return  <FeedPost user={user} id1={idx+1} postsID={postsID} Image1={Image1} name={name} category={category}  userLike={userLike} img={img} userFollowState={userFollowState} username={username} days={days} content={content} hastags={hastags} likes={likes} comments={comments} reKoo={reKoo}/>
+               
+               })}
+          </Box>
         </Box>
+
+        
       </Box>
+
+      <Box w="32%" paddingRight={'6%'}    >
+          {/* <RightSidebar />{" "} */}
+          <Rsidebar/>
+        </Box>
+     
     </Flex>
+    
+    </div>
   );
 };
 
