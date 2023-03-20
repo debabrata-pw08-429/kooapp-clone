@@ -86,14 +86,14 @@ const Login = ({ children }) => {
 
   return (
     <>
-      <Button
+      <Box
         zIndex={5}
         onClick={onOpen}
         bg="transparent"
         _hover={{ bg: "transparent" }}
       >
         {children}
-      </Button>
+      </Box>
       <Box position="relative">
         <AbsoluteCenter axis="both">
           <Modal

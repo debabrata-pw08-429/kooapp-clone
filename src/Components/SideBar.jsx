@@ -56,16 +56,22 @@ const SideBar = () => {
 
   return (
     //Main div--
-    <Box>
-      <Box className="sidebar-main" w="350px" h='700px' position='sticky' top='0'>
+    <Box position="sticky" top="0">
+      <Box className="sidebar-main" w="350px" h="700px">
         <Flex direction="column" m="20px">
           {/* Koo logo-- */}
-          <Box w="163px" h="73px">
+          <Box w="163px" h="73px" ml={["0", "0", "20px", "0"]}>
             <Image className="kooLogo" src={koo} alt="mainlogo" />
           </Box>
 
           {/* Flex for sidebar options */}
-          <Flex direction="column" justifyContent="center" mt="35px" mb="20px">
+          <Flex
+            direction="column"
+            justifyContent="center"
+            mt="35px"
+            mb="20px"
+            ml={["0", "0", "50px", "0"]}
+          >
             {/* Feed option */}
             <Box textAlign="left" m=" 8px" h="48px">
               <Button
@@ -274,6 +280,7 @@ const SideBar = () => {
                       onClick={() => {
                         onClose();
                         dispatch(log_out(loggedUser_Data));
+                        window.location.reload();
                       }}
                     >
                       Yes
@@ -322,7 +329,7 @@ const SideBar = () => {
         className="sidebar-sub"
         w="100%"
         h="56px"
-        display="flex"
+        display={["flex", "flex", "none", "none"]}
         justifyContent="space-around"
         position="fixed"
         alignItems="center"

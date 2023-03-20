@@ -32,6 +32,9 @@ import { postData } from "../Redux/PostDetails/action";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 import { getData2 } from "../Redux/userDetails/action";
+
+
+
 function Create() {
   useEffect(() => {
     dispatch(getData2());
