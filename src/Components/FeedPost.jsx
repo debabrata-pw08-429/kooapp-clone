@@ -186,9 +186,11 @@ function FeedPost({id1,postsID,name,img,username,category,days,content,hastags,l
             <Box marginTop={'3%'}><Image maxHeight={'500px'} width={'100%'} src={content.imgContent} style={{ cursor: 'pointer' }}></Image>
             {/* {console.log(content.vdoContent,"vdeo in vdo space")} */}
                         {content.vdoContent !== undefined && (
-                            <video width="600" height="120" controls>
-                                <source src={content.vdoContent} type={content.type} />
+                            
+                              <video width="600" height="150" controls>
+                                <source src={content.vdoContent} type="video/mp4" />
                             </video>
+                            
                         )}
             </Box>
             <Box  marginTop={'2%'}><HStack>
