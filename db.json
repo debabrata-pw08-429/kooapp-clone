@@ -657,11 +657,9 @@
           "content": {
             "textContent": "Welcome to the Koo family 🙂 1. Follow people you like by clicking on the '+ Follow' button to see their posts in your feed. 2. Share your thoughts with others and gain a following. Happy Koo to you!",
             "vdoContent": "https://drive.google.com/uc?id=1N64FJvnk4VfnxPQ-LFj8JDJwE1O9hVG0&export=download"
-            
           },
           "days": "101d",
-          "hastags": [
-          ]
+          "hastags": []
         }
       ]
     }
