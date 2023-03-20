@@ -73,7 +73,6 @@ function Feed() {
           w={["100%", "100%", "74%", "42%"]}
           bg="#f8f7f3"
           p={"10px 12px 0px"}
-          zIndex="-1"
           overflow={"hidden"}
         >
           <HStack
