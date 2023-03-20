@@ -15,6 +15,7 @@ import { FeedContext } from "../Context/FeedContext";
 import { SideBar } from "../Components/SideBar";
 import { getData1 } from "../Redux/PostDetails/action";
 import { getData2 } from "../Redux/userDetails/action";
+import { getData3 } from "../Redux/LoogedOutData/action";
 function Feed() {
   let dispatch = useDispatch();
   let { followstate, setFollowstate, idC, setidC, trueCount, setTrueCount } =
@@ -25,6 +26,7 @@ function Feed() {
     dispatch(getData(0));
     dispatch(getData1());
     dispatch(getData2());
+    dispatch(getData3());
     // console.log("yyesss")
     setTrueCount (7);
     
@@ -33,6 +35,12 @@ function Feed() {
   let peopleData = useSelector(state=>state.PeopleReducer.peopleData);
   let userPostData = useSelector(state=>state.userPostReducer.userPostData);
   let  loggedUser  = useSelector((state) => state.loggedReducer.loggedUser);
+  
+  let LoggedOutData= useSelector((state) => state.loggedOutDataReducer.loggedOutData);
+  let isAuth = useSelector((state) => {
+    return state.loginReducer.isAuth;
+  });
+  console.log(LoggedOutData,"loggedoutttttttttttttttttttttttUser");
   console.log(loggedUser,"loggedUser");
   console.log(userPostData,"userPostData");
   // console.log(userPostData[0].data.files[0].previewUrl,"prievewinggggg")
@@ -134,7 +142,7 @@ function Feed() {
           </HStack></>
           )}
 
-              {userPostData.map((e,idx)=>{
+              {isAuth==true && userPostData.map((e,idx)=>{
                 // let {name,username,category,img,posts,userFollowState,id}=e;
                 let name=loggedUser.name;
                 let username=loggedUser.given_name;
@@ -160,7 +168,7 @@ function Feed() {
                
                })}
 
-          {peopleData.map((e)=>{
+          {isAuth==true &&  peopleData.map((e)=>{
                 let {name,username,category,img,posts,userFollowState,id}=e;
                 return (<div >
                 {posts.map((e)=>{
@@ -172,6 +180,18 @@ function Feed() {
                 </div>)
             })}
 
+
+              {isAuth==false &&  LoggedOutData.map((e)=>{
+                let {name,username,category,img,posts,userFollowState,id}=e;
+                return (<div >
+                {posts.map((e)=>{
+                  let Image1=loggedUser.picture;
+                  let {postsID,days,content,hastags,likes,comments,reKoo,userLike}=e;
+                  let user=false;
+                  return <FeedPost user={user} id1={id} postsID={postsID} Image1={Image1} name={name} category={category}  userLike={userLike} img={img} userFollowState={userFollowState} username={username} days={days} content={content} hastags={hastags} likes={likes} comments={comments} reKoo={reKoo}/>
+                })}
+                </div>)
+            })}
 
          
         </Box>
