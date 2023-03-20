@@ -6,7 +6,8 @@ import { useSelector } from "react-redux";
 
 function FeedCreate() {
     // let { Image } = useSelector((state) => state.LoggedReducer);
-    let Image='https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61nlaq18GGL._SY679_.jpg';
+    let  loggedUser  = useSelector((state) => state.loggedReducer.loggedUser);
+    let Image=loggedUser.picture;
   return (
     <div style={{pointer:'cursor'}}>
         <Link to="/create">

@@ -30,41 +30,76 @@ import {
 import { useSelector, useDispatch } from "react-redux";
 import { postData } from "../Redux/PostDetails/action";
 import { useNavigate } from "react-router-dom";
-
+import axios from 'axios';
+import { getData2 } from "../Redux/userDetails/action";
 function Create() {
-  // let { Image } = useSelector((state) => state.LoggedReducer);
+  useEffect(() => {
+    dispatch(getData2());
+    
+  },[])
+  let  loggedUser  = useSelector((state) => state.loggedReducer.loggedUser);
+  console.log(loggedUser,'loggedUserrr')
+  let Image=loggedUser.picture;
   // let Image='https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61nlaq18GGL._SY679_.jpg';
   const dispatch = useDispatch();
   const [count, setCount] = useState(0);
   const [description, setDescription] = useState(0);
+  const [myJSON, setmyJSON] = useState();
   const [file, setFile] = useState([]);
+  const [selectedFile, setSelectedFile] = useState(null);
   const fileInputRef = useRef(null);
   const fileInputRef1 = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
   const [progressCount, setProgressCount] = useState(0);
   const [previewFiles, setPreviewFiles] = useState([]);
+
+
   const handleInputChange = (event) => {
     const inputValue = event.target.value;
     setDescription(event.target.value);
     setCount(inputValue.length);
   };
-
   const handleFileChange = (event) => {
-    console.log(file,"fileeeeeee");
+    // console.log(file,"fileeeeeee");
     const selectedFiles = event.target.files;
     const filesArray = Array.from(selectedFiles);
     console.log(filesArray, "filesssssAARRRRay");
-    const filesWithPreview = filesArray.map((file) => ({
+    const filesWithPreview = filesArray.map((file) => (
+      {
       fileData: file,
       previewUrl: URL.createObjectURL(file),
+      actualFile: file,
       type: file.type,
       date: file.lastModifiedDate,
     }));
+    const filesEncode = filesArray.map((file) => (
+      encodeFileAsBase64(file).then(encoded => {
+        // Store the encoded file data in your JSON
+        setmyJSON ({
+          fileData: encoded,
+        }) 
+        const x={
+          fileData: encoded,
+        }
+        // axios.post('http://localhost:8080/images',x)
+        //   .then(response => console.log(response))
+        //     .catch(error => console.log(error));
+      })
+      ));
     console.log(filesWithPreview, "ffilesWithPreview");
     setFile([...file, ...filesWithPreview]);
+    // const filed = event.target.files[0];
+    // setSelectedFile(filed);
   };
-
+  function encodeFileAsBase64(file) {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = reject;
+    });
+  }
   const handleClose = (index) => {
     const newFiles = [...file];
     newFiles.splice(index, 1);
@@ -77,18 +112,55 @@ function Create() {
   };
 
   const handlePost = () => {
-    console.log(file, "fileeeeeee22222222");
+    console.log(myJSON, "fileeeeeee22222222");
     let data = {
       description,
       files:[...file],
       likes:0,
-      comments:[]
+      comments:[],
+      myJSON:myJSON.fileData,
+      userLike:false,
     }
     console.log(data,"dataaaa")
     console.log("av");
+    // const reader = new FileReader();
+    // reader.readAsDataURL(selectedFile);
+    // reader.onloadend = () => {
+    //   const imageData = reader.result.replace(/^data:image\/\w+;base64,/, '');
+    //   uploadImage(imageData)
+    //     .then(response => {
+    //       console.log('Image uploaded successfully:', response.data);
+    //     })
+    //     .catch(error => {
+    //       console.error('Error uploading image:', error);
+    //     });
+    // };
     dispatch(postData(data))
      setIsOpen(true);
   }
+  // const onImageUpload = async (imageFile) => {
+  //   try {
+  //     const formData = new FormData();
+  //     formData.append('file', imageFile);
+  //     const response = await axios.post('http://localhost:3000/images', formData, {
+  //       headers: {
+  //         'Content-Type': 'multipart/form-data'
+  //       }
+  //     });
+  //     return response.data.url;
+  //   } catch (error) {
+  //     console.error(error);
+  //     return null;
+  //   }
+  // };
+  // function uploadImage(imageData) {
+  //   const apiUrl = 'http://localhost:3000/images';
+  //   console.log("inuplaod");
+  //   return axios.post(apiUrl, {
+  //     data: imageData,
+  //     contentType: 'image/jpeg' // replace with the appropriate content type for your image
+  //   });
+  // }
 
   // const handlePost = ()=>{ 
   //  let data={ 

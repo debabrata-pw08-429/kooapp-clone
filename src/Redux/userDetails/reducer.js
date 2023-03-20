@@ -1,15 +1,14 @@
-import { GET_POST_DATA } from "./actionType";
+import { GET_POST_USER_DATA } from "./actionType";
 
 const initialState = {
-  userPostData:[]
+  loggedUser:[]
 };
 
 const reducer = (state = initialState, { type, payload }) => {
-  // console.log(payload,"userdataaaa at reducer regarding postsss")
   switch (type) {
-    case GET_POST_DATA:
+    case GET_POST_USER_DATA:
       return {
-        userPostData: payload,
+        loggedUser: payload,
       };
 
     default:
