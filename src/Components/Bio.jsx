@@ -26,6 +26,7 @@ import axios from "axios";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
+import Rsidebar from "./Rsidebar";
 
 const Bio = () => {
   const [images, setImages] = useState(Array(10).fill(null));
@@ -101,9 +102,12 @@ const Bio = () => {
   }, [images]);
   return (
     <Flex>
-      <SideBar />
+      <Box w="26%" paddingLeft={'2%'}>
+          {/* <LeftSidebar /> */}
+          <SideBar />
+        </Box>
 
-      <Box w="620px" bg="rgb(248,247,243)" p="20px 24px 0">
+      <Box w="42%" bg="rgb(248,247,243)" p="20px 24px 0">
         {/* User details top box of image */}
         <Box borderRadius="14px">
           <Box
@@ -528,6 +532,10 @@ const Bio = () => {
           </Box>
         </Box>
       </Box>
+      <Box w="32%"  paddingRight={'6%'}   >
+          {/* <RightSidebar />{" "} */}
+          <Rsidebar/>
+        </Box>
     </Flex>
   );
 };

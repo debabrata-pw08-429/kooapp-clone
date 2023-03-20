@@ -38,7 +38,7 @@ function Feed() {
   let followData = useSelector(state=>state.PeopleReducer.followData)
   console.log(peopleData,"checking after like peopleData");
   return (
-    <div>
+    <Box>
       <Flex w="100%">
         <Box w="26%" paddingLeft={'2%'}>
           {/* <LeftSidebar /> */}
@@ -145,7 +145,7 @@ function Feed() {
         </Box>
 
       </Flex>
-    </div>
+    </Box>
   );
 }
 
