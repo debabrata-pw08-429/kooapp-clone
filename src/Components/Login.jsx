@@ -41,7 +41,16 @@ import {
 } from "@chakra-ui/react";
 
 const Login = ({ children }) => {
-  // let { setLog } = useContext(FeedContext);
+  // let {
+  //   followstate,
+  //   setFollowstate,
+  //   idC,
+  //   setidC,
+  //   trueCount,
+  //   setTrueCount,
+  //   log,
+  //   setLog,
+  // } = useContext(FeedContext);
 
   let isAuth = useSelector((state) => {
     return state.loginReducer.isAuth;
