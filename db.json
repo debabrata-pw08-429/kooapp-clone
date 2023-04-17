@@ -97,8 +97,8 @@
         },
         {
           "postsID": 4,
-          "userLike": false,
-          "likes": 998,
+          "userLike": true,
+          "likes": 999,
           "comments": 19,
           "re-share": 7,
           "days": "1d",
@@ -158,7 +158,7 @@
       "posts": [
         {
           "postsID": 1,
-          "userLike": true,
+          "userLike": false,
           "likes": 80,
           "comments": 16,
           "reKoo": 13,
@@ -223,7 +223,7 @@
         {
           "postsID": 1,
           "userLike": true,
-          "likes": 42,
+          "likes": 43,
           "comments": 5,
           "reKoo": 3,
           "content": {
@@ -269,7 +269,7 @@
       "des": "Minister of Road Transport & Highways, Government of India.",
       "followers": "3.4M",
       "following": 2,
-      "userFollowState": false,
+      "userFollowState": true,
       "category": "Politician",
       "posts": [
         {
@@ -416,7 +416,7 @@
       "des": "Government Organisation. Official Account of India‘s G20 Presidency. Official Hashtag: #G20India",
       "followers": "9.4K",
       "following": 2,
-      "userFollowState": false,
+      "userFollowState": true,
       "category": "Government Organisation",
       "posts": [
         {
@@ -497,8 +497,8 @@
         },
         {
           "postsID": 2,
-          "userLike": false,
-          "likes": 1472,
+          "userLike": true,
+          "likes": 1473,
           "comments": 217,
           "reKoo": 75,
           "content": {

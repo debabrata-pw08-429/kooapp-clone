@@ -20,9 +20,9 @@ import {
   Portal,
   useColorMode,
   useDisclosure,
-  IconButton
+  IconButton,
 } from "@chakra-ui/react";
-import { FaSun} from 'react-icons/fa'
+import { FaSun } from "react-icons/fa";
 import "../Styles/sidebar.css";
 import koo from "../Images/koo.svg";
 import feedIcon from "../Images/feed.svg";
@@ -35,13 +35,14 @@ import logout from "../Images/logout.svg";
 import notifications from "../Images/notifications.svg";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { log_out } from "../Redux/login/action";
+import { log_out, setLogin } from "../Redux/login/action";
 import { Link } from "react-router-dom";
+
 const SideBar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   let navigate = useNavigate();
   let dispatch = useDispatch();
-  const {toggleColorMode} = useColorMode()
+  const { toggleColorMode } = useColorMode();
   let isAuth = useSelector((state) => {
     return state.loginReducer.isAuth;
   });
@@ -57,9 +58,8 @@ const SideBar = () => {
   let img_DP = useSelector((state) => {
     return state.loginReducer.picture;
   });
-  useEffect(()=>{
 
-  })
+  useEffect(() => {});
   return (
     //Main div--
     <Box position="sticky" top="0">
@@ -80,20 +80,22 @@ const SideBar = () => {
           >
             {/* Feed option */}
             <Box textAlign="left" m=" 8px" h="48px">
-            <Link to="/feed">
-              <Button
-                color="rgb(136,136,136)"
-                border="none"
-                bg={["none", "none", "none", "white"]}
-                w="150px"
-                h="48px"
-                justifyContent="flex-start"
-                borderRadius="50px"
-                onClick={()=>{navigate('/feed')}}
-              >
-                <Image src={feedIcon} alt="" marginRight="8px" />
-                <span className="text-fields">Feed</span>
-              </Button>
+              <Link to="/feed">
+                <Button
+                  color="rgb(136,136,136)"
+                  border="none"
+                  bg={["none", "none", "none", "white"]}
+                  w="150px"
+                  h="48px"
+                  justifyContent="flex-start"
+                  borderRadius="50px"
+                  onClick={() => {
+                    navigate("/feed");
+                  }}
+                >
+                  <Image src={feedIcon} alt="" marginRight="8px" />
+                  <span className="text-fields">Feed</span>
+                </Button>
               </Link>
             </Box>
 
@@ -114,10 +116,10 @@ const SideBar = () => {
                 justifyContent="flex-start"
                 bg={["none", "none", "white"]}
                 borderRadius="50px"
-                overflow='hidden'
-                textOverflow='ellipsis'
-                whiteSpace='normal'
-                wordWrap= "break-word"
+                overflow="hidden"
+                textOverflow="ellipsis"
+                whiteSpace="normal"
+                wordWrap="break-word"
               >
                 <Image
                   src={img_DP}
@@ -173,7 +175,7 @@ const SideBar = () => {
               <Button
                 color="rgb(136,136,136)"
                 border="none"
-                bg={["none", "none","none", "white"]}
+                bg={["none", "none", "none", "white"]}
                 _hover={{ bg: "#ebedf0" }}
                 w="150px"
                 h="48px"
@@ -190,7 +192,7 @@ const SideBar = () => {
               <Button
                 color="rgb(136,136,136)"
                 border="none"
-                bg={["none", "none","none", "white"]}
+                bg={["none", "none", "none", "white"]}
                 _hover={{ bg: "#ebedf0" }}
                 w="150px"
                 h="48px"
@@ -207,7 +209,7 @@ const SideBar = () => {
               <Button
                 color="rgb(136,136,136)"
                 border="none"
-                bg={["none", "none","none", "white"]}
+                bg={["none", "none", "none", "white"]}
                 _hover={{ bg: "#ebedf0" }}
                 w="150px"
                 h="48px"
@@ -229,7 +231,7 @@ const SideBar = () => {
               <Button
                 color="rgb(136,136,136)"
                 border="none"
-                bg={["none", "none","none", "white"]}
+                bg={["none", "none", "none", "white"]}
                 _hover={{ bg: "#ebedf0" }}
                 w="150px"
                 h="48px"
@@ -252,7 +254,7 @@ const SideBar = () => {
                 onClick={onOpen}
                 color="rgb(136,136,136)"
                 border="none"
-                bg={["none", "none","none", "white"]}
+                bg={["none", "none", "none", "white"]}
                 _hover={{ bg: "#ebedf0" }}
                 w="150px"
                 h="48px"
@@ -292,6 +294,7 @@ const SideBar = () => {
                       color="white"
                       onClick={() => {
                         onClose();
+                        dispatch(setLogin({}));
                         dispatch(log_out(loggedUser_Data));
                         window.location.reload();
                       }}
@@ -310,7 +313,7 @@ const SideBar = () => {
               mb={isAuth ? "0" : "80px"}
               bg="rgb(75,75,75)"
               color="white"
-              display={["none", "none","none", "block"]}
+              display={["none", "none", "none", "block"]}
               border="none"
               borderRadius="50px"
               p="8px"
@@ -339,31 +342,31 @@ const SideBar = () => {
              */}
           </Flex>
         </Flex>
-      </Box>
-      <Box
-        className="sidebar-sub"
-        w="100%"
-        h="56px"
-        display={["flex", "flex", "none", "none"]}
-        justifyContent="space-around"
-        position="fixed"
-        alignItems="center"
-        zIndex="-99"
-        bg="white"
-        bottom="0"
-        borderTop="1px solid #e8e8e3"
-      >
-        <Box w="48px" h="48px" display="flex" alignItems="center">
-          <Image w="34px" h="34px" src={feedIcon} />
-        </Box>
-        <Box w="48px" h="48px" display="flex" alignItems="center">
-          <Image w="34px" h="34px" src={hashtag} />
-        </Box>
-        <Box w="48px" h="48px" display="flex" alignItems="center">
-          <Image w="34px" h="34px" src={search} />
-        </Box>
-        <Box w="48px" h="48px" display="flex" alignItems="center">
-          <Image w="34px" h="34px" src={notifications} />
+        <Box
+          className="sidebar-sub"
+          w="100%"
+          h="56px"
+          display={["flex", "flex", "none", "none"]}
+          justifyContent="space-around"
+          position="fixed"
+          alignItems="center"
+          zIndex="10"
+          bg="white"
+          bottom="0"
+          borderTop="1px solid #e8e8e3"
+        >
+          <Box w="48px" h="48px" display="flex" alignItems="center">
+            <Image w="34px" h="34px" src={feedIcon} />
+          </Box>
+          <Box w="48px" h="48px" display="flex" alignItems="center">
+            <Image w="34px" h="34px" src={hashtag} />
+          </Box>
+          <Box w="48px" h="48px" display="flex" alignItems="center">
+            <Image w="34px" h="34px" src={search} />
+          </Box>
+          <Box w="48px" h="48px" display="flex" alignItems="center">
+            <Image w="34px" h="34px" src={notifications} />
+          </Box>
         </Box>
       </Box>
     </Box>

@@ -14,16 +14,18 @@ import { Link } from "react-router-dom";
 import { AiFillPlusCircle } from "react-icons/ai";
 import { useSelector } from "react-redux";
 import acc_Img from "../Images/acct.svg";
-
 function FeedCreate() {
-    // let { Image } = useSelector((state) => state.LoggedReducer);
-    let  loggedUser  = useSelector((state) => state.loggedReducer.loggedUser);
-    let Image=loggedUser.picture;
+  // let { Image } = useSelector((state) => state.LoggedReducer);
+  let img_DP = useSelector((state) => {
+    return state.loginReducer.picture;
+  });
+  let loggedUser = useSelector((state) => state.loggedReducer.loggedUser);
+  let Image = img_DP;
   return (
     <div style={{ pointer: "cursor" }}>
       <Link to="/create">
         <Stack padding="10px" spacing={4}>
-          <InputGroup pointer="cursor" style={{ backgroundColor: "#ffffff" }}>
+          <InputGroup pointer="cursor" style={{ backgroundColor: "#FFFFFF" }}>
             <InputLeftElement
               children={
                 <div>
@@ -49,5 +51,4 @@ function FeedCreate() {
     </div>
   );
 }
-
 export default FeedCreate;

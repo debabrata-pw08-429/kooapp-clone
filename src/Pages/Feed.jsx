@@ -16,21 +16,18 @@ import { SideBar } from "../Components/SideBar";
 import { getData1 } from "../Redux/PostDetails/action";
 import { getData2 } from "../Redux/userDetails/action";
 import { getData3 } from "../Redux/LoogedOutData/action";
-
-
+import { setLogin } from "../Redux/login/action";
 
 function Feed() {
   let dispatch = useDispatch();
   let { followstate, setFollowstate, idC, setidC, trueCount, setTrueCount } =
     useContext(FeedContext);
-  // console.log(followstate, "contextchecl");
 
   useEffect(() => {
     dispatch(getData(0));
     dispatch(getData1());
     dispatch(getData2());
     dispatch(getData3());
-    // console.log("yyesss")
     setTrueCount(7);
   }, []);
 
@@ -41,6 +38,7 @@ function Feed() {
   let LoggedOutData = useSelector(
     (state) => state.loggedOutDataReducer.loggedOutData
   );
+
   let isAuth = useSelector((state) => {
     return state.loginReducer.isAuth;
   });
@@ -73,7 +71,7 @@ function Feed() {
           w={["100%", "100%", "74%", "42%"]}
           bg="#f8f7f3"
           p={"10px 12px 0px"}
-          zIndex="-1"
+          _zIndex="-1"
           overflow={"hidden"}
         >
           <HStack
