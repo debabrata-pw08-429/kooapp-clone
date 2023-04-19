@@ -580,33 +580,5 @@
         }
       ]
     }
-  ],
-  "images": [],
-  "loggedOutData": [
-    {
-      "id": 1,
-      "name": "Koo English",
-      "username": "kooenglish",
-      "img": "https://upload.wikimedia.org/wikipedia/en/thumb/a/ad/Koo.svg/1200px-Koo.svg.png",
-      "followers": "89.5K",
-      "following": 0,
-      "userFollowState": false,
-      "category": "",
-      "posts": [
-        {
-          "postsID": 1,
-          "userLike": false,
-          "likes": 94,
-          "comments": 19,
-          "re-share": 8,
-          "content": {
-            "textContent": "Welcome to the Koo family 🙂 1. Follow people you like by clicking on the '+ Follow' button to see their posts in your feed. 2. Share your thoughts with others and gain a following. Happy Koo to you!",
-            "vdoContent": "https://drive.google.com/uc?id=1N64FJvnk4VfnxPQ-LFj8JDJwE1O9hVG0&export=download"
-          },
-          "days": "101d",
-          "hastags": []
-        }
-      ]
-    }
   ]
 }
