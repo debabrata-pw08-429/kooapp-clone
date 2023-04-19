@@ -1,7 +1,9 @@
 import React from "react";
+import { useContext } from "react";
+import FeedContext from "../Context/FeedContext";
 import axios from "axios";
-import { useGoogleLogin } from "@react-oauth/google";
 
+import { useGoogleLogin } from "@react-oauth/google";
 import WatsApp from "./WatsApp";
 import EmailIcon from "./EmailIcon";
 import { AiFillApple } from "react-icons/ai";
@@ -9,6 +11,10 @@ import { FcGoogle } from "react-icons/fc";
 import { FiPhone } from "react-icons/fi";
 import { BiEdit } from "react-icons/bi";
 import { theme } from "../Styles/theme/brandTheme";
+
+import { useLocation, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { setLogin } from "../Redux/login/action";
 
 import {
   useDisclosure,
@@ -34,23 +40,49 @@ import {
   Spacer,
 } from "@chakra-ui/react";
 
-const Login = () => {
+const Login = ({ children }) => {
+  // let {
+  //   followstate,
+  //   setFollowstate,
+  //   idC,
+  //   setidC,
+  //   trueCount,
+  //   setTrueCount,
+  //   log,
+  //   setLog,
+  // } = useContext(FeedContext);
+
+  let isAuth = useSelector((state) => {
+    return state.loginReducer.isAuth;
+  });
+
+  console.log(isAuth);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [change, setChange] = React.useState(false);
   const [otpVerify, setotpVerify] = React.useState(false);
-  const [oathVerify, setoathVerify] = React.useState(false);
+  const [oathVerify, setoathVerify] = React.useState(isAuth);
   const initialRef = React.useRef(null);
+
+  let navigate = useNavigate();
+  let location = useLocation();
+  let dispatch = useDispatch();
 
   const login = useGoogleLogin({
     onSuccess: async (tokenResponse) => {
       try {
-        const data = await axios
-          .get("https://www.googleapis.com/oauth2/v3/userinfo", {
+        const user = await axios.get(
+          "https://www.googleapis.com/oauth2/v3/userinfo",
+          {
             headers: {
               Authorization: `Bearer ${tokenResponse.access_token}`,
             },
-          })
-          .then((res) => setoathVerify(true));
+          }
+        );
+        setoathVerify(true);
+
+        dispatch(setLogin(user.data));
+        // setLog(true);
+        navigate(location.state === null ? "/feed" : location.state);
       } catch (error) {
         console.log(error);
       }
@@ -66,7 +98,14 @@ const Login = () => {
 
   return (
     <>
-      <Button onClick={onOpen}>sign in</Button>
+      <Box
+        zIndex={5}
+        onClick={onOpen}
+        bg="transparent"
+        _hover={{ bg: "transparent" }}
+      >
+        {children}
+      </Box>
       <Box position="relative">
         <AbsoluteCenter axis="both">
           <Modal

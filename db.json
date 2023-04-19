@@ -75,7 +75,9 @@
             "textContent": "Super stoked to announce our Series A funding - an imp milestone in our mission to unlock 🇮🇳's untapped potential, regardless of their background. 💪This Series A empowers us to expand access to high-quality education to 1000s of students & transform lives. We are excited to have Omidyar Network India (Siddharth Nautiyal, Namita Dalmia and Neel Pattani ) as a partner on this journey, their keen understanding of the state of education at a global level will bring immense value.",
             "imgContent": "https://media.licdn.com/dms/image/sync/C5627AQH6vNwTVblbtw/articleshare-shrink_800/0/1677705782538?e=1679428800&v=beta&t=V_EA_xmn4dnhWBe4Ya41QeycHjiksc2uxuJnXrmJl9g"
           },
-          "hastags": ["#AcademyAwards"]
+          "hastags": [
+            "#AcademyAwards"
+          ]
         },
         {
           "postsID": 4,
@@ -90,12 +92,13 @@
             "vdoContent": "https://drive.google.com/uc?export=download&id=1aAfH40lP73REteAnKUmM2alaU-OPjR8B",
             "type": "video/mp4"
           },
-          "hastags": ["#Imperial Blue"]
+          "hastags": [
+            "#Imperial Blue"
+          ]
         },
         {
           "postsID": 2,
-          "userLike": true,
-          "likes": 208,
+          "likes": 207,
           "comments": 10,
           "re-share": 1,
           "content": {
@@ -107,7 +110,6 @@
         },
         {
           "postsID": 3,
-          "userLike": false,
           "likes": 76,
           "comments": 5,
           "re-share": 12,
@@ -133,8 +135,7 @@
       "posts": [
         {
           "postsID": 1,
-          "userLike": false,
-          "likes": 80,
+          "likes": 79,
           "comments": 16,
           "reKoo": 13,
           "content": {
@@ -151,7 +152,6 @@
         },
         {
           "postsID": 2,
-          "userLike": false,
           "likes": 659,
           "comments": 66,
           "reKoo": 23,
@@ -169,7 +169,6 @@
         },
         {
           "postsID": 3,
-          "userLike": false,
           "likes": 154,
           "comments": 33,
           "reKoo": 22,
@@ -195,8 +194,7 @@
       "posts": [
         {
           "postsID": 1,
-          "userLike": true,
-          "likes": 43,
+          "likes": 41,
           "comments": 5,
           "reKoo": 3,
           "content": {
@@ -208,8 +206,7 @@
         },
         {
           "postsID": 2,
-          "userLike": true,
-          "likes": 182,
+          "likes": 181,
           "comments": 42,
           "reKoo": 17,
           "content": {
@@ -221,7 +218,6 @@
         },
         {
           "postsID": 3,
-          "userLike": false,
           "likes": 240,
           "comments": 62,
           "reKoo": 27,
@@ -342,8 +338,7 @@
         },
         {
           "postsID": 2,
-          "userLike": false,
-          "likes": 554,
+          "likes": 2.6,
           "comments": 185,
           "re-share": 103,
           "content": {
@@ -355,8 +350,8 @@
         },
         {
           "postsID": 3,
-          "userLike": true,
-          "likes": 219,
+          "userLike": false,
+          "likes": 218,
           "comments": 88,
           "re-share": 84,
           "content": {
@@ -433,8 +428,7 @@
       "posts": [
         {
           "postsID": 1,
-          "userLike": false,
-          "likes": 222,
+          "likes": 2022,
           "comments": 50,
           "reKoo": 80,
           "content": {
@@ -446,8 +440,7 @@
         },
         {
           "postsID": 2,
-          "userLike": true,
-          "likes": 1473,
+          "likes": 1472,
           "comments": 217,
           "reKoo": 75,
           "content": {
@@ -472,8 +465,7 @@
         },
         {
           "postsID": 4,
-          "userLike": false,
-          "likes": 472,
+          "likes": 5472,
           "comments": 417,
           "reKoo": 45,
           "content": {
@@ -511,8 +503,7 @@
         },
         {
           "postsID": 2,
-          "userLike": false,
-          "likes": 142,
+          "likes": 1472,
           "comments": 217,
           "reKoo": 75,
           "content": {
@@ -561,6 +552,34 @@
     "#AcademyAwards",
     "#Oscars2023",
     "#vandebharatexpress"
+  ],
+  "images": [],
+  "loggedOutData": [
+    {
+      "id": 1,
+      "name": "Koo English",
+      "username": "kooenglish",
+      "img": "https://upload.wikimedia.org/wikipedia/en/thumb/a/ad/Koo.svg/1200px-Koo.svg.png",
+      "followers": "89.5K",
+      "following": 0,
+      "userFollowState": false,
+      "category": "",
+      "posts": [
+        {
+          "postsID": 1,
+          "userLike": false,
+          "likes": 94,
+          "comments": 19,
+          "re-share": 8,
+          "content": {
+            "textContent": "Welcome to the Koo family 🙂 1. Follow people you like by clicking on the '+ Follow' button to see their posts in your feed. 2. Share your thoughts with others and gain a following. Happy Koo to you!",
+            "vdoContent": "https://drive.google.com/uc?id=1N64FJvnk4VfnxPQ-LFj8JDJwE1O9hVG0&export=download"
+          },
+          "days": "101d",
+          "hastags": []
+        }
+      ]
+    }
   ],
   "images": [],
   "loggedOutData": [

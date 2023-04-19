@@ -4,8 +4,10 @@ import { Box, Grid, GridItem, Spacer } from "@chakra-ui/react";
 import { Button, Image, Link, Text } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import app_ss from "../Images/app_ss.png";
+import { useNavigate } from "react-router-dom";
 
 const Section1 = () => {
+  let navigate = useNavigate();
   return (
     <Grid
       templateAreas={[
@@ -27,6 +29,7 @@ const Section1 = () => {
             All in your Language
           </Text>
           <Button
+            onClick={() => navigate("/feed")}
             borderRadius="full"
             bg={theme.brand.colors.btn_bg_login}
             size="lg"
