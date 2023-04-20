@@ -79,7 +79,7 @@ const Login = ({ children }) => {
           }
         );
         setoathVerify(true);
-
+        console.log(user);
         dispatch(setLogin(user.data));
         // setLog(true);
         navigate(location.state === null ? "/feed" : location.state);

@@ -42,8 +42,8 @@ const Bio = () => {
     return state.loginReducer.picture;
   });
 
-  let Image1 = img_DP || loggedUser.picture;
-
+  let Image1 = data.picture || loggedUser.picture || img_DP;
+  console.log("Profile Image => ", Image1);
   let navigate = useNavigate();
   const handleClick = (event) => {
     hiddenFileInput.current.click();
@@ -100,11 +100,12 @@ const Bio = () => {
   };
 
   useEffect(() => {
-    axios.get(`http://localhost:8000/user`).then((res) => {
+    axios.get(`${process.env.REACT_APP_API_KEY}/loggedUser`).then((res) => {
+      // console.table(res.data);
       setData(res.data);
     });
     axios
-      .patch(`http://localhost:8000/user`, {
+      .patch(`${process.env.REACT_APP_API_KEY}/loggedUser`, {
         profileImg: JSON.stringify(images),
       })
       .then((res) => {

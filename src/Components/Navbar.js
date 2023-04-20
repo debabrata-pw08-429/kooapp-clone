@@ -23,17 +23,6 @@ import {
   Image,
 } from "@chakra-ui/react";
 
-// These are the default breakpoints
-// const breakpoints = {
-//   sm: "30em", // 480px
-//   md: "48em", // 768px
-//   lg: "62em", // 992px
-//   xl: "80em", // 1280px
-//   "2xl": "96em", // 1536px
-// };
-
-// Internally, we transform to this
-// const breakpoints = ["0em", "30em", "48em", "62em", "80em", "96em"];
 import { useSelector } from "react-redux";
 
 const Navbar = () => {

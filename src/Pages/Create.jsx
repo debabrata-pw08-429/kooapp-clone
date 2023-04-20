@@ -85,7 +85,7 @@ function Create() {
         const x = {
           fileData: encoded,
         };
-        // axios.post('http://localhost:8080/images',x)
+        // axios.post('${process.env.REACT_APP_API_KEY}/images',x)
         //   .then(response => console.log(response))
         //     .catch(error => console.log(error));
       })

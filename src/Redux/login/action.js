@@ -6,7 +6,7 @@ import {
   LOGOUT,
 } from "./actionTypes";
 
-const json_URL = `http://localhost:8080/loggedUser`;
+const json_URL = `${process.env.REACT_APP_API_KEY}/loggedUser`;
 
 const setLogin = (payload) => {
   return (dispatch) => {

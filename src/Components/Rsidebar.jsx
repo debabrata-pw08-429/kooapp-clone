@@ -29,7 +29,7 @@ const Rsidebar = () => {
   let [queryData, setqueryData] = useState([]);
 
   useEffect(() => {
-    const json_URL = `http://localhost:8080/peopleData`;
+    const json_URL = `${process.env.REACT_APP_API_KEY}/peopleData`;
 
     const getInitialState = async () => {
       let res = await axios.get(json_URL);

@@ -5,10 +5,10 @@ import { GET_FEED_DATA,GET_CHANGE_DATA } from "./actionType"
 let getData = (i) => {
     return (dispatch) => {
       i === 0
-        ? axios.get(`http://localhost:8080/peopleData`).then((res) => {
+        ? axios.get(`${process.env.REACT_APP_API_KEY}/peopleData`).then((res) => {
             return dispatch(redData(res.data));
           })
-        : axios.get(`http://localhost:8080/feedData`).then((res) => {
+        : axios.get(`${process.env.REACT_APP_API_KEY}/feedData`).then((res) => {
             return dispatch(blueData(res.data));
           });
     };
@@ -32,7 +32,7 @@ let blueData = (data)=>{
 
 // let putData = (data) => {
 //   return (dispatch) => {
-//        axios.put('http://localhost:8080/peopleData',data)
+//        axios.put('${process.env.REACT_APP_API_KEY}/peopleData',data)
 //         .then((res) => {
 //           console.log(res.data,"put data called")
 //           return dispatch(redData(res.data));
@@ -46,7 +46,7 @@ let blueData = (data)=>{
 // const putData = (updatedData) => {
 //   return async (dispatch) => {
 //     try {
-//       const res = await axios.put('http://localhost:8080/peopleData', {updatedData});
+//       const res = await axios.put('${process.env.REACT_APP_API_KEY}/peopleData', {updatedData});
 //       console.log(res.data,'Data updated successfully on server.');
 //       return dispatch(redData(res.data));
 //     } catch (error) {
@@ -58,7 +58,7 @@ let blueData = (data)=>{
 // const putData = (updatedData) => {
 //   return async (dispatch) => {
 //     try {
-//       const response = await fetch('http://localhost:8080/peopleData', {
+//       const response = await fetch('${process.env.REACT_APP_API_KEY}/peopleData', {
 //         method: 'PUT',
 //         headers: {
 //           'Content-Type': 'application/json',
@@ -83,7 +83,7 @@ let blueData = (data)=>{
 
 // const putData = (updatedData) => {
 //   return (dispatch) => {
-//     fetch('http://localhost:8080/peopleData', {
+//     fetch('${process.env.REACT_APP_API_KEY}/peopleData', {
 //       method: 'PUT',
 //       headers: {
 //         'Content-Type': 'application/json',
@@ -108,7 +108,7 @@ let blueData = (data)=>{
 // };
 // const putData = (updatedData) => {
 //   return (dispatch) => {
-//     fetch('http://localhost:8080/peopleData', {
+//     fetch('${process.env.REACT_APP_API_KEY}/peopleData', {
 //       method: 'PUT',
 //       headers: {
 //         'Content-Type': 'application/json',
@@ -134,7 +134,7 @@ let blueData = (data)=>{
 const putData = (send,id1) => {
   console.log(send,id1,"in actionnn")
     return (dispatch) => {
-      fetch(`http://localhost:8080/peopleData/${id1}`, {
+      fetch(`${process.env.REACT_APP_API_KEY}/peopleData/${id1}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

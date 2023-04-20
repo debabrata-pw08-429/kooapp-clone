@@ -42,6 +42,17 @@ function Feed() {
   let isAuth = useSelector((state) => {
     return state.loginReducer.isAuth;
   });
+
+  
+  
+
+
+
+
+
+
+
+
   console.log(LoggedOutData, "loggedoutttttttttttttttttttttttUser");
   console.log(loggedUser, "loggedUser");
   console.log(userPostData, "userPostData");

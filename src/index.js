@@ -10,14 +10,11 @@ import { Provider } from "react-redux";
 import { store } from "./Redux/store";
 import FeedContextProviderComponent from "../src/Context/FeedContext";
 
-const clientID =
-  "147260584431-dsp5dsqk22jsa3u1lq121ls6iesj6rkc.apps.googleusercontent.com";
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <ChakraProvider>
     <BrowserRouter>
-      <GoogleOAuthProvider clientId={clientID}>
+      <GoogleOAuthProvider clientId={process.env.REACT_APP_CLIENT_ID}>
         <Provider store={store}>
           <FeedContextProviderComponent>
             <App />
@@ -28,7 +25,4 @@ root.render(
   </ChakraProvider>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

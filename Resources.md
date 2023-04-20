@@ -22,6 +22,8 @@ https://www.npmjs.com/package/@react-oauth/google
 
 ## Google Auth Provider -
 
+json-server --watch db.json --port 8080
+
 <!-- <GoogleOAuthProvider clientId="147260584431-dsp5dsqk22jsa3u1lq121ls6iesj6rkc.apps.googleusercontent.com"> -->
 
 <!-- // import { GoogleLogin } from "@react-oauth/google";

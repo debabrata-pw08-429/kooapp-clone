@@ -3,7 +3,7 @@ import { GET_POST_DATA } from "./actionType";
 
 // let getData = () => {
 //   return (dispatch) => {
-//     axios.get(`http://localhost:8080/posts`).then((res) => {
+//     axios.get(`${process.env.REACT_APP_API_KEY}/posts`).then((res) => {
 //       return dispatch(redData(res.data));
 //     });
 //   };
@@ -11,7 +11,7 @@ import { GET_POST_DATA } from "./actionType";
 
 let getData1 = ()=>{
     return (dispatch)=>{
-       axios.get(`http://localhost:8080/userposts`)
+       axios.get(`${process.env.REACT_APP_API_KEY}/userposts`)
        .then((res)=>{
         // console.log(res.data,"")
         return dispatch(redData(res.data))
@@ -28,7 +28,7 @@ let redData = (data)=>{
 
 let postData = (data)=>{
     return (dispatch)=>{
-        axios.post(`http://localhost:8080/userposts`,{
+        axios.post(`${process.env.REACT_APP_API_KEY}/userposts`,{
             data
         })
         .then((res)=>{
@@ -41,7 +41,7 @@ let postData = (data)=>{
 const putData1 = (send,id1) => {
   console.log(send,id1,"in actionnn")
     return (dispatch) => {
-      fetch(`http://localhost:8080/userposts/${id1}`, {
+      fetch(`${process.env.REACT_APP_API_KEY}/userposts/${id1}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

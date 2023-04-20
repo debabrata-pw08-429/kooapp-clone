@@ -19,7 +19,7 @@ const People = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get(`http://localhost:8000/peopleData`).then((res) => {
+    axios.get(`${process.env.REACT_APP_API_KEY}/peopleData`).then((res) => {
       setData(res.data);
     });
   }, []);
