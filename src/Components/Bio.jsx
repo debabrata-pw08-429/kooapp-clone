@@ -100,11 +100,11 @@ const Bio = () => {
   };
 
   useEffect(() => {
-    axios.get(`http://localhost:8000/user`).then((res) => {
+    axios.get(`http://localhost:8080/loggedUser`).then((res) => {
       setData(res.data);
     });
     axios
-      .patch(`http://localhost:8000/user`, {
+      .patch(`http://localhost:8080/loggedUser`, {
         profileImg: JSON.stringify(images),
       })
       .then((res) => {
